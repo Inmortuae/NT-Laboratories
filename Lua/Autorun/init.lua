@@ -11,7 +11,10 @@ Timer.Wait(function() if NTC ~= nil and NTC.RegisterExpansion ~= nil then NTC.Re
 -- server-side code (also run in singleplayer)
 if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
+    -- BioPrinter
     dofile(NTL.Path .. "/Lua/Scripts/Server/BioPrinter/EmptySyringe.lua")
+
+    -- Pharmacy
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/humanupdate.lua")
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/items.lua")
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/pills.lua")
@@ -23,8 +26,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
             return
         end
 
-        NTC.AddPreHumanUpdateHook(NTP.PreUpdateHuman)
-        NTC.AddHumanUpdateHook(NTP.PostUpdateHuman)
+        NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
+        NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)
     end,1)
 
 end

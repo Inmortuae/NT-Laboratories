@@ -21,7 +21,7 @@
         </StatusEffect>
         <!-- randomize effects if spawned outside of the chem master -->
         <StatusEffect type="OnSpawn" target="This" delay="0.5" stackable="false">
-          <LuaHook name="NTP.OnPillSpawned" />
+          <LuaHook name="NTL.OnPillSpawned" />
         </StatusEffect>
       </Holdable>
     </Item>
@@ -30,7 +30,7 @@
       <Sprite texture="%ModDir%/Images/Pharmacy/droppedpills.png" sourcerect="0,0,103,42" depth="0.6" origin="0.5,0.5" />
     </Item>
     <Item name="" identifier="custompill_tablets" variantof="custompill" scale="0.09" impactsoundtag="impact_tabletpill" maxstacksize="32">
-      <InventoryIcon texture="%ModDir%/Pharmacy/Images/InventoryItemIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/Images/Pharmacy/droppedpills.png" sourcerect="216,0,122,44" depth="0.6" origin="0.5,0.5" />
     </Item>
     <!-- ChemMaster 2000 -->
@@ -103,12 +103,12 @@
         <GuiFrame relativesize="0.2,0.2" anchor="CenterRight" pivot="CenterLeft" relativeoffset="0.36,0.001" style="ItemUI" linkuitocomponent="ItemContainer" />
         <Button text="label.cm_makeone">
           <StatusEffect target="This" type="OnUse">
-            <LuaHook name="NTP.ChemMaster.makeone" />
+            <LuaHook name="NTL.ChemMaster.makeone" />
           </StatusEffect>
         </Button>
         <Button text="label.cm_makeall">
           <StatusEffect target="This" type="OnUse">
-            <LuaHook name="NTP.ChemMaster.makeall" />
+            <LuaHook name="NTL.ChemMaster.makeall" />
           </StatusEffect>
         </Button>
         <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64" />
@@ -143,17 +143,17 @@
         <GuiFrame relativesize="0.2,0.2" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
         <Button text="label.ca_analyze">
           <StatusEffect target="This" type="OnUse">
-            <LuaHook name="NTP.Chemalyzer.analyze" />
+            <LuaHook name="NTL.Chemalyzer.analyze" />
           </StatusEffect>
         </Button>
         <Button text="label.ca_rename">
           <StatusEffect target="This" type="OnUse">
-            <LuaHook name="NTP.Chemalyzer.rename" />
+            <LuaHook name="NTL.Chemalyzer.rename" />
           </StatusEffect>
         </Button>
         <Button text="missiontype.scanalienruins">
           <StatusEffect target="This" type="OnUse">
-            <LuaHook name="NTP.Chemalyzer.automatic" />
+            <LuaHook name="NTL.Chemalyzer.automatic" />
           </StatusEffect>
         </Button>
         <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64" />

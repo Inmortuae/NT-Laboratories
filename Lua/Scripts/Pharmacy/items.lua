@@ -1,11 +1,11 @@
 
-NTP.ActiveChemCraftalls = {}
+NTL.ActiveChemCraftalls = {}
 
 Timer.Wait(function() 
 
 NT.ItemStartsWithMethods.custompill = function(item, usingCharacter, targetCharacter, limb)
 
-    local config = NTP.TagsToPillconfig(HF.SplitString(item.Tags,","))
+    local config = NTL.TagsToPillconfig(HF.SplitString(item.Tags,","))
 
     for identifier,strength in pairs(config.fx) do
         HF.AddAffliction(targetCharacter,identifier,strength,usingCharacter)
@@ -17,7 +17,7 @@ end
 
 end,1)
 
-function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
+function NTL.TryCraftPills(chemmaster,user,dontreporterrors)
 
     if chemmaster == nil or user == nil then return false end
     if dontreporterrors == nil then dontreporterrors = false end
@@ -39,7 +39,7 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
     -- vaildate ingredients
     for categorykey,category in pairs(ingredients) do
         for item in category do
-            local itemdata = NTP.PillData.items[item.Prefab.identifier.Value]
+            local itemdata = NTL.PillData.items[item.Prefab.identifier.Value]
             if itemdata == nil then
                 errors[#errors+1]=HF.ReplaceString(TextManager.Get("lua.chemerror.invaliditem").Value,"{id}",item.Name)
             elseif itemdata.types[1] ~= categorykey then
@@ -65,7 +65,7 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
     if chemmaster.OriginalOutpost ~= "" then
         descriptionOverride=chemmaster.OriginalOutpost
     end
-    local config = NTP.PillConfigFromItems(ingredientArray,HF.GetSkillLevel(user,"medical"),descriptionOverride,user)
+    local config = NTL.PillConfigFromItems(ingredientArray,HF.GetSkillLevel(user,"medical"),descriptionOverride,user)
     local productidentifier = "custompill"
     if config.sprite~=nil then productidentifier="custompill_"..config.sprite end
 
@@ -120,7 +120,7 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
     -- spawn output
     for i = 1, config.yield, 1 do
         HF.SpawnItemPlusFunction(productidentifier,function(params)
-            NTP.SetPillFromConfig(params.item,params.config)
+            NTL.SetPillFromConfig(params.item,params.config)
         end,{config=config},inv,13)
     end
 
@@ -140,10 +140,10 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
 end
 
 
-Hook.Add("NTP.ChemMaster.makeone", "NTP.ChemMaster.makeone", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.ChemMaster.makeone", "NTL.ChemMaster.makeone", function (effect, deltaTime, item, targets, worldPosition)
     
     -- check if in craftall queue, if so, abort
-    for craftall in NTP.ActiveChemCraftalls do
+    for craftall in NTL.ActiveChemCraftalls do
         if craftall==item then return end
     end
     
@@ -169,14 +169,14 @@ Hook.Add("NTP.ChemMaster.makeone", "NTP.ChemMaster.makeone", function (effect, d
     end
 
     -- wait 250ms so that the description can update
-    Timer.Wait(function() NTP.TryCraftPills(item,user) end,250)
+    Timer.Wait(function() NTL.TryCraftPills(item,user) end,250)
 
 end)
 
-Hook.Add("NTP.ChemMaster.makeall", "NTP.ChemMaster.makeall", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.ChemMaster.makeall", "NTL.ChemMaster.makeall", function (effect, deltaTime, item, targets, worldPosition)
     
     -- check if in craftall queue, if so, abort
-    for craftall in NTP.ActiveChemCraftalls do
+    for craftall in NTL.ActiveChemCraftalls do
         if craftall==item then return end
     end
     
@@ -206,14 +206,14 @@ Hook.Add("NTP.ChemMaster.makeall", "NTP.ChemMaster.makeall", function (effect, d
 
     local function recursiveUse(dontReportErrors)
         Timer.Wait(function()
-            if NTP.TryCraftPills(item,user,dontReportErrors) then
+            if NTL.TryCraftPills(item,user,dontReportErrors) then
                 recursiveUse(true)
             else
                 HF.GiveItem(user,"ntpsfx_chemfinish")
                 -- craftall finished, remove from craftalls
-                for index, value in ipairs(NTP.ActiveChemCraftalls) do
+                for index, value in ipairs(NTL.ActiveChemCraftalls) do
                     if value == item then
-                        NTP.ActiveChemCraftalls[index] = nil
+                        NTL.ActiveChemCraftalls[index] = nil
                     end
                 end
             end
@@ -221,12 +221,12 @@ Hook.Add("NTP.ChemMaster.makeall", "NTP.ChemMaster.makeall", function (effect, d
     end
 
     -- add to craftalls so fellas cant spam it
-    NTP.ActiveChemCraftalls[#NTP.ActiveChemCraftalls+1] = item
+    NTL.ActiveChemCraftalls[#NTL.ActiveChemCraftalls+1] = item
 
     recursiveUse(false)
 end)
 
-NTP.DetachChemMasters = function()
+NTL.DetachChemMasters = function()
     -- fetch items
     local chemmasters = {}
     for item in Item.ItemList do
@@ -248,7 +248,7 @@ NTP.DetachChemMasters = function()
     print("successfully reset "..tostring(chemMasterCount).." chemmasters")
 end
 
-Hook.Add("NTP.Chemalyzer.analyze", "NTP.Chemalyzer.analyze", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.Chemalyzer.analyze", "NTL.Chemalyzer.analyze", function (effect, deltaTime, item, targets, worldPosition)
     
     local inv = item.OwnInventory
     if inv == nil then return end
@@ -281,7 +281,7 @@ Hook.Add("NTP.Chemalyzer.analyze", "NTP.Chemalyzer.analyze", function (effect, d
     if user == nil then return end
 
     -- construct readout
-    local config = NTP.PillConfigFromPill(containedItem)
+    local config = NTL.PillConfigFromPill(containedItem)
     local resstring = TextManager.Get("lua.chemalyzer.header").Value
     for key, value in pairs(config.ingredients) do
         if value > 1 then
@@ -294,7 +294,7 @@ Hook.Add("NTP.Chemalyzer.analyze", "NTP.Chemalyzer.analyze", function (effect, d
     HF.SendTextBox(TextManager.Get("entityname.chemalyzer").Value,resstring,userclient)
 end)
 
-Hook.Add("NTP.Chemalyzer.rename", "NTP.Chemalyzer.rename", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.Chemalyzer.rename", "NTL.Chemalyzer.rename", function (effect, deltaTime, item, targets, worldPosition)
     
     local inv = item.OwnInventory
     if inv == nil then return end
@@ -309,15 +309,15 @@ Hook.Add("NTP.Chemalyzer.rename", "NTP.Chemalyzer.rename", function (effect, del
         if item.OriginalOutpost ~= "" then
             newdescription=item.OriginalOutpost
         end
-        local config = NTP.PillConfigFromPill(containedItem)
+        local config = NTL.PillConfigFromPill(containedItem)
         config.description = HF.ReplaceString(newdescription,",","")
-        NTP.SetPillFromConfig(containedItem,config)
-        NTP.RefreshPillDescription(containedItem)
+        NTL.SetPillFromConfig(containedItem,config)
+        NTL.RefreshPillDescription(containedItem)
         containedItem.Condition = 100
     end,250)
 end)
 
-Hook.Add("NTP.Chemalyzer.automatic", "NTP.Chemalyzer.automatic", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.Chemalyzer.automatic", "NTL.Chemalyzer.automatic", function (effect, deltaTime, item, targets, worldPosition)
     
     local inv = item.OwnInventory
     if inv == nil then return end
@@ -354,7 +354,7 @@ Hook.Add("NTP.Chemalyzer.automatic", "NTP.Chemalyzer.automatic", function (effec
     if user == nil then return end
 
     -- construct automatic custom label
-    local config = NTP.PillConfigFromPill(containedItem)
+    local config = NTL.PillConfigFromPill(containedItem)
     local resstring = ""
     for key, value in pairs(config.ingredients) do
         if next(config.ingredients, key) ~= nil then
@@ -373,8 +373,8 @@ Hook.Add("NTP.Chemalyzer.automatic", "NTP.Chemalyzer.automatic", function (effec
     end
     Timer.Wait(function()
         config.description = resstring
-        NTP.SetPillFromConfig(containedItem,config)
-        NTP.RefreshPillDescription(containedItem)
+        NTL.SetPillFromConfig(containedItem,config)
+        NTL.RefreshPillDescription(containedItem)
         containedItem.Condition = 100
     end,250)
 end)

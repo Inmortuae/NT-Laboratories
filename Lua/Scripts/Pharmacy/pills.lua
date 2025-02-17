@@ -1,6 +1,6 @@
 
-NTP.PillData = {}
-NTP.PillData.items = {
+NTL.PillData = {}
+NTL.PillData.items = {
     -- /// bases ///
     alienblood={types={"base"},skillrequirement=60,
         effects={
@@ -465,7 +465,7 @@ NTP.PillData.items = {
     whitepaint={types={"dye"},skillrequirement=0,
         effects={{type="color",r=255,g=255,b=255}}},
 }
-NTP.PillData.combos = {
+NTL.PillData.combos = {
     antihusk={
         requireditems={{id="antibiotics"},{id="calyxanide"}},
         forbiddenitems={},
@@ -498,15 +498,15 @@ NTP.PillData.combos = {
 
 -- extrude variants (wait twice so other mods can add variants of other things)
 Timer.Wait(function() Timer.Wait(function()
-    for key,val in pairs(NTP.PillData.items) do
+    for key,val in pairs(NTL.PillData.items) do
         if val.variantof ~= nil then
-            NTP.PillData.items[key] = NTP.PillData.items[val.variantof]
+            NTL.PillData.items[key] = NTL.PillData.items[val.variantof]
         end
     end
 end,1) end,1)
 
 
-function NTP.TagsToPillconfig(tags)
+function NTL.TagsToPillconfig(tags)
     local res = {fx={},yield=2,capacity=0,tags={},ingredients={},color=nil,description=nil}
     for i, tag in ipairs(tags) do
         if HF.StartsWith(tag,"yld/") then
@@ -533,10 +533,10 @@ function NTP.TagsToPillconfig(tags)
     end
     return res
 end
-function NTP.PillConfigFromPill(pillitem)
-    return NTP.TagsToPillconfig(HF.SplitString(pillitem.Tags,","))
+function NTL.PillConfigFromPill(pillitem)
+    return NTL.TagsToPillconfig(HF.SplitString(pillitem.Tags,","))
 end
-function NTP.PillConfigToTags(config)
+function NTL.PillConfigToTags(config)
     local res = {"init"}
 
     -- yield
@@ -573,7 +573,7 @@ function NTP.PillConfigToTags(config)
     
     return res
 end
-function NTP.PillConfigFromItems(components,skill,descriptionOverride,user)
+function NTL.PillConfigFromItems(components,skill,descriptionOverride,user)
     skill = skill or 30
 
     local res = {fx={},capacity=0,yield=2,tags={},
@@ -599,18 +599,18 @@ function NTP.PillConfigFromItems(components,skill,descriptionOverride,user)
     local success = {}
     for i, itemidentifier in ipairs(components) do
         local s = true
-        if NTP.PillData.items[itemidentifier] ~= nil then
+        if NTL.PillData.items[itemidentifier] ~= nil then
             s = math.random() < 
-                skill/(NTP.PillData.items[itemidentifier].skillrequirement or 30)
+                skill/(NTL.PillData.items[itemidentifier].skillrequirement or 30)
         end
         success[i] = s
     end
 
     -- fetch multipliers
     for i, itemidentifier in ipairs(components) do
-        if NTP.PillData.items[itemidentifier] ~= nil then
-            local effects = NTP.PillData.items[itemidentifier].effects or {}
-            if not success[i] then effects = NTP.PillData.items[itemidentifier].faileffects or effects end
+        if NTL.PillData.items[itemidentifier] ~= nil then
+            local effects = NTL.PillData.items[itemidentifier].effects or {}
+            if not success[i] then effects = NTL.PillData.items[itemidentifier].faileffects or effects end
         
             for effect in effects do
                 if effect.type == "potencymult" then potencymult=potencymult*effect.value
@@ -631,7 +631,7 @@ function NTP.PillConfigFromItems(components,skill,descriptionOverride,user)
 
     -- check for combos
     local activecombo = nil
-    for comboidentifier, combo in pairs(NTP.PillData.combos) do
+    for comboidentifier, combo in pairs(NTL.PillData.combos) do
         local viable = true
         -- required items
         if combo.requireditems~=nil then
@@ -684,11 +684,11 @@ function NTP.PillConfigFromItems(components,skill,descriptionOverride,user)
         end
     else
         for i, itemidentifier in ipairs(components) do
-            if NTP.PillData.items[itemidentifier] ~= nil then
-                local effects = NTP.PillData.items[itemidentifier].effects or {}
-                if not success[i] then effects = NTP.PillData.items[itemidentifier].faileffects or effects end
+            if NTL.PillData.items[itemidentifier] ~= nil then
+                local effects = NTL.PillData.items[itemidentifier].effects or {}
+                if not success[i] then effects = NTL.PillData.items[itemidentifier].faileffects or effects end
             
-                local itemType = NTP.PillData.items[itemidentifier].types[1] or ""
+                local itemType = NTL.PillData.items[itemidentifier].types[1] or ""
     
                 for effect in effects do
                     if effect.type == "addeffect" and (effect.chance == nil or HF.Chance(effect.chance)) then
@@ -745,8 +745,8 @@ end
 
 LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.Item"], "set_InventoryIconColor")
 
-function NTP.SetPillFromConfig(item,config)
-    local tags = NTP.PillConfigToTags(config)
+function NTL.SetPillFromConfig(item,config)
+    local tags = NTL.PillConfigToTags(config)
     local tagstring = ""
     for index, value in ipairs(tags) do
         tagstring = tagstring..value
@@ -788,7 +788,7 @@ local function GetRandomPillConfig()
     local fillersWeightSum = 0
     local dyesWeightSum = 0
 
-    for id, dat in pairs(NTP.PillData.items) do
+    for id, dat in pairs(NTL.PillData.items) do
         -- makes sure the item actually exists
         local prefab = ItemPrefab.GetItemPrefab(id)
         if prefab ~= nil then
@@ -821,7 +821,7 @@ local function GetRandomPillConfig()
         local weightpick = math.random()*basesWeightSum
         local currentWeight = 0
         for id in baseIdentifiers do
-            local dat = NTP.PillData.items[id]
+            local dat = NTL.PillData.items[id]
             currentWeight = currentWeight + (dat.weight or 1)
             if currentWeight > weightpick then
                 table.insert(components,id)
@@ -835,7 +835,7 @@ local function GetRandomPillConfig()
         local weightpick = math.random()*bindersWeightSum
         local currentWeight = 0
         for id in binderIdentifiers do
-            local dat = NTP.PillData.items[id]
+            local dat = NTL.PillData.items[id]
             currentWeight = currentWeight + (dat.weight or 1)
             if currentWeight > weightpick then
                 table.insert(components,id)
@@ -849,7 +849,7 @@ local function GetRandomPillConfig()
         local weightpick = math.random()*fillersWeightSum
         local currentWeight = 0
         for id in fillerIdentifiers do
-            local dat = NTP.PillData.items[id]
+            local dat = NTL.PillData.items[id]
             currentWeight = currentWeight + (dat.weight or 1)
             if currentWeight > weightpick then
                 table.insert(components,id)
@@ -863,7 +863,7 @@ local function GetRandomPillConfig()
         local weightpick = math.random()*activesWeightSum
         local currentWeight = 0
         for id in activeIdentifiers do
-            local dat = NTP.PillData.items[id]
+            local dat = NTL.PillData.items[id]
             currentWeight = currentWeight + (dat.weight or 1)
             if currentWeight > weightpick then
                 table.insert(components,id)
@@ -877,7 +877,7 @@ local function GetRandomPillConfig()
         local weightpick = math.random()*dyesWeightSum
         local currentWeight = 0
         for id in dyeIdentifiers do
-            local dat = NTP.PillData.items[id]
+            local dat = NTL.PillData.items[id]
             currentWeight = currentWeight + (dat.weight or 1)
             if currentWeight > weightpick then
                 table.insert(components,id)
@@ -888,17 +888,17 @@ local function GetRandomPillConfig()
     end
 
     
-    local config = NTP.PillConfigFromItems(components)
+    local config = NTL.PillConfigFromItems(components)
 
     return config
 end
 local function RandomizePill(item)
-    NTP.SetPillFromConfig(item,GetRandomPillConfig())
+    NTL.SetPillFromConfig(item,GetRandomPillConfig())
 end
-function NTP.RefreshPillDescription(item)
+function NTL.RefreshPillDescription(item)
     -- if not HF.ItemHasTag(item,"init") then return end
 
-    local config = NTP.TagsToPillconfig(HF.SplitString(item.Tags,","))
+    local config = NTL.TagsToPillconfig(HF.SplitString(item.Tags,","))
     if config.description == nil then return end
 
     local identifier = item.Prefab.Identifier.Value
@@ -911,11 +911,11 @@ function NTP.RefreshPillDescription(item)
     HF.RemoveItem(item)
     HF.SpawnItemPlusFunction(identifier,function(params)
         params.item.Description = config.description
-        NTP.SetPillFromConfig(params.item,config)
+        NTL.SetPillFromConfig(params.item,config)
     end,nil,targetinventory,targetslot,itemposition)
 end
 
-Hook.Add("NTP.OnPillSpawned", "NTP.OnPillSpawned", function (effect, deltaTime, item, targets, worldPosition)
+Hook.Add("NTL.OnPillSpawned", "NTL.OnPillSpawned", function (effect, deltaTime, item, targets, worldPosition)
     if item == nil then return end
 
     -- instant explosion
@@ -937,7 +937,7 @@ Hook.Add("NTP.OnPillSpawned", "NTP.OnPillSpawned", function (effect, deltaTime, 
     local targetinventory = item.ParentInventory
     HF.RemoveItem(item)
     HF.SpawnItemPlusFunction(identifier,function(params)
-        NTP.SetPillFromConfig(params.item,config)
+        NTL.SetPillFromConfig(params.item,config)
         if targetinventory~=nil then
             targetinventory.TryPutItem(params.item, nil, {InvSlotType.Any})
         end
@@ -945,14 +945,14 @@ Hook.Add("NTP.OnPillSpawned", "NTP.OnPillSpawned", function (effect, deltaTime, 
     
 end)
 
-Hook.Add("roundStart", "NTP.RoundStart", function()
+Hook.Add("roundStart", "NTL.RoundStart", function()
     Timer.Wait(function()
-        NTP.RefreshAllPills()
+        NTL.RefreshAllPills()
     end,10000) -- maybe 10 seconds is enough?
     
 end)
 
-function NTP.RefreshAllPills()
+function NTL.RefreshAllPills()
     -- descriptions dont get serialized, so i have to respawn
     -- every pill item every round to keep their descriptions (big oof)
 
@@ -965,11 +965,11 @@ function NTP.RefreshAllPills()
     end
     -- refresh pill items
     for pillItem in pillItems do
-        NTP.RefreshPillDescription(pillItem)
+        NTL.RefreshPillDescription(pillItem)
     end
 
     -- clear chem craft alls
-    NTP.ActiveChemCraftalls = {}
+    NTL.ActiveChemCraftalls = {}
 end
 Timer.Wait(function()
-NTP.RefreshAllPills() end,50)
+NTL.RefreshAllPills() end,50)
