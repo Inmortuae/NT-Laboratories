@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction
+      name=""
+      identifier="bonemarrowextracted"
+      description=""
+      type="surgeryincision"
+      limbspecific="true"
+      showiconthreshold="50"
+      showinhealthscannerthreshold="25"
+      maxstrength="100"
+      healableinmedicalclinic="false"
+      isbuff="false"
+      basehealcost="0">
+      
+      <!-- Strength dissipates over 10 minutes -->
+      <Effect minstrength="0" maxstrength="99"
+          maxvitalitydecrease="0"
+          strengthchange="-0.1667"> <!-- Dissipates over 10 minutes -->
+      </Effect>
+
+      <Effect minstrength="99" maxstrength="100"
+          maxvitalitydecrease="0"
+          strengthchange="0.0">
+      </Effect>
+
+      <!-- At full strength, start applying gradual bone damage -->
+      <PeriodicEffect mininterval="10" maxinterval="30">
+          <StatusEffect type="OnActive" target="Limb">
+              <Conditional bonemarrowextracted="gte 100" />
+              <Affliction identifier="bonedamage" amount="15" />
+          </StatusEffect>
+      </PeriodicEffect>
+      
+      <icon texture="%ModDir%/Xml/Afflictions/bonemarrowextracted.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" sourcerect="0,0,128,128" />
+  </Affliction>
+</Afflictions>

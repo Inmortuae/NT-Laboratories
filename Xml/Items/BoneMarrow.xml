@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" description="" identifier="bone_marrow" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Deconstruct time="20">
+      <Item identifier="calcium" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Xml/Items/BoneMarrow.png" sourcerect="51,6,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Xml/Items/BoneMarrow.png" sourcerect="11,-2,40,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="10.2" waterdragcoefficient="1" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+</Items>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Localization done by @Undead -->
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- /// Items /// !-->
+  <entityname.empty_syringe_bone>Empty Syringe</entityname.empty_syringe_bone>
+  <entitydescription.empty_syringe_bone>A empty syringe used for collecting Bone Marrow.</entitydescription.empty_syringe_bone>
+  <entityname.bone_marrow>Bone Marrow Syringe</entityname.bone_marrow>
+  <entitydescription.bone_marrow>A syringe full of Bone Marrow.</entitydescription.bone_marrow>
+  <entityname.stem_cells>Stem Cell Syringe</entityname.stem_cells>
+  <entitydescription.stem_cells>A syringe full of Stem Cells.</entitydescription.stem_cells>
+  <entityname.biological_material>Biological Material Syringe</entityname.biological_material>
+  <entitydescription.biological_material>A syringe full of Biological Material.</entitydescription.biological_material>
+  <!-- /// Machines /// !-->
+  <entityname.bioprinter>Bio Printer</entityname.bioprinter>
+  <entitydescription.bioprinter>A specialized fabricator designed for printing biological organs.</entitydescription.bioprinter>
+  <entityname.stemcellprocessor>Stem Cell Processor</entityname.stemcellprocessor>
+  <entitydescription.stemcellprocessor>A specialized fabricator designed for synthesising Stem Cells.</entitydescription.stemcellprocessor>
+  <!-- /// Afflictions /// !-->
+  <afflictionname.bonemarrowextracted>Bone Marrow Extracted</afflictionname.bonemarrowextracted>
+  <afflictiondescription.bonemarrowextracted>The patient's bone marrow has been extracted.</afflictiondescription.bonemarrowextracted>
+</infotexts>
