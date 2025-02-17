@@ -7,6 +7,9 @@
   <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
   <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
   <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
+
+  <!--New-->
+  <Item file="%ModDir%/Xml/Machines/Genetics/geneextractor.xml" />
   
   <!--Bio Printer-->
   <Other file="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" />
@@ -66,4 +69,29 @@
   <Other file="%ModDir%/Lua/Scripts/Server/NTEye/spoonServer.lua" />
   <Other file="%ModDir%/CSharp/RunConfig.xml" />
   <Other file="%ModDir%/CSharp/Client/CompleteDarknessMod.cs" />
+
+  <!--NT Blood Work-->
+  <Item file="%ModDir%/Xml/Items/BloodWork/items.xml" />
+  <Other file="%ModDir%/Images/BloodWork/Blood cell culture.png" />
+  <Other file="%ModDir%/Images/BloodWork/Blood plasma.png" />
+  <Other file="%ModDir%/Images/BloodWork/BloodPacksAtlas.png" />
+  <Afflictions file="%ModDir%/Xml/Afflictions/BloodWork/Afflictions.xml" />
+
+  <!--Undead's Medical-->
+  <Afflictions file="%ModDir%/Xml/Afflictions/UndeadsMed/afflictions.xml" />
+  <Item file="%ModDir%/Xml/Items/UndeadsMed/ReviveSyringe/revive_syringe.xml" />
+  <Item file="%ModDir%/Xml/Items/UndeadsMed/RefinedCalyxSyringe/refinedcalyx_syringe.xml" />
+  <Item file="%ModDir%/Xml/Items/UndeadsMed/SymbiosisSyringe/symbiosis_syringe.xml" />
+  <Item file="%ModDir%/Xml/Items/UndeadsMed/Materials/materials.xml" />
+  <Item file="%ModDir%/Xml/Items/UndeadsMed/Nanobots/nanobots.xml" />
+  <Other file="%ModDir%/Xml/Afflictions/UndeadsMed/revivedicon.png" />
+  <Other file="%ModDir%/Xml/Afflictions/UndeadsMed/nanobotsicon.png" />
+  <Talents file="%ModDir%/Xml/Talents/UndeadsMed/Doctor/TalentsDoctor.xml" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Affliction.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Regen.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/revivesyringe.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/refinedcalyxsyringe.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/nanobots.lua" />
 </contentpackage>

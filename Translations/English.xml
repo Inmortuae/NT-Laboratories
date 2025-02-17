@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Localization done by @Undead -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
+  <!--Genetics-->
+  <!-- /// Machines /// !-->
+  <entityname.geneextractor>Gene Extractor</entityname.geneextractor>
+  <entitydescription.geneextractor>A specialized fabricator designed for Extracting Genes.</entitydescription.geneextractor>
+
   <!--BIO PRINTER-->
   <!-- /// Items /// !-->
   <entityname.empty_syringe_bone>Empty Syringe</entityname.empty_syringe_bone>
-  <entitydescription.empty_syringe_bone>A empty syringe used for collecting Bone Marrow.</entitydescription.empty_syringe_bone>
+  <entitydescription.empty_syringe_bone>A empty syringe used for crafting.</entitydescription.empty_syringe_bone>
   <entityname.bone_marrow>Bone Marrow Syringe</entityname.bone_marrow>
   <entitydescription.bone_marrow>A syringe full of Bone Marrow.</entitydescription.bone_marrow>
   <entityname.stem_cells>Stem Cell Syringe</entityname.stem_cells>
@@ -235,5 +240,51 @@
   <loadingscreentip>Laser Surgery Tool consumes high amounts of power.</loadingscreentip>
   <loadingscreentip>Eye Regeneration Jar can regenerate a dead eye.</loadingscreentip>
   <loadingscreentip>Cataract causes blurry vision, use glasses.</loadingscreentip>
+
+  <!--Blood Work-->
+  <entityname.bloodcultureominus>Blood cell culture O-</entityname.bloodcultureominus>
+  <entitydescription.bloodcultureominus>Combine with any blood plasma to fabricate an O- blood pack</entitydescription.bloodcultureominus>
+  <entityname.bloodcultureoplus>Blood cell culture O+</entityname.bloodcultureoplus>
+  <entitydescription.bloodcultureoplus>Combine with any blood plasma to fabricate an O+ blood pack</entitydescription.bloodcultureoplus>
+  <entityname.bloodcultureabminus>Blood cell culture AB-</entityname.bloodcultureabminus>
+  <entitydescription.bloodcultureabminus>Combine with AB blood plasma to fabricate an AB- blood pack</entitydescription.bloodcultureabminus>
+  <entityname.bloodcultureabplus>Blood cell culture AB+</entityname.bloodcultureabplus>
+  <entitydescription.bloodcultureabplus>Combine with AB blood plasma to fabricate an AB+ blood pack</entitydescription.bloodcultureabplus>
+  <entityname.bloodcultureaminus>Blood cell culture A-</entityname.bloodcultureaminus>
+  <entitydescription.bloodcultureaminus>Combine with AB or A blood plasma to fabricate an A- blood pack</entitydescription.bloodcultureaminus>
+  <entityname.bloodcultureaplus>Blood cell culture A+</entityname.bloodcultureaplus>
+  <entitydescription.bloodcultureaplus>Combine with AB or A blood plasma to fabricate an A+ blood pack</entitydescription.bloodcultureaplus>
+  <entityname.bloodculturebminus>Blood cell culture B-</entityname.bloodculturebminus>
+  <entitydescription.bloodculturebminus>Combine with AB or B plasma to fabricate an B- blood pack</entitydescription.bloodculturebminus>
+  <entityname.bloodculturebplus>Blood cell culture B+</entityname.bloodculturebplus>
+  <entitydescription.bloodculturebplus>Combine with AB or B plasma to fabricate an B+ blood pack</entitydescription.bloodculturebplus>
+  <entityname.bloodplasmao>Blood plasma O</entityname.bloodplasmao>
+  <entitydescription.bloodplasmao>Compatible with O- and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmao>
+  <entityname.bloodplasmaab>Blood plasma AB</entityname.bloodplasmaab>
+  <entitydescription.bloodplasmaab>Compatible with all blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaab>
+  <entityname.bloodplasmaa>Blood plasma A</entityname.bloodplasmaa>
+  <entitydescription.bloodplasmaa>Compatible with A-, A+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaa>
+  <entityname.bloodplasmab>Blood plasma B</entityname.bloodplasmab>
+  <entitydescription.bloodplasmab>Compatible with B-, B+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmab>
+  <afflictionname.afbloodplasma>Blood plasma infusion</afflictionname.afbloodplasma>
+
+  <!--Undead's Medical-->
+  <!-- Afflictions ! -->
+  <afflictionname.revived>Revived</afflictionname.revived>
+  <afflictiondescription.revived>You have been brought back from death's door.</afflictiondescription.revived>
+  <afflictionname.nanobots>Nanobots</afflictionname.nanobots>
+  <afflictiondescription.nanobots>Nanobots are reviving you.</afflictiondescription.nanobots>
+  <!-- /// Items /// !-->
+  <entityname.revive_syringe>Revive Serum</entityname.revive_syringe>
+  <entitydescription.revive_syringe>A powerful mix to prevent eternal rest. Effective only on the dead.</entitydescription.revive_syringe>
+  <entityname.nanobots>Nanobots</entityname.nanobots>
+  <entitydescription.nanobots>A syringe full of tiny medical robots. They can heal everyone including previously revived people.</entitydescription.nanobots>
+  <entityname.refinedcalyx_syringe>Refined Calyx Extract</entityname.refinedcalyx_syringe>
+  <entitydescription.refinedcalyx_syringe>A more potent calyx extract.</entitydescription.refinedcalyx_syringe>
+  <entityname.symbiosis_syringe>Symbiosis Syringe</entityname.symbiosis_syringe>
+  <entitydescription.symbiosis_syringe>A syringe containing a refined symbiote, granting strength and awareness while binding host and parasite as one.</entitydescription.symbiosis_syringe>
+  <!-- /// Materials /// !-->
+  <entityname.xenocrystal>Xenocrystal</entityname.xenocrystal>
+  <entitydescription.xenocrystal>A alien crystal formed from various metals.</entitydescription.xenocrystal>
 
 </infotexts>

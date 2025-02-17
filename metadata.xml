@@ -10,6 +10,7 @@
     <conflict name="NT Pharmacy" steamID="2804655816" ID="Mannatu.NT_Pharmacy" />
     <conflict name="NT Pharmacy" steamID="3247838390" ID="guns.NT_Pharmacy" />
     <conflict name="NT Eyes" steamID="3294574390" ID="POSTACI.NT_Eyes" />
-    
+    <conflict name="NT Blood work" steamID="2976434626" ID="Dornam.NT_Blood_work" />
+    <conflict name="Undead's Medical" steamID="3275278739" ID="Undead.Undead's_Medical" />
   </dependencies>
 </metadata>

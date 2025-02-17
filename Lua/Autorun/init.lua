@@ -20,15 +20,29 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/pills.lua")
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/testing.lua")
 
+    -- Blood Work
+    dofile(NTL.Path.."/Lua/Scripts/BloodWork/plasma.lua")
+
+    -- Undead's Medical
+    dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua")
+	dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.Lua")
+	dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Affliction.lua")
+	dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/Regen.lua")
+    dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/revivesyringe.lua")
+    dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/nanobots.lua")
+	dofile(NTL.Path.."/Lua/Scripts/Server/UndeadsMed/refinedcalyxsyringe.lua")
+
     Timer.Wait(function()
         if NTC == nil then
             print("Error loading NT Laboratories: It appears Neurotrauma isn't loaded!")
             return
         end
 
+        --Pharmacy
         NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
         NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)
 
+        --Eyes
         if SERVER or (CLIENT and not Game.IsMultiplayer) then
 		
             dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/eyeupdateServer.lua")

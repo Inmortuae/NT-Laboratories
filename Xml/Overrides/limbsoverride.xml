@@ -145,5 +145,57 @@
         </StatusEffect>
       </Throwable>
     </Item>
+      <Item name="" identifier="llegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="20" />
+    <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="" identifier="rlegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="20" />
+    <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="" identifier="larmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="20" />
+    <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="" identifier="rarmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="20" />
+    <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
   </Items>
 </Override>
