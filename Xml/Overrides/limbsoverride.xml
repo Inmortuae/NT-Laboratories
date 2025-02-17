@@ -2,8 +2,8 @@
 <Override>
   <Items>
     <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
-      <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
       <Body width="46" height="90" density="20" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="65">
           <RequiredSkill identifier="medical" level="60" />
@@ -16,7 +16,7 @@
       <Price baseprice="50" soldbydefault="false"></Price>
       <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect target="Character" type="OnSpawn">
-          <Sound file="%ModDir%/Sounds/severed.ogg" range="500" />
+          <Sound file="%ModDir%/Sounds/BioPrinter/severed.ogg" range="500" />
         </StatusEffect>
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
@@ -38,8 +38,8 @@
       </Throwable>
     </Item>
     <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
-      <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
       <Body width="46" height="90" density="20" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="65">
           <RequiredSkill identifier="medical" level="60" />
@@ -52,7 +52,7 @@
       <Price baseprice="50" soldbydefault="false"></Price>
       <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect target="Character" type="OnSpawn">
-          <Sound file="%ModDir%/Sounds/severed.ogg" range="500" />
+          <Sound file="%ModDir%/Sounds/BioPrinter/severed.ogg" range="500" />
         </StatusEffect>
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
@@ -74,9 +74,9 @@
       </Throwable>
     </Item>
     <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
-      <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
       <Body width="60" height="90" density="20" />
-      <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="65">
           <RequiredSkill identifier="medical" level="60" />
           <RequiredItem identifier="biological_material" amount="5" />
@@ -88,7 +88,7 @@
       <Price baseprice="50" soldbydefault="false"></Price>
       <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect target="Character" type="OnSpawn">
-          <Sound file="%ModDir%/Sounds/severed.ogg" range="500" />
+          <Sound file="%ModDir%/Sounds/BioPrinter/severed.ogg" range="500" />
         </StatusEffect>
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
@@ -110,8 +110,8 @@
       </Throwable>
     </Item>
     <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
-      <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BioPrinter/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
       <Body width="60" height="90" density="20" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="65">
           <RequiredSkill identifier="medical" level="60" />
@@ -124,7 +124,7 @@
       <Price baseprice="50" soldbydefault="false"></Price>
       <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect target="Character" type="OnSpawn">
-          <Sound file="%ModDir%/Sounds/severed.ogg" range="500" />
+          <Sound file="%ModDir%/Sounds/BioPrinter/severed.ogg" range="500" />
         </StatusEffect>
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">

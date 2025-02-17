@@ -16,8 +16,8 @@
     <Deconstruct time="20">
       <Item identifier="silicon" />
     </Deconstruct>
-    <InventoryIcon texture="%ModDir%/Xml/Items/EmptySyringe.png" sourcerect="51,6,64,64" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Xml/Items/EmptySyringe.png" sourcerect="11,-2,40,70" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Xml/Items/BioPrinter/EmptySyringe.png" sourcerect="51,6,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Xml/Items/BioPrinter/EmptySyringe.png" sourcerect="11,-2,40,70" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="10.2" waterdragcoefficient="1" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
       <RequiredSkill identifier="medical" level="0" />

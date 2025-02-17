@@ -32,6 +32,6 @@
           </StatusEffect>
       </PeriodicEffect>
       
-      <icon texture="%ModDir%/Xml/Afflictions/bonemarrowextracted.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" sourcerect="0,0,128,128" />
+      <icon texture="%ModDir%/Xml/Afflictions/BioPrinter/bonemarrowextracted.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" sourcerect="0,0,128,128" />
   </Affliction>
 </Afflictions>

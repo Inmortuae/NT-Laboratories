@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <meta>
+    <author>Undead</author>
+    <id>Undead.NT_Laboratories</id>
+  </meta>
+  <dependencies>
+    <requirement name="Lua For Barotrauma" steamID="2559634234" ID="EvilFactory.LuaForBarotrauma" />
+    <requirement name="Neurotrauma" steamID="3190189044" ID="guns.Neurotrauma" />
+    <conflict name="NT Pharmacy" steamID="2804655816" ID="Mannatu.NT_Pharmacy" />
+    <conflict name="NT Pharmacy" steamID="3247838390" ID="guns.NT_Pharmacy" />
+    
+  </dependencies>
+</metadata>

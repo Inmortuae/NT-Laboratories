@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Item name="" identifier="bioprinter" tags="bioprinter,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+<Item name="" identifier="stemcellprocessor" tags="stemcellprocessor,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.5" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
   <Upgrade gameversion="0.10.4.0">
     <Repairable Msg="ItemMsgRepairWrench" />
   </Upgrade>
@@ -12,16 +12,16 @@
     <RequiredItem identifier="fpgacircuit" amount="6" />
   </Fabricate>
   <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-  <Sprite texture="%ModDir%/Xml/Machines/bioprinter.png" depth="0.8" sourcerect="1,0,295,105" origin="0.5,0.5" />
-  <BrokenSprite texture="%ModDir%/Xml/Machines/bioprinter.png" sourcerect="337,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-  <BrokenSprite texture="%ModDir%/Xml/Machines/bioprinter.png" sourcerect="673,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+  <Sprite texture="%ModDir%/Xml/Machines/BioPrinter/stemcellprocessor.png" depth="0.8" sourcerect="0,0,117,108" origin="0.5,0.5" />
+  <BrokenSprite texture="%ModDir%/Xml/Machines/BioPrinter/stemcellprocessor.png" sourcerect="168,1,117,108" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+  <BrokenSprite texture="%ModDir%/Xml/Machines/BioPrinter/stemcellprocessor.png" sourcerect="335,0,117,108" origin="0.5,0.5" depth="0.8" maxcondition="0" />
   <Body width="94" height="221" density="20" />
   <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
     <RequiredItem identifier="heavywrench" type="Equipped" />
     <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.5" setvalue="true" />
   </Holdable>
   <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-    <sprite texture="%ModDir%/Xml/Machines/machinelights.png" depth="0.025" sourcerect="79,18,316,119" alpha="1.0" origin="0.5,0.5" />
+    <sprite texture="%ModDir%/Xml/Machines/BioPrinter/machinelights.png" depth="0.025" sourcerect="177,162,117,109" alpha="1.0" origin="0.5,0.5" />
   </LightComponent>
   <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
     <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
