@@ -28,6 +28,62 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
         NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
         NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)
+
+        if SERVER or (CLIENT and not Game.IsMultiplayer) then
+		
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/eyeupdateServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/eyesurgeryServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/eyeondamageServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/spoonServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/itemspawnServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/eyeNetworkServer.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Server/NTEye/LosModeServer.lua")
+    
+        end
+            
+            --client side scripts
+        if CLIENT then
+            dofile(NTL.Path.."/Lua/Scripts/Client/NTEye/eyeupdateClient.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Client/NTEye/clientControls.lua")
+            dofile(NTL.Path.."/Lua/Scripts/Client/NTEye/eyeHealthScanner.lua") -- testing purpouses
+            
+        end
+    
+                
+            --comp patches (decided to seperate these since some need to be both client and server)
+                --Robotrauma Compatibility Patch
+            for package in ContentPackageManager.EnabledPackages.All do
+                    if 
+                           tostring(package.UgcId) == "2948488019" --Robotrauma
+                        or tostring(package.UgcId) == "2952546076" --Robo-Trauma-
+                        or tostring(package.UgcId) == "3227815460" --Robotrauma (Afflictions Override)
+                    then
+                        if SERVER or (CLIENT and not Game.IsMultiplayer) then
+                            dofile(NTL.Path.."/Lua/Scripts/Compatibility/NTEye/robotraumaCompServer.lua")
+                            print("NT Eyes - Robotrauma Integrated Compatibility Patch")
+                        end
+                        
+                        if CLIENT then
+                            dofile(NTL.Path.."/Lua/Scripts/Compatibility/NTEye/robotraumaCompClient.lua")
+                        end
+                        
+                    break
+                end
+            end
+    
+            
+                    --Immersive Diving Gear Compatibility Patch
+            for package in ContentPackageManager.EnabledPackages.All do
+                    if 
+                        tostring(package.UgcId) == "3074045632" 
+                    then
+                        if SERVER or (CLIENT and not Game.IsMultiplayer) then
+                            dofile(NTL.Path.."/Lua/Scripts/Compatibility/NTEye/immersivedivingComp.lua")
+                            print("NT Eyes - Immersive Diving Gear Integrated Compatibility Patch")
+                        end
+                    break
+                end
+            end
     end,1)
 
 end

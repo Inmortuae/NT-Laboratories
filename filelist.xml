@@ -31,4 +31,39 @@
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
+
+  <!--NT Eyes-->
+  <Afflictions file="%ModDir%/Xml/Afflictions/NTEye/afflictions.xml" />
+  <Item file="%ModDir%/Xml/Items/NTEye/items.xml" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/blackoverlay.png" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/plasticoverlay.png" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/leftblind.png" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/rightblind.png" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/blind.png" />
+  <Other file="%ModDir%/Images/NTEye/Overlays/lowpressure.png" />
+  <Other file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/eye_slowlaser.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/eye_healthscanner.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/eye_error.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/eye_beep.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_female_1.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_1.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_2.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_3.ogg" />
+  <Other file="%ModDir%/Sounds/NTEye/Voice/screams_female_2.ogg" />
+  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/clientControls.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/eyeHealthScanner.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/eyeupdateClient.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/immersivedivingComp.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/robotraumaCompClient.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/robotraumaCompServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeNetworkServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeondamageServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyesurgeryServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeupdateServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/itemspawnServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/LosModeServer.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/spoonServer.lua" />
+  <Other file="%ModDir%/CSharp/RunConfig.xml" />
+  <Other file="%ModDir%/CSharp/Client/CompleteDarknessMod.cs" />
 </contentpackage>
