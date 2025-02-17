@@ -26,6 +26,7 @@
   <Other file="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions/Pharmacy/Afflictions.xml" />
   <Item file="%ModDir%/Xml/Items/Pharmacy/items.xml" />
+  <Item file="%ModDir%/Xml/Machines/Pharmacy/chemmaster.xml" />
   <Sounds file="%ModDir%/Xml/Sounds/Pharmacy/sounds.xml" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
