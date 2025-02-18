@@ -1,0 +1,2 @@
+cl_lua for a in Character.Controlled.CharacterHealth.GetAllAfflictions() do print(tostring(a.Identifier) .. ': ' .. tostring(a.Strength)) end print('vitality: ' .. tostring(Character.Controlled.Vitality)) print('reduced vitality by: ' .. tostring(Character.Controlled.MaxVitality - Character.Controlled.Vitality) .. ' points')
+

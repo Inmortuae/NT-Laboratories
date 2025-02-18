@@ -2,6 +2,10 @@ NTL.ConfigData = {
     NTL_header1 = {name=NTL.Name,type="category"},
 
     NTL_Nil= {name="Nil",default=20,range={0,100},type="float", description="Nil" },
+    NTCyb_waterDamage = {name="Cyberlimb Water Damage",default=1,range={0,5},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
+    NTCyb_cyberpsychosisChance = {name="Cyberpsychosis Chance",default=1,range={0,1},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
+    NTCyb_cyberarmSpeed = {name="Cyberarm Speed Increase",default=1,range={0,2},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
+    NTCyb_cyberlegSpeed = {name="Cyberleg Speed Increase",default=1,range={0,2},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
     RS_VanillaDMG = {
         name = "Vanilla Damage Patch",
         default = true,

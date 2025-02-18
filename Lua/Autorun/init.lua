@@ -38,6 +38,16 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
             return
         end
 
+        --Cyber
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/empexplosionpatch.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/humanupdate.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/items.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/items.shared.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/ondamaged.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/helperfunctions.lua")
+    
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/testing.lua")
+
         --Pharmacy
         NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
         NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)
@@ -100,6 +110,17 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
             end
     end,1)
 
+else
+    Timer.Wait(function()
+        if NT ~= nil and NT.VersionNum < 01090000 then
+            local msg = "Error loading NT Cybernetics: old Neurotrauma detected, use the modern fork published by 'guns'"
+            print(msg)
+            Game.ChatBox.AddMessage(ChatMessage.Create("", msg, ChatMessageType.Server, nil))
+            return
+        end
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/items.client.lua")
+        dofile(NTL.Path.."/Lua/Scripts/Cyber/items.shared.lua")
+    end, 1)
 end
 
 Timer.Wait(function()

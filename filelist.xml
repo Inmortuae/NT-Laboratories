@@ -94,4 +94,42 @@
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/revivesyringe.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/refinedcalyxsyringe.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/nanobots.lua" />
+
+  <!--Cyber-->
+  <Afflictions file="%ModDir%/Xml/Afflictions/Cyber/Afflictions.xml" />
+  <Item file="%ModDir%/Xml/Items/Cyber/items.xml" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/humanupdate.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/items.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/items.client.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/items.shared.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/ondamaged.lua" />
+  <Other file="%ModDir%/Images/Cyber/AfflictionIcons.png" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/testing.lua" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberbite1.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberbite2.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberbite3.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt1.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt10.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt11.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt2.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt3.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt4.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt5.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt6.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt7.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt8.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberblunt9.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberdeath1.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberdeath2.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/cyberdeath3.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/screwdriver1.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/screwdriver2.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/welding1.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/welding2.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/welding3.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/welding4.ogg" />
+  <Other file="%ModDir%/Sounds/Cyber/welding5.ogg" />
+  <Other file="%ModDir%/Lua/Scripts/Cyber/helperfunctions.lua" />
+  <Other file="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" />
+  <Other file="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" />
 </contentpackage>
