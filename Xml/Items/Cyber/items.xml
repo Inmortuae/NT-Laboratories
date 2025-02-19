@@ -23,8 +23,8 @@
       <Item identifier="fpgacircuit" amount="3" />
       <Item identifier="fulgurium" />
     </Deconstruct>
-    <Sprite texture="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
-    <InventoryIcon texture="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="693,165,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="380,0,128,128" origin="0.5,0.5" />
     <Body width="114" height="23" density="50" />
     <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
       <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
@@ -60,8 +60,8 @@
       <Item identifier="plastic" amount="2" />
       <Item identifier="rubber" amount="2" />
     </Deconstruct>
-    <Sprite texture="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
-    <InventoryIcon texture="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="693,102,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="380,128,128,128" origin="0.5,0.5" />
     <Body width="114" height="23" density="50" />
     <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
       <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
@@ -95,8 +95,8 @@
       <Item identifier="fpgacircuit" amount="3" />
       <Item identifier="fulgurium" />
     </Deconstruct>
-    <Sprite texture="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
-    <InventoryIcon texture="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="734,232,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="508,0,128,128" origin="0.5,0.5" />
     <Body width="30" height="115" density="50" />
     <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
       <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
@@ -132,8 +132,8 @@
       <Item identifier="plastic" amount="2" />
       <Item identifier="rubber" amount="2" />
     </Deconstruct>
-    <Sprite texture="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
-    <InventoryIcon texture="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="823,232,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="508,128,128,128" origin="0.5,0.5" />
     <Body width="30" height="115" density="50" />
     <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
       <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
@@ -506,7 +506,7 @@
     <PreferredContainer primary="medcab" spawnprobability="0.2" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.1" />
     <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.03" />
-    <Sprite texture="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" sourcerect="256,0,84,128" depth="0.6" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,0,84,128" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10" />
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="3">
       <RequiredSkill identifier="medical" level="40" />

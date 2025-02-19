@@ -16,100 +16,91 @@ function CollectAfflictionsOnDeath(character)
     }
 
     -- NT afflictions
-    if NTConfig.Get("NTLRS", true) then
-        local ntGAfflictions = {
-            "tra_amputation",
-            "tla_amputation",
-            "trl_amputation",
-            "tll_amputation",
-            "sra_amputation",
-            "sla_amputation",
-            "srl_amputation",
-            "sll_amputation"
-        }
-        for _, affliction in ipairs(ntGAfflictions) do
-            table.insert(globalAfflictions, affliction)
-        end
+    local ntGAfflictions = {
+        "tra_amputation",
+        "tla_amputation",
+        "trl_amputation",
+        "tll_amputation",
+        "sra_amputation",
+        "sla_amputation",
+        "srl_amputation",
+        "sll_amputation"
+    }
+    for _, affliction in ipairs(ntGAfflictions) do
+        table.insert(globalAfflictions, affliction)
+    end
 
-        if NTConfig.Get("NTERS", true) then
-            local nteLAfflictions = {
-                noeye = {LimbType.Head},
-                eyesdead = {LimbType.Head},
-                eyeone = {LimbType.Head},
-                lefteyegone = {LimbType.Head},
-                righteyegone = {LimbType.Head},
-                eyelowbloodpressure = {LimbType.Head},
-                eyedamage = {LimbType.Head},
-                eyeshock = {LimbType.Head},
-                eyedrop = {LimbType.Head},
-                deusizinedrop = {LimbType.Head},
-                eyesickness = {LimbType.Head},
-                eyecataract = {LimbType.Head},
-                eyemuscle = {LimbType.Head},
-                eyegell = {LimbType.Head},
-                eyenerve = {LimbType.Head},
-                eyelid = {LimbType.Head},
-                eyepopped = {LimbType.Head},
-                corneaincision = {LimbType.Head},
-                emulsification = {LimbType.Head},
-                lasereyesurgery = {LimbType.Head},
-                hasglasses = {LimbType.Head}
-            }
-            for affliction, limbs in pairs(nteLAfflictions) do
-                limbMapping[affliction] = limbs  -- Directly insert key-value pairs
-            end
-        end
+    local nteLAfflictions = {
+        noeye = {LimbType.Head},
+        eyesdead = {LimbType.Head},
+        eyeone = {LimbType.Head},
+        lefteyegone = {LimbType.Head},
+        righteyegone = {LimbType.Head},
+        eyelowbloodpressure = {LimbType.Head},
+        eyedamage = {LimbType.Head},
+        eyeshock = {LimbType.Head},
+        eyedrop = {LimbType.Head},
+        deusizinedrop = {LimbType.Head},
+        eyesickness = {LimbType.Head},
+        eyecataract = {LimbType.Head},
+        eyemuscle = {LimbType.Head},
+        eyegell = {LimbType.Head},
+        eyenerve = {LimbType.Head},
+        eyelid = {LimbType.Head},
+        eyepopped = {LimbType.Head},
+        corneaincision = {LimbType.Head},
+        emulsification = {LimbType.Head},
+        lasereyesurgery = {LimbType.Head},
+        hasglasses = {LimbType.Head}
+    }
+    for affliction, limbs in pairs(nteLAfflictions) do
+        limbMapping[affliction] = limbs  -- Directly insert key-value pairs
     end
 
     -- NTC afflictions
-    if NTConfig.Get("NTCRS", true) then
-        local ntcGAfflictions = {
-            "ntc_cyberpsychosis",
-            "ntc_cyberpsychosis_resistance",
-            "ntc_cyberlung_pressure_recovery"
-        }
-        local ntcLAfflictions = {
-            ntc_cyberarm = {LimbType.LeftArm, LimbType.RightArm},
-            ntc_cyberleg = {LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_cyberlimb = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_cyberliver = {LimbType.Torso},
-            ntc_cyberkidney = {LimbType.Torso},
-            ntc_cyberlung = {LimbType.Torso},
-            ntc_cyberheart = {LimbType.Torso},
-            ntc_cyberbrain = {LimbType.Head},
-            ntc_loosescrews = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_damagedelectronics = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_bentmetal = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_materialloss = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_armspeed = {LimbType.LeftArm, LimbType.RightArm},
-            ntc_waterproof = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
-            ntc_legspeed = {LimbType.LeftLeg, LimbType.RightLeg}
-        }
-        for _, affliction in ipairs(ntcGAfflictions) do
-            table.insert(globalAfflictions, affliction)
-        end
-        for affliction, limbs in pairs(ntcLAfflictions) do
-            limbMapping[affliction] = limbs  -- Directly insert key-value pairs
-        end
+    local ntcGAfflictions = {
+        "ntc_cyberpsychosis",
+        "ntc_cyberpsychosis_resistance",
+        "ntc_cyberlung_pressure_recovery"
+    }
+    local ntcLAfflictions = {
+        ntc_cyberarm = {LimbType.LeftArm, LimbType.RightArm},
+        ntc_cyberleg = {LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_cyberlimb = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_cyberliver = {LimbType.Torso},
+        ntc_cyberkidney = {LimbType.Torso},
+        ntc_cyberlung = {LimbType.Torso},
+        ntc_cyberheart = {LimbType.Torso},
+        ntc_cyberbrain = {LimbType.Head},
+        ntc_loosescrews = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_damagedelectronics = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_bentmetal = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_materialloss = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_armspeed = {LimbType.LeftArm, LimbType.RightArm},
+        ntc_waterproof = {LimbType.LeftArm, LimbType.RightArm, LimbType.LeftLeg, LimbType.RightLeg},
+        ntc_legspeed = {LimbType.LeftLeg, LimbType.RightLeg}
+    }
+    for _, affliction in ipairs(ntcGAfflictions) do
+        table.insert(globalAfflictions, affliction)
+    end
+    for affliction, limbs in pairs(ntcLAfflictions) do
+        limbMapping[affliction] = limbs  -- Directly insert key-value pairs
     end
 
-    -- NTE afflictions
-    if NTConfig.Get("NTERS", true) then
-        local nteLAfflictions = {
-            eyebionic = {LimbType.Head},
-            medicallens = {LimbType.Head},
-            electricallens = {LimbType.Head},
-            zoomlens = {LimbType.Head},
-            eyenight = {LimbType.Head},
-            eyeinfrared = {LimbType.Head},
-            eyeplastic = {LimbType.Head},
-            eyemonster = {LimbType.Head},
-            eyehusk = {LimbType.Head},
-            eyeterror = {LimbType.Head}
-        }
-        for affliction, limbs in pairs(nteLAfflictions) do
-            limbMapping[affliction] = limbs  -- Directly insert key-value pairs
-        end
+    local nteLAfflictions = {
+        eyebionic = {LimbType.Head},
+        medicallens = {LimbType.Head},
+        electricallens = {LimbType.Head},
+        zoomlens = {LimbType.Head},
+        eyenight = {LimbType.Head},
+        eyeinfrared = {LimbType.Head},
+        eyeplastic = {LimbType.Head},
+        eyemonster = {LimbType.Head},
+        eyehusk = {LimbType.Head},
+        eyeterror = {LimbType.Head}
+    }
+    for affliction, limbs in pairs(nteLAfflictions) do
+        limbMapping[affliction] = limbs  -- Directly insert key-value pairs
     end
 
     -- Collect limb-specific afflictions
@@ -181,7 +172,7 @@ function ApplySavedAfflictions(targetCharacter)
                 ) then
                     -- Skip applying NT amputation afflictions
                     print("Skipping " .. identifier .. " because the character has nanobots.")
-                elseif hasNanobots and NTEIn and (
+                elseif hasNanobots and (
                     identifier == "noeye" or
                     identifier == "eyesdead" or
                     identifier == "eyeone" or
@@ -226,45 +217,39 @@ end
 -- Function to apply Revive afflictions to a revived character
 function ApplyRevivedAfflictions(user, character, target)
     local hasNanobots = HF.HasAffliction(character, "nanobots", 1)
-    local VanillaDMG = NTConfig.Get("RS_VanillaDMG", true)
-    local NTRS = NTConfig.Get("NTRS", true)
 
     -- Apply (revived) afflictions
     if hasNanobots then
         HF.SetAffliction(target, "nanobots", 100)
     else
         -- Check if config for RS_VanillaDMG is true if so then it applies Vanilla Afflictions
-        if (VanillaDMG and not NTRS) or (NTRS and not VanillaDMG) then
-            if user.GetSkillLevel("medical") >= 60 then
-                HF.SetAffliction(target, "bloodloss", math.random(40, 60))
-                HF.SetAffliction(target, "organdamage", math.random(40, 60))
-                HF.SetAffliction(target, "reaperstax", math.random(15, 25))
-                HF.SetAffliction(target, "stun", math.random(15, 25))
-            else
-                HF.SetAffliction(target, "bloodloss", math.random(60, 80))
-                HF.SetAffliction(target, "organdamage", math.random(80, 100))
-                HF.SetAffliction(target, "reaperstax", math.random(35, 50))
-                HF.SetAffliction(target, "stun", math.random(30, 50))
-            end
+        if user.GetSkillLevel("medical") >= 60 then
+            HF.SetAffliction(target, "bloodloss", math.random(40, 60))
+            HF.SetAffliction(target, "organdamage", math.random(40, 60))
+            HF.SetAffliction(target, "reaperstax", math.random(15, 25))
+            HF.SetAffliction(target, "stun", math.random(15, 25))
+        else
+            HF.SetAffliction(target, "bloodloss", math.random(60, 80))
+            HF.SetAffliction(target, "organdamage", math.random(80, 100))
+            HF.SetAffliction(target, "reaperstax", math.random(35, 50))
+            HF.SetAffliction(target, "stun", math.random(30, 50))
         end
 
         -- Check if NT is installed and that config for NT Patch is true then applies corresponding damage group
-        if NTRS then
-            if user.GetSkillLevel("medical") >= 60 then
-                HF.SetAffliction(target, "sym_confusion", 100)
-                HF.SetAffliction(target, "sym_unconsciousness", 100)
-                HF.SetAffliction(target, "kidneydamage", math.random(20, 30))
-                HF.SetAffliction(target, "heartdamage", math.random(20, 30))
-                HF.SetAffliction(target, "lungdamage", math.random(20, 30))
-                HF.SetAffliction(target, "liverdamage", math.random(20, 30))
-            else
-                HF.SetAffliction(target, "sym_confusion", 100)
-                HF.SetAffliction(target, "sym_unconsciousness", 100)
-                HF.SetAffliction(target, "kidneydamage", math.random(35, 60))
-                HF.SetAffliction(target, "heartdamage", math.random(35, 60))
-                HF.SetAffliction(target, "lungdamage", math.random(35, 60))
-                HF.SetAffliction(target, "liverdamage", math.random(35, 60))
-            end
+        if user.GetSkillLevel("medical") >= 60 then
+            HF.SetAffliction(target, "sym_confusion", 100)
+            HF.SetAffliction(target, "sym_unconsciousness", 100)
+            HF.SetAffliction(target, "kidneydamage", math.random(20, 30))
+            HF.SetAffliction(target, "heartdamage", math.random(20, 30))
+            HF.SetAffliction(target, "lungdamage", math.random(20, 30))
+            HF.SetAffliction(target, "liverdamage", math.random(20, 30))
+        else
+            HF.SetAffliction(target, "sym_confusion", 100)
+            HF.SetAffliction(target, "sym_unconsciousness", 100)
+            HF.SetAffliction(target, "kidneydamage", math.random(35, 60))
+            HF.SetAffliction(target, "heartdamage", math.random(35, 60))
+            HF.SetAffliction(target, "lungdamage", math.random(35, 60))
+            HF.SetAffliction(target, "liverdamage", math.random(35, 60))
         end
     end
 

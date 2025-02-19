@@ -11,8 +11,8 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="50" fabricationlimitmin="5" fabricationlimitmax="10" />
       <Deconstruct time="5" />
-      <InventoryIcon texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/Pharmacy/droppedpills.png" sourcerect="103,0,113,31" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="139,18,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="102,188,113,31" depth="0.6" origin="0.5,0.5" />
       <Body width="50" height="30" density="8" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -26,12 +26,12 @@
       </Holdable>
     </Item>
     <Item name="" identifier="custompill_horsepill" variantof="custompill" scale="0.09" impactsoundtag="impact_horsepill" maxstacksize="8">
-      <InventoryIcon texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/Pharmacy/droppedpills.png" sourcerect="0,0,103,42" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="210,18,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,188,103,42" depth="0.6" origin="0.5,0.5" />
     </Item>
     <Item name="" identifier="custompill_tablets" variantof="custompill" scale="0.09" impactsoundtag="impact_tabletpill" maxstacksize="32">
-      <InventoryIcon texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/Pharmacy/droppedpills.png" sourcerect="216,0,122,44" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="283,20,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="215,188,122,44" depth="0.6" origin="0.5,0.5" />
     </Item>
     <!-- Chemalyzer -->
     <Item name="" identifier="chemalyzer" description="" category="Equipment" Tags="smallitem" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light">
@@ -92,7 +92,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="87,87,84,67" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="87,87,84,67" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -123,7 +123,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="173,87,84,67" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="173,87,84,67" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -154,7 +154,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="259,87,84,67" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="259,87,84,67" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -185,7 +185,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="345,87,84,67" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="345,87,84,67" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -216,7 +216,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="431,87,84,67" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="431,87,84,67" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -245,7 +245,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="1,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="1,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -263,7 +263,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="149,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="149,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -281,7 +281,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="297,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="297,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -299,7 +299,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="445,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="445,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -317,7 +317,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="593,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="593,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -335,7 +335,7 @@
       <Price baseprice="25" soldbydefault="false">
         <Price storeidentifier="merchantengineering" minavailable="4" sold="true" />
       </Price>
-      <Sprite texture="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" sourcerect="741,1,146,83" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="741,1,146,83" origin="0.5,0.5" depth="0.6" />
       <Body width="150" height="80" density="50" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
@@ -394,7 +394,7 @@
       <Price baseprice="25">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3" />
       </Price>
-      <Sprite texture="%ModDir%/images/Pharmacy/pillbox.png" sourcerect="0,0,59,47" origin="0.5,0.5" depth="0.6" />
+      <Sprite texture="%ModDir%/images/InGameItemIconAtlas.png" sourcerect="922,6,59,47" origin="0.5,0.5" depth="0.6" />
       <Body width="90" height="60" density="20" />
       <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
         <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
@@ -423,18 +423,18 @@
         <RequiredSkill identifier="medical" level="10" />
         <RequiredItem identifier="plastic" />
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Images/Pharmacy/bottles.png" sourcerect="26,59,59,59" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/Pharmacy/bottles.png" sourcerect="0,59,24,42" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="419,173,59,59" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="949,13,24,42" depth="0.55" origin="0.5,0.5" />
       <Body width="20" height="34" density="10" />
       <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="6" maxstacksize="16">
         <Containable items="custompill" />
-        <SlotIcon slotindex="0" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="2" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="3" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="4" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="5" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="0" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="2" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="3" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="4" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="5" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
         <StatusEffect type="OnImpact" target="This" AllowWhenBroken="True">
           <RequiredItem Items="custompill" type="Contained" />
           <Sound file="%ModDir%/Sounds/Pharmacy/pillbottledrop1.ogg" range="200" volume="5" selectionmode="random" />
@@ -458,22 +458,22 @@
         <RequiredSkill identifier="medical" level="50" />
         <RequiredItem identifier="plastic" />
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Images/Pharmacy/bottles.png" sourcerect="0,0,59,59" origin="0.5,0.52" />
-      <Sprite texture="%ModDir%/Images/Pharmacy/bottles.png" sourcerect="59,0,25,42" depth="0.55" origin="0.5,0.52" />
-      <BrokenSprite texture="%ModDir%/Images/Pharmacy/bottles.png" sourcerect="59,6,25,36" depth="0.55" origin="0.5,0.44" />
+      <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="350,174,59,59" origin="0.5,0.52" />
+      <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="985,12,25,42" depth="0.55" origin="0.5,0.52" />
+      <BrokenSprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="985,18,25,36" depth="0.55" origin="0.5,0.44" />
       <Body width="20" height="30" density="10" />
       <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="9" slotsperrow="3" maxstacksize="16" hideitems="true" containedstateindicatorslot="0" AccessOnlyWhenBroken="true" ShowContainedStateIndicator="False" AllowSwappingContainedItems="false">
         <Containable items="custompill" />
-        <SlotIcon slotindex="0" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="2" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="3" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="4" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="5" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="6" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="7" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="8" texture="%ModDir%/Images/Pharmacy/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="0" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="2" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="3" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="4" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="5" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="6" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="7" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="8" texture="%ModDir%/Images/pillui.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
         <StatusEffect type="OnImpact" target="This" AllowWhenBroken="True">
           <RequiredItem items="custompill" type="Contained" />
           <Sound file="%ModDir%/Sounds/Pharmacy/pillbottledrop1.ogg" range="200" volume="5" loop="false" selectionmode="random" />

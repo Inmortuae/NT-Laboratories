@@ -58,14 +58,14 @@
       <ItemContainer capacity="14" slotsperrow="7" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.3,0.2" anchor="Center" style="ItemUI" />
         <Containable items="smallitem,mediumitem" />
-        <SlotIcon slotindex="0" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="1,465,31,47" origin="0.5,0.45" />
-        <SlotIcon slotindex="1" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="34,468,25,44" origin="0.5,0.45" />
-        <SlotIcon slotindex="2" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="61,472,49,39" origin="0.5,0.45" />
-        <SlotIcon slotindex="3" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="61,472,49,39" origin="0.5,0.45" />
-        <SlotIcon slotindex="4" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="114,463,30,48" origin="0.5,0.45" />
-        <SlotIcon slotindex="5" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="114,463,30,48" origin="0.5,0.45" />
-        <SlotIcon slotindex="6" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="114,463,30,48" origin="0.5,0.45" />
-        <SlotIcon slotindex="13" texture="%ModDir%/Images/Pharmacy/InventoryItemIconAtlas.png" sourcerect="149,473,42,39" origin="0.5,0.45" />
+        <SlotIcon slotindex="0" texture="%ModDir%/Images/pillui.png" sourcerect="66,0,31,47" origin="0.5,0.45" />
+        <SlotIcon slotindex="1" texture="%ModDir%/Images/pillui.png" sourcerect="99,4,25,44" origin="0.5,0.45" />
+        <SlotIcon slotindex="2" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
+        <SlotIcon slotindex="3" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
+        <SlotIcon slotindex="4" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="5" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="6" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="13" texture="%ModDir%/Images/pillui.png" sourcerect="214,9,42,39" origin="0.5,0.45" />
       </ItemContainer>
       <CustomInterface canbeselected="true" allowuioverlap="true">
         <GuiFrame relativesize="0.2,0.2" anchor="CenterRight" pivot="CenterLeft" relativeoffset="0.36,0.001" style="ItemUI" linkuitocomponent="ItemContainer" />

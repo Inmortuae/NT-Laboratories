@@ -5,7 +5,7 @@
       <Price baseprice="1000" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
       </Price>
-      <Sprite texture="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="18" density="10" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="60">
         <RequiredSkill identifier="medical" level="55" />
@@ -50,7 +50,7 @@
       <Price baseprice="2000" soldbydefault="false">
         <Price locationtype="research" multiplier="1" sold="true" minavailable="2" />
       </Price>
-      <Sprite texture="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="30" density="10" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="65">
         <RequiredSkill identifier="medical" level="60" />
@@ -95,7 +95,7 @@
       <Price baseprice="400" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2" />
       </Price>
-      <Sprite texture="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5" />
       <Body width="14" height="20" density="10" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="50">
         <RequiredSkill identifier="medical" level="50" />
@@ -140,7 +140,7 @@
       <Price baseprice="4000" soldbydefault="false">
         <Price locationtype="research" multiplier="1" sold="true" minavailable="2" />
       </Price>
-      <Sprite texture="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
       <Body width="14" height="22" density="10" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="75">
         <RequiredSkill identifier="medical" level="70" />
@@ -185,7 +185,7 @@
       <Price baseprice="0" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="false" />
       </Price>
-      <Sprite texture="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="25" density="10" />
       <Fabricate suitablefabricators="bioprinter" requiredtime="90">
         <RequiredSkill identifier="medical" level="100" />

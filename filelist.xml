@@ -8,12 +8,20 @@
   <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
   <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
 
-  <!--New-->
+  <!--Main-->
   <Item file="%ModDir%/Xml/Machines/Genetics/geneextractor.xml" />
+  <Other file="%ModDir%/Images/InGameItemIconAtlas.png" />
+  <Other file="%ModDir%/Images/InventoryItemIconAtlas.png" />
+  <Other file="%ModDir%/Images/AfflictionIcons.png" />
+  <Other file="%ModDir%/Images/BloodPacksAtlas.png" />
+  <Other file="%ModDir%/Images/Overlays/blackoverlay.png" />
+  <Other file="%ModDir%/Images/Overlays/plasticoverlay.png" />
+  <Other file="%ModDir%/Images/Overlays/leftblind.png" />
+  <Other file="%ModDir%/Images/Overlays/rightblind.png" />
+  <Other file="%ModDir%/Images/Overlays/blind.png" />
+  <Other file="%ModDir%/Images/Overlays/lowpressure.png" />
   
   <!--Bio Printer-->
-  <Other file="%ModDir%/Images/BioPrinter/InGameItemIconAtlas.png" />
-  <Other file="%ModDir%/Images/BioPrinter/limbs.png" />
   <Other file="%ModDir%/Xml/Afflictions/BioPrinter/bonemarrowextracted.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions/BioPrinter/afflictions.xml" />
   <Item file="%ModDir%/Xml/Machines/BioPrinter/bioprinter.xml" />
@@ -26,7 +34,6 @@
   <Other file="%ModDir%/Sounds/BioPrinter/severed.ogg" />
 
   <!--Pharmacy-->
-  <Other file="%ModDir%/Images/Pharmacy/InGameItemIconAtlas.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions/Pharmacy/Afflictions.xml" />
   <Item file="%ModDir%/Xml/Items/Pharmacy/items.xml" />
   <Item file="%ModDir%/Xml/Machines/Pharmacy/chemmaster.xml" />
@@ -38,12 +45,6 @@
   <!--NT Eyes-->
   <Afflictions file="%ModDir%/Xml/Afflictions/NTEye/afflictions.xml" />
   <Item file="%ModDir%/Xml/Items/NTEye/items.xml" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/blackoverlay.png" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/plasticoverlay.png" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/leftblind.png" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/rightblind.png" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/blind.png" />
-  <Other file="%ModDir%/Images/NTEye/Overlays/lowpressure.png" />
   <Other file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" />
   <Other file="%ModDir%/Sounds/NTEye/eye_slowlaser.ogg" />
   <Other file="%ModDir%/Sounds/NTEye/eye_healthscanner.ogg" />
@@ -72,9 +73,6 @@
 
   <!--NT Blood Work-->
   <Item file="%ModDir%/Xml/Items/BloodWork/items.xml" />
-  <Other file="%ModDir%/Images/BloodWork/Blood cell culture.png" />
-  <Other file="%ModDir%/Images/BloodWork/Blood plasma.png" />
-  <Other file="%ModDir%/Images/BloodWork/BloodPacksAtlas.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions/BloodWork/Afflictions.xml" />
 
   <!--Undead's Medical-->
@@ -103,7 +101,6 @@
   <Other file="%ModDir%/Lua/Scripts/Cyber/items.client.lua" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/items.shared.lua" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/ondamaged.lua" />
-  <Other file="%ModDir%/Images/Cyber/AfflictionIcons.png" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/testing.lua" />
   <Other file="%ModDir%/Sounds/Cyber/cyberbite1.ogg" />
   <Other file="%ModDir%/Sounds/Cyber/cyberbite2.ogg" />
@@ -130,6 +127,4 @@
   <Other file="%ModDir%/Sounds/Cyber/welding4.ogg" />
   <Other file="%ModDir%/Sounds/Cyber/welding5.ogg" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/helperfunctions.lua" />
-  <Other file="%ModDir%/Images/Cyber/InGameItemIconAtlas.png" />
-  <Other file="%ModDir%/Images/Cyber/InventoryItemIconAtlas.png" />
 </contentpackage>

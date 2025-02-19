@@ -10,6 +10,6 @@
         <!--<Affliction identifier="burn" amount="-0.075" />-->
       </StatusEffect>
     </Effect>
-    <!--<icon texture="%ModDir%/Images/BloodWork/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0" />-->
+    <!--<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0" />-->
   </Affliction>
 </Afflictions>

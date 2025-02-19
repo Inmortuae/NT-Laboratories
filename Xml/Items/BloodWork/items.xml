@@ -22,7 +22,7 @@
         <Item identifier="bloodcultureominus" />
       </Deconstruct>
       <SuitableTreatment identifier="bloodloss" suitability="100" />
-      <Sprite texture="%ModDir%/Images/BloodWork/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
       <Body width="80" height="42" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -49,7 +49,7 @@
         <Item identifier="bloodplasmao" />
         <Item identifier="bloodcultureominus" />
       </Deconstruct>
-      <Sprite texture="%ModDir%/Images/BloodWork/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
       <Body width="80" height="42" density="11" />
     </Item>-->
     <Item name="" identifier="bloodpackoplus" nameidentifier="bloodpackoplus" variantof="antibloodloss2">
@@ -181,7 +181,7 @@
   </Override>
   <!--<Item name="Any type O blood" identifier="Anytypeoblood" Tags="smallite,medical">
     <SuitableTreatment identifier="bloodloss" suitability="100" />
-    <Sprite texture="%ModDir%/Images/BloodWork/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
     </Holdable>
@@ -210,8 +210,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="357,9,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="357,9,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodcultureoplus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -233,8 +233,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="357,65,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="357,65,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodcultureabplus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -256,8 +256,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="309,65,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="309,65,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodcultureabminus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -279,8 +279,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="309,9,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="309,9,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodcultureaplus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -302,8 +302,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="341,65,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="341,65,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodcultureaminus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -325,8 +325,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="341,9,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="341,9,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodculturebplus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -348,8 +348,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,65,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,65,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodculturebminus" Tags="smallitem,medical" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -371,8 +371,8 @@
     </Deconstruct>
     <Body width="80" height="45" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood cell culture.png" sourcerect="0,0,125,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,9,15,50" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,9,15,50" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodplasmao" Tags="smallitem,medical,plasmao" category="Medical" cargocontaineridentifier="mediccrate" useinhealthinterface="true" description="" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.3" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -394,8 +394,8 @@
         <Remove />
       </StatusEffect>
     </Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,337,64,85" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,337,64,85" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodplasmaab" Tags="smallitem,medical,plasmao,plasmaab,plasmaa,plasmab" category="Medical" cargocontaineridentifier="mediccrate" useinhealthinterface="true" description="" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.3" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -417,8 +417,8 @@
         <Remove />
       </StatusEffect>
     </Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,252,64,85" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,252,64,85" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodplasmaa" Tags="smallitem,medical,plasmao,plasmaa" category="Medical" useinhealthinterface="true" description="" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.3" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -440,8 +440,8 @@
         <Remove />
       </StatusEffect>
     </Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="64,252,64,85" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="64,252,64,85" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="bloodplasmab" Tags="smallitem,medical,plasmao,plasmab" category="Medical" useinhealthinterface="true" description="" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.3" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
@@ -463,7 +463,7 @@
         <Remove />
       </StatusEffect>
     </Holdable>
-    <InventoryIcon texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Images/BloodWork/Blood plasma.png" sourcerect="0,0,71,125" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,252,64,85" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,252,64,85" depth="0.6" origin="0.5,0.5" />
   </Item>
 </Items>
