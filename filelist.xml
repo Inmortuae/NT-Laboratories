@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="NT Laboratories" modversion="1.0.0" corepackage="False" gameversion="1.7.7.0">
-  <!--All-->
+  <!--Lua-->
   <Other file="%ModDir%/Lua/Autorun/init.lua" />
-  <Text file="%ModDir%/Translations/English.xml" />
   <Other file="%ModDir%/Lua/Scripts/configdata.lua" />
-  <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
-  <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
-  <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
+  
+  <!--Localizations-->
+  <Text file="%ModDir%/Translations/English.xml" />
 
   <!--Main-->
-  <Item file="%ModDir%/Xml/Machines/Genetics/geneextractor.xml" />
+    <!--Images-->  
   <Other file="%ModDir%/Images/InGameItemIconAtlas.png" />
   <Other file="%ModDir%/Images/InventoryItemIconAtlas.png" />
   <Other file="%ModDir%/Images/AfflictionIcons.png" />
+  <Other file="%ModDir%/Images/Machines.png" />
   <Other file="%ModDir%/Images/BloodPacksAtlas.png" />
   <Other file="%ModDir%/Images/Overlays/blackoverlay.png" />
   <Other file="%ModDir%/Images/Overlays/plasticoverlay.png" />
@@ -20,31 +20,29 @@
   <Other file="%ModDir%/Images/Overlays/rightblind.png" />
   <Other file="%ModDir%/Images/Overlays/blind.png" />
   <Other file="%ModDir%/Images/Overlays/lowpressure.png" />
+    <!--Afflictions-->
+  <Afflictions file="%ModDir%/Xml/Afflictions/Afflictions.xml" />
+    <!--Items-->
+  <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
+  <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
+  <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
+  <Item file="%ModDir%/Xml/Items/items.xml" />
+    <!--Machines-->
+  <Item file="%ModDir%/Xml/Machines/Machines.xml" />
+    <!--Sounds-->
+    <!--Talents-->
   
   <!--Bio Printer-->
-  <Other file="%ModDir%/Xml/Afflictions/BioPrinter/bonemarrowextracted.png" />
-  <Afflictions file="%ModDir%/Xml/Afflictions/BioPrinter/afflictions.xml" />
-  <Item file="%ModDir%/Xml/Machines/BioPrinter/bioprinter.xml" />
-  <Item file="%ModDir%/Xml/Machines/BioPrinter/stemcellprocessor.xml" />
-  <Item file="%ModDir%/Xml/Items/BioPrinter/EmptySyringe.xml" />
-  <Item file="%ModDir%/Xml/Items/BioPrinter/BoneMarrow.xml" />
-  <Item file="%ModDir%/Xml/Items/BioPrinter/StemCell.xml" />
-  <Item file="%ModDir%/Xml/Items/BioPrinter/BioMat.xml" />
   <Other file="%ModDir%/Lua/Scripts/Server/BioPrinter/EmptySyringe.lua" />
   <Other file="%ModDir%/Sounds/BioPrinter/severed.ogg" />
 
   <!--Pharmacy-->
-  <Afflictions file="%ModDir%/Xml/Afflictions/Pharmacy/Afflictions.xml" />
-  <Item file="%ModDir%/Xml/Items/Pharmacy/items.xml" />
-  <Item file="%ModDir%/Xml/Machines/Pharmacy/chemmaster.xml" />
   <Sounds file="%ModDir%/Xml/Sounds/Pharmacy/sounds.xml" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
   <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
 
   <!--NT Eyes-->
-  <Afflictions file="%ModDir%/Xml/Afflictions/NTEye/afflictions.xml" />
-  <Item file="%ModDir%/Xml/Items/NTEye/items.xml" />
   <Other file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" />
   <Other file="%ModDir%/Sounds/NTEye/eye_slowlaser.ogg" />
   <Other file="%ModDir%/Sounds/NTEye/eye_healthscanner.ogg" />
@@ -71,19 +69,7 @@
   <Other file="%ModDir%/CSharp/RunConfig.xml" />
   <Other file="%ModDir%/CSharp/Client/CompleteDarknessMod.cs" />
 
-  <!--NT Blood Work-->
-  <Item file="%ModDir%/Xml/Items/BloodWork/items.xml" />
-  <Afflictions file="%ModDir%/Xml/Afflictions/BloodWork/Afflictions.xml" />
-
   <!--Undead's Medical-->
-  <Afflictions file="%ModDir%/Xml/Afflictions/UndeadsMed/afflictions.xml" />
-  <Item file="%ModDir%/Xml/Items/UndeadsMed/ReviveSyringe/revive_syringe.xml" />
-  <Item file="%ModDir%/Xml/Items/UndeadsMed/RefinedCalyxSyringe/refinedcalyx_syringe.xml" />
-  <Item file="%ModDir%/Xml/Items/UndeadsMed/SymbiosisSyringe/symbiosis_syringe.xml" />
-  <Item file="%ModDir%/Xml/Items/UndeadsMed/Materials/materials.xml" />
-  <Item file="%ModDir%/Xml/Items/UndeadsMed/Nanobots/nanobots.xml" />
-  <Other file="%ModDir%/Xml/Afflictions/UndeadsMed/revivedicon.png" />
-  <Other file="%ModDir%/Xml/Afflictions/UndeadsMed/nanobotsicon.png" />
   <Talents file="%ModDir%/Xml/Talents/UndeadsMed/Doctor/TalentsDoctor.xml" />
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.lua" />
@@ -94,8 +80,6 @@
   <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/nanobots.lua" />
 
   <!--Cyber-->
-  <Afflictions file="%ModDir%/Xml/Afflictions/Cyber/Afflictions.xml" />
-  <Item file="%ModDir%/Xml/Items/Cyber/items.xml" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/items.lua" />
   <Other file="%ModDir%/Lua/Scripts/Cyber/items.client.lua" />
