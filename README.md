@@ -1,4 +1,4 @@
-![download](https://github.com/user-attachments/assets/03fd1361-9f72-4bab-aa1a-4bfe915af5ff)
+![NT Laboratories](https://github.com/user-attachments/assets/03fd1361-9f72-4bab-aa1a-4bfe915af5ff)
 
 # **NT Laboratories - The Future of Medical Science, Cybernetics, and Biotech**  
 
@@ -48,19 +48,35 @@ From **life-saving transplants and neural implants** to **revival syringes, nano
 
 ---
 
-## **⚙️ Seamless Neurotrauma Integration**
+## **⚙️ Seamless Neurotrauma Integration**  
 
 NT Laboratories is **fully integrated** with **Neurotrauma** and **requires NT to function**. This addon expands **organ failure, transplants, cybernetic augmentation, and advanced medical mechanics**.  
 
-- **Print organs instead of relying on harvested transplants.**  
-- **Develop cybernetic alternatives for lost limbs and organs.**  
-- **Experiment with advanced medicine, symbiosis, and neural enhancements.**  
+✅ **Print organs instead of relying on harvested transplants.**  
+✅ **Develop cybernetic alternatives for lost limbs and organs.**  
+✅ **Experiment with advanced medicine, symbiosis, and neural enhancements.**  
 
-🔴 **NT Laboratories requires Neurotrauma (NT) to function!** Make sure NT is installed before using this addon.  
+⚠️ **NT Laboratories requires Neurotrauma (NT) to function!**  
+Ensure **Neurotrauma** is installed before using this addon.  
 
 ---
 
-## **⚠️ Ethical Boundaries?**
+## **🔗 Contributors**  
+
+This mod is built upon and enhanced by the following **Neurotrauma** expansions:  
+
+- [NT Blood Work](https://steamcommunity.com/workshop/filedetails/?id=2976434626)  
+- [NT Pharmacy](https://steamcommunity.com/sharedfiles/filedetails/?id=3247838390)  
+- [NT Cybernetics Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=3324062208)  
+- [NT Bio Printer](https://steamcommunity.com/sharedfiles/filedetails/?id=3429100373)  
+- [NT Eyes](https://steamcommunity.com/sharedfiles/filedetails/?id=3294574390)  
+- [Undead's Medical](https://steamcommunity.com/sharedfiles/filedetails/?id=3275278739)  
+- [Extract it!](https://steamcommunity.com/sharedfiles/filedetails/?id=2936086408)  
+
+---
+
+## **⚠️ Ethical Boundaries?**  
+
 At **NT Laboratories**, ethics are **a guideline, not a rule**. **Innovation comes first—moral dilemmas come second.**  
 
 🔬 **Will you push the limits of medical science for the greater good? Or descend into scientific madness?**  
@@ -69,5 +85,5 @@ At **NT Laboratories**, ethics are **a guideline, not a rule**. **Innovation com
 
 ---
 
-Let me know if you want **additional details or modifications**! 🚀
-
+### 🔧 *Need help?*  
+If you have **issues, suggestions, or ideas**, feel free to open an **[issue](https://github.com/Inmortuae/NT-Laboratories/issues)** 
