@@ -258,6 +258,8 @@
   <entitydescription.bloodculturebminus>Combine with AB or B plasma to fabricate an B- blood pack</entitydescription.bloodculturebminus>
   <entityname.bloodculturebplus>Blood cell culture B+</entityname.bloodculturebplus>
   <entitydescription.bloodculturebplus>Combine with AB or B plasma to fabricate an B+ blood pack</entitydescription.bloodculturebplus>
+  <entityname.bloodcultureabcplus>Blood cell culture C+</entityname.bloodcultureabcplus>
+  <entitydescription.bloodcultureabcplus>Combine with C blood plasma to fabricate an C+ blood pack</entitydescription.bloodcultureabcplus>
   <entityname.bloodplasmao>Blood plasma O</entityname.bloodplasmao>
   <entitydescription.bloodplasmao>Compatible with O- and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmao>
   <entityname.bloodplasmaab>Blood plasma AB</entityname.bloodplasmaab>
@@ -266,7 +268,10 @@
   <entitydescription.bloodplasmaa>Compatible with A-, A+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaa>
   <entityname.bloodplasmab>Blood plasma B</entityname.bloodplasmab>
   <entitydescription.bloodplasmab>Compatible with B-, B+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmab>
+  <entityname.bloodplasmaabc>Blood plasma C</entityname.bloodplasmaabc>
+  <entitydescription.bloodplasmaabc>Compatible with C+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaabc>
   <afflictionname.afbloodplasma>Blood plasma infusion</afflictionname.afbloodplasma>
+  
 
   <!--Undead's Medical-->
   <!-- Afflictions ! -->
@@ -351,5 +356,10 @@ Can give blood to: C+</entitydescription.abcpluscard>
   <afflictiondescription.ntc_materialloss>Parts of the limb are gone.</afflictiondescription.ntc_materialloss>
   <afflictionname.immunosuppressantinhaler>Inhaled Immunosuppressants</afflictionname.immunosuppressantinhaler>
   <afflictiondescription.immunosuppressantinhaler></afflictiondescription.immunosuppressantinhaler>
+
+  <entityname.mannitolplus>Mannitol plus</entityname.mannitolplus>
+  <entitydescription.mannitolplus>An improved version of mannitol. It is used to quickly treat neurotrauma.</entitydescription.mannitolplus>
+  <entityname.brainjar>Brain jar</entityname.brainjar>
+  <entitydescription.brainjar>A container to hold brain transplants indefinitely.</entitydescription.brainjar>
 
 </infotexts>

@@ -107,45 +107,66 @@ Hook.Add("item.applyTreatment", "NTL.Surgery", function(item, usingCharacter, ta
 	if --surgery check
 		NTL.CanSurgery(targetCharacter) 
 	then
-		if --eye popped (tweezers)
-			identifier == "tweezers" 
-			--and not HF.HasAffliction(targetCharacter, "corneaincision") 
+
+		-- Hold Eye Lid Open
+		if 
+					identifier == "advretractors" 
+				and limbtype == 11 
+			and not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", 11) 
+		then
+			if HF.HasAffliction(targetCharacter, "eyepopped") then
+				return
+			elseif HF.HasAffliction(targetCharacter, "eyelid") then
+				HF.SetAfflictionLimb(targetCharacter, "eyelid", 11, 0)
+			else
+				HF.AddAfflictionLimb(targetCharacter, "eyelid", 11, 100)
+			end
+		end
+
+		-- Popped Eye in/out
+		if
+			identifier == "tweezers"
 			and not HF.HasAffliction(targetCharacter, "noeye") 
 			and not HF.HasAffliction(targetCharacter, "th_amputation")
 			and not HF.HasAffliction(targetCharacter, "sh_amputation")
 		then
-			if 
-				HF.CanPerformSurgeryOn(targetCharacter) 
-				and HF.HasAffliction(targetCharacter, "eyelid") 
-			then
-				if 
-					HF.GetSurgerySkillRequirementMet(usingCharacter, 25) 
-				then
-					HF.AddAfflictionLimb(targetCharacter, "eyepopped", 11, 100)
+			if HF.HasAffliction(targetCharacter, "eyepopped") then
+				if HF.GetSkillRequirementMet(usingCharacter, "medical", 30) then
+					-- Remove the popped eye affliction
+					HF.SetAfflictionLimb(targetCharacter, "eyepopped", 11, 0)
 				else
-					HF.AddAfflictionLimb(targetCharacter, "severepainlite", 11, 100)
-					HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100)
-					HF.AddAfflictionLimb(targetCharacter, "bleeding", 11, 10)
-					
-					if --give eye damage on fail
-						NTL.HasEyes(targetCharacter)
-					then 
-						HF.AddAfflictionLimb(targetCharacter, "eyedamage", 11, math.random(0,10)) 
+					-- If surgery skill fails, apply more pain and a small failure chance
+					HF.AddAfflictionLimb(targetCharacter, "eyedamage", 11, math.random(5,15))
+					HF.AddAfflictionLimb(targetCharacter, "severepainlite", 11, 30)
+					HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 50)
+					if HF.Chance(0.4) then -- 40% chance to still succeed despite failure
+						HF.SetAfflictionLimb(targetCharacter, "eyepopped", 11, 0)
 					end
-					
-					if 
-						HF.Chance(0.5) 
-					then
-						HF.AddAfflictionLimb(targetCharacter, "eyepopped", 11, math.random(0,100))
-					end
-				
 				end
-			
-			end
+			else
+				-- Original eye popping logic
+				if HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAffliction(targetCharacter, "eyelid") then
+					if HF.GetSurgerySkillRequirementMet(usingCharacter, 25) then
+						HF.AddAfflictionLimb(targetCharacter, "eyepopped", 11, 100)
+					else
+						HF.AddAfflictionLimb(targetCharacter, "severepainlite", 11, 100)
+						HF.AddAfflictionLimb(targetCharacter, "pain_extremity", 11, 100)
+						HF.AddAfflictionLimb(targetCharacter, "bleeding", 11, 10)
 		
+						if NTL.HasEyes(targetCharacter) then
+							HF.AddAfflictionLimb(targetCharacter, "eyedamage", 11, math.random(0,10)) 
+						end
+						
+						if HF.Chance(0.5) then
+							HF.AddAfflictionLimb(targetCharacter, "eyepopped", 11, math.random(0,100))
+						end
+					end
+				end
+			end
 		end
-
-		if --eyes removed (organscalpel_eyes)
+		
+		-- Eyes Removed
+		if
 			identifier == "organscalpel_eyes" 
 			and not HF.HasAffliction(targetCharacter, "noeye") 
 			and not HF.HasAffliction(targetCharacter, "th_amputation")
@@ -554,14 +575,6 @@ Hook.Add("item.applyTreatment", "NTL.Surgery", function(item, usingCharacter, ta
 				NTL.CataractClearAfflictions(targetCharacter)
 			end
 		end
-
-		if 
-					identifier == "advretractors" 
-				and limbtype == 11 
-			and not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", 11) 
-		then
-			HF.AddAfflictionLimb(targetCharacter, "eyelid", 11, 100)
-		end	
 		
 	end
 	

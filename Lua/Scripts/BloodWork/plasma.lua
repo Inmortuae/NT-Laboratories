@@ -34,17 +34,20 @@ Timer.Wait(function()
         -- determine compatibility
         local packhasantibodyA = string.find(packtype, "a")
         local packhasantibodyB = string.find(packtype, "b")
+        local packhasantibodyC = string.find(packtype, "c")
         local packhasantibodyO = string.find(packtype, "o")
     
         local targettype = NT.GetBloodtype(targetCharacter)
     
         local targethasantibodyA = string.find(targettype, "a")
         local targethasantibodyB = string.find(targettype, "b")
+        local targethasantibodyC = string.find(targettype, "c")
         local targethasantibodyO = string.find(targettype, "o")
     
         local compatible = 
         (packhasantibodyA and packhasantibodyB) or
-        (targethasantibodyO) or
+        (targethasantibodyO and not packhasantibodyC) or
+        (targethasantibodyC) or
         (targethasantibodyA and packhasantibodyA) or
         (targethasantibodyB and packhasantibodyB)
     

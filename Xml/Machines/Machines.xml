@@ -136,7 +136,7 @@
             <output name="condition_out" displayname="connection.conditionout" />
         </ConnectionPanel>
     </Item>
-        <Item name="" identifier="stemcellprocessor" tags="stemcellprocessor,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.5" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Item name="" identifier="stemcellprocessor" tags="stemcellprocessor,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.5" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
@@ -204,7 +204,7 @@
         <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
       </ItemContainer>
     </Item>
-    <Item name="" identifier="bioprinter" tags="bioprinter,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Item name="" identifier="bioprinter" tags="bioprinter,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>

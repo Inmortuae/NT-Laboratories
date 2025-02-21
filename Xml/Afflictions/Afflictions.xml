@@ -1,531 +1,531 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
   <!--Undead's Medical-->
-  <Affliction name="" identifier="revived" description="" healableinmedicalclinic="false" targets="human,humanhusk" type="resistance" isbuff="true" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="1" showiconthreshold="50" maxstrength="100">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1408,128,128" origin="0,0"/>
-  </Affliction>
-  <Affliction name="" identifier="nanobots" description="" healableinmedicalclinic="false" targets="human,humanhusk" type="resistance" isbuff="true" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="1" showiconthreshold="50" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-3.33" resistancefor="stun" minresistance="0" maxresistance="0.45">
-      <StatusEffect target="Character">
-        <StatValue stattype="MeleeAttackMultiplier" minvalue="1.3" maxvalue="1.3" />
-        <!-- Increases melee attack power -->
-        <StatValue stattype="MovementSpeedMultiplier" minvalue="1.2" maxvalue="1.2" />
-        <!-- Increases movement speed (Haste) -->
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1408,128,128" origin="0,0"/>
-  </Affliction>
+    <Affliction name="" identifier="revived" description="" healableinmedicalclinic="false" targets="human,humanhusk" type="resistance" isbuff="true" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="1" showiconthreshold="50" maxstrength="100">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1408,128,128" origin="0,0"/>
+    </Affliction>
+    <Affliction name="" identifier="nanobots" description="" healableinmedicalclinic="false" targets="human,humanhusk" type="resistance" isbuff="true" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="1" showiconthreshold="50" maxstrength="100">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-3.33" resistancefor="stun" minresistance="0" maxresistance="0.45">
+        <StatusEffect target="Character">
+          <StatValue stattype="MeleeAttackMultiplier" minvalue="1.3" maxvalue="1.3" />
+          <!-- Increases melee attack power -->
+          <StatValue stattype="MovementSpeedMultiplier" minvalue="1.2" maxvalue="1.2" />
+          <!-- Increases movement speed (Haste) -->
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1408,128,128" origin="0,0"/>
+    </Affliction>
   <!--Blood Work-->
-  <Affliction name="" identifier="afbloodplasma" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" showiconthreshold="200" showinhealthscannerthreshold="200" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25">
-      <StatusEffect target="Character">
-        <Conditional ishuman="true" />
-        <Affliction identifier="acidosis" amount="-0.1" />
-        <Affliction identifier="alkalosis" amount="-0.1" />
-        <Affliction identifier="sepsis" amount="-.05" />
-        <!--<Affliction identifier="burn" amount="-0.075" />-->
-      </StatusEffect>
-    </Effect>
-    <!--<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0" />-->
-  </Affliction>
+    <Affliction name="" identifier="afbloodplasma" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" showiconthreshold="200" showinhealthscannerthreshold="200" maxstrength="100">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-0.25">
+        <StatusEffect target="Character">
+          <Conditional ishuman="true" />
+          <Affliction identifier="acidosis" amount="-0.1" />
+          <Affliction identifier="alkalosis" amount="-0.1" />
+          <Affliction identifier="sepsis" amount="-.05" />
+          <!--<Affliction identifier="burn" amount="-0.075" />-->
+        </StatusEffect>
+      </Effect>
+      <!--<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0" />-->
+    </Affliction>
   
   <!--Cyber-->
-  <!-- Artifical limb
-  invisible
-  converts all regular damage types to cybernetic specific ones -->
-  <Affliction name="" identifier="ntc_cyberlimb" description="" healableinmedicalclinic="false" targets="human" type="gaze" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" sourcerect="0,0,128,128" />
-  </Affliction>
-  <!-- Cyberarm
-  converts the arm into a cyberarm -->
-  <Affliction name="" identifier="ntc_cyberarm" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,0" sheetelementsize="128,128" origin="0,0" sourcerect="640,0,128,128" />
-  </Affliction>
-  <Affliction name="Arm Speed" identifier="ntc_armspeed" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="200" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <Effect minstrength="0" maxstrength="200" strengthchange="0">
-      <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.5" />
-      <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="1" />
-    </Effect>
-  </Affliction>
-  <Affliction name="WaterProof" identifier="ntc_waterproof" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,4" sheetelementsize="128,128" origin="0,0" sourcerect="256,512,128,128" />
-  </Affliction>
-  <!-- Cyberleg
-  converts the leg into a cyberleg -->
-  <Affliction name="" identifier="ntc_cyberleg" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="6,0" sheetelementsize="128,128" origin="0,0" sourcerect="768,0,128,128" />
-  </Affliction>
-  <Affliction name="Leg     Speed" identifier="ntc_legspeed" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="200" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <Effect minstrength="0" maxstrength="200">
-      <Statvalue stattype="WalkingSpeed" minvalue="0" maxvalue="0.5" />
-    </Effect>
-  </Affliction>
-  <!--
-    Cyberorgans
-  -->
-  <Affliction name="Cyberliver" identifier="ntc_cyberliver" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <!-- in humanupdate.lua, also applies faster recovery rate for most poisons/debuffs/nausea, and resists liver damage-->
-    <!-- Overdose / Nausea resistance -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="opiateoverdose,nausea" minresistance="0" maxresistance="0.5"></Effect>
-    <PeriodicEffect mininterval="300" maxinterval="1200">
-      <!-- Cyberpsychosis -->
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Conditional ntc_cyberliver="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-    </PeriodicEffect>
-  </Affliction>
-  <Affliction name="Cyberkidney" identifier="ntc_cyberkidney" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <!-- Bleeding & Bloodloss resistance -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="bleeding,bloodloss" minresistance="0" maxresistance="0.6">
-      <StatusEffect target="Character" disabledeltatime="true" setvalue="true">
-        <Affliction identifier="abcplus" amount="100" />
-        <!-- Cyberblood, fun for selfish compatibility, and prevents Cyberorgan rejection -->
-        <Affliction identifier="ominus" amount="0" />
-        <Affliction identifier="oplus" amount="0" />
-        <Affliction identifier="aminus" amount="0" />
-        <Affliction identifier="aplus" amount="0" />
-        <Affliction identifier="bminus" amount="0" />
-        <Affliction identifier="bplus" amount="0" />
-        <Affliction identifier="abminus" amount="0" />
-        <Affliction identifier="abplus" amount="0" />
-      </StatusEffect>
-    </Effect>
-    <PeriodicEffect mininterval="300" maxinterval="1200">
-      <!-- Cyberpsychosis -->
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Conditional ntc_cyberkidney="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-    </PeriodicEffect>
-  </Affliction>
-  <Affliction name="Cyberlungs" identifier="ntc_cyberlung" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <!-- in humanupdate.lua lungs also grant reduced pneumothoraxchance and hypoxemia, and hypo/hyperventilates to balance PH -->
-    <!-- Oxygen low resistance -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="oxygenlow" minresistance="0" maxresistance="0.6">
-      <!-- Faster movement/attack. Raises Vigor up to 75/150/225/300 if Tier 2/3 Lung + if Tier 2/3 Heart active -->
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 150.3" />
-        <Conditional ntc_cyberlung="gte 90" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 75.3" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 300.3" />
-        <Conditional ntc_cyberlung="gte 90" />
-        <Conditional ntc_cyberheart="gte 90" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 225.3" />
-        <Conditional ntc_cyberlung="gte 90" />
-        <Conditional ntc_cyberheart="gte 40" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 150.3" />
-        <Conditional ntc_cyberlung="gte 40" />
-        <Conditional ntc_cyberheart="gte 40" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 225.3" />
-        <Conditional ntc_cyberlung="gte 40" />
-        <Conditional ntc_cyberheart="gte 90" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatValue stattype="HoldBreathMultiplier" minvalue="1" maxvalue="0.5" />
-      <!-- Partial Pressure Protection: at most once every 30 seconds, if you're in pressure, give 5-10 seconds of Pressure Stabilization.
-        ntc_cyberlung_pressure_recovery being > 0 means its been triggered recently, and is a countdown until its next allowed to trigger.
-       -->
-      <StatusEffect target="Character" setvalue="true" interval="1" comparison="And">
-        <Conditional InPressure="true" />
-        <Conditional pressureProtection="lt 1000" />
-        <Conditional ntc_cyberlung_pressure_recovery="lte 0.1" />
-        <Affliction identifier="ntc_cyberlung_pressure_recovery" amount="31" />
-      </StatusEffect>
-    </Effect>
-    <PeriodicEffect mininterval="300" maxinterval="1200">
-      <!-- Cyberpsychosis -->
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Conditional ntc_cyberlung="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-    </PeriodicEffect>
-  </Affliction>
-  <Affliction name="Pressurized Cyberlung" identifier="ntc_cyberlung_pressure_recovery" description="" healableinmedicalclinic="false" type="gaze" isbuff="false" targets="human" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="100">
-    <Description textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery.low" minstrength="0" maxstrength="20" />
-    <Description textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery" minstrength="20" maxstrength="100" />
-    <!-- Restore partial loss from the Pressure Protection triggering  -->
-    <Effect minstrength="0" maxstrength="19.5" strengthchange="-1"></Effect>
-    <Effect minstrength="19.5" maxstrength="20" strengthchange="-1">
-      <StatusEffect type="always" target="Character" comparison="And">
-        <Conditional ntc_cyberlung="gte 90" />
-        <Affliction identifier="pressurestabilized" strength="3" />
-        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="20" maxstrength="23.5" strengthchange="-1"></Effect>
-    <Effect minstrength="23.5" maxstrength="24" strengthchange="-1">
-      <StatusEffect type="always" target="Character">
-        <Affliction identifier="pressurestabilized" strength="3" />
-        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="24" maxstrength="27.5" strengthchange="-1"></Effect>
-    <Effect minstrength="27.5" maxstrength="28" strengthchange="-1">
-      <StatusEffect type="always" target="Character">
-        <Affliction identifier="pressurestabilized" strength="3" />
-        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="28" maxstrength="100" strengthchange="-1"></Effect>
-  </Affliction>
-  <Affliction name="Cyberheart" identifier="ntc_cyberheart" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <!-- in humanupdate.lua heart also grants better bloodpressurerate -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0">
-      <!-- Faster movement/attack -->
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 150.3" />
-        <Conditional ntc_cyberlung="gte 90" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect type="always" target="Character" interval="1" comparison="And">
-        <Conditional haste="lt 75.3" />
-        <Affliction identifier="haste" amount="0.125" />
-      </StatusEffect>
-      <StatusEffect target="Character" disabledeltatime="true">
-        <StatValue stattype="MaximumHealthMultiplier" minvalue="0" maxvalue="0.2" />
-        <!-- More Vitality -->
-      </StatusEffect>
-    </Effect>
-    <PeriodicEffect mininterval="300" maxinterval="1200">
-      <!-- Cyberpsychosis -->
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Conditional ntc_cyberheart="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
-      </StatusEffect>
-    </PeriodicEffect>
-  </Affliction>
-  <Affliction name="Cyberbrain" identifier="ntc_cyberbrain" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
-    <!-- in humanupdate: Neurotrauma (cerebralhypoxia) resistance, improved Neurotrauma/Coma recovery rate, and improved withdrawal/addiction recovery rates -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0">
-      <!-- Stat buffs -->
-      <StatValue stattype="ElectricalSkillBonus" minvalue="0" maxvalue="10" />
-      <StatValue stattype="HelmSkillBonus" minvalue="0" maxvalue="10" />
-      <StatValue stattype="MechanicalSkillBonus" minvalue="0" maxvalue="10" />
-      <StatValue stattype="MedicalSkillBonus" minvalue="0" maxvalue="10" />
-      <StatValue stattype="WeaponsSkillBonus" minvalue="0" maxvalue="10" />
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
-        <Conditional ishuman="true" analgesia="lte 3" />
-        <Affliction identifier="analgesia" amount="1" />
-        <!-- Little bit of anaesthetic for easier surgery -->
-      </StatusEffect>
-    </Effect>
-    <PeriodicEffect mininterval="300" maxinterval="1200">
-      <!-- Cyberpsychosis -->
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
-      </StatusEffect>
-      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
-        <Conditional immunity="gte 90" />
-        <Conditional ntc_cyberbrain="gte 90" />
-        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
-      </StatusEffect>
-    </PeriodicEffect>
-  </Affliction>
-  <Affliction name="C+" identifier="abcplus" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
-  </Affliction>
-  <!-- Immunosuppressant Inhaler / mildly decreases immunity to prevent Cyberpsychosis -->
-  <Affliction name="" identifier="immunosuppressantinhaler" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="false" showiconthreshold="10" showinhealthscannerthreshold="300" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.125">
-      <StatusEffect target="Character" comparison="and">
-        <Conditional ishuman="true" immunity="gte 85" />
-        <ReduceAffliction identifier="immunity" amount="2.5" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,4" sheetelementsize="128,128" origin="0,0" sourcerect="0,512,128,128" />
-  </Affliction>
-  <!-- Hidden, immediately causes equivalent vanilla psychosis. Separate to allow configurable resistance -->
-  <Affliction name="" identifier="ntc_cyberpsychosis" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
-    <Effect minstrength="0" maxstrength="100" strengthchange="-100">
-      <StatusEffect target="Character" comparison="and" disabledeltatime="true">
-        <Conditional ishuman="true" immunity="gte 85" />
-        <Affliction identifier="psychosis" minamount="0" maxamount="100" />
-      </StatusEffect>
-    </Effect>
-  </Affliction>
-  <Affliction name="" identifier="ntc_cyberpsychosis_resistance" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
-    <Effect minstrength="0" maxstrength="100" resistancefor="ntc_cyberpsychosis" minresistance="0" maxresistance="1" strengthchange="0"></Effect>
-  </Affliction>
-  <!-- /// cyberlimb damage types /// -->
-  <!-- Loose screws
-  a cyber damage type, caused by trauma, movement
-  increases susceptibility to material loss -->
-  <Affliction name="" identifier="ntc_loosescrews" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <!-- 191,171,57,255;191,57,57,255 -->
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,0" sheetelementsize="128,128" origin="0,0" sourcerect="128,0,128,128" />
-  </Affliction>
-  <!-- Damaged electronics
-  a cyber damage type, caused by water and trauma
-  increases susceptibility to material loss -->
-  <Affliction name="" identifier="ntc_damagedelectronics" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,0" sheetelementsize="128,128" origin="0,0" sourcerect="256,0,128,128" />
-  </Affliction>
-  <!-- Bent metal
-  a cyber damage type, caused by trauma
-  increases susceptibility to material loss, decreases movement speed -->
-  <Affliction name="" identifier="ntc_bentmetal" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="3" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,0" sheetelementsize="128,128" origin="0,0" sourcerect="384,0,128,128" />
-  </Affliction>
-  <!-- Material loss
-  a cyber damage type, caused by trauma
-  if too high, the limb is lost -->
-  <Affliction name="" identifier="ntc_materialloss" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,0" sheetelementsize="128,128" origin="-2.6355391E-07,0" sourcerect="512,0,128,128" />
-  </Affliction>
+    <!-- Artifical limb
+    invisible
+    converts all regular damage types to cybernetic specific ones -->
+    <Affliction name="" identifier="ntc_cyberlimb" description="" healableinmedicalclinic="false" targets="human" type="gaze" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" sourcerect="0,0,128,128" />
+    </Affliction>
+    <!-- Cyberarm
+    converts the arm into a cyberarm -->
+    <Affliction name="" identifier="ntc_cyberarm" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,0" sheetelementsize="128,128" origin="0,0" sourcerect="640,0,128,128" />
+    </Affliction>
+    <Affliction name="Arm Speed" identifier="ntc_armspeed" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="200" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <Effect minstrength="0" maxstrength="200" strengthchange="0">
+        <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.5" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="1" />
+      </Effect>
+    </Affliction>
+    <Affliction name="WaterProof" identifier="ntc_waterproof" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,4" sheetelementsize="128,128" origin="0,0" sourcerect="256,512,128,128" />
+    </Affliction>
+    <!-- Cyberleg
+    converts the leg into a cyberleg -->
+    <Affliction name="" identifier="ntc_cyberleg" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="6,0" sheetelementsize="128,128" origin="0,0" sourcerect="768,0,128,128" />
+    </Affliction>
+    <Affliction name="Leg     Speed" identifier="ntc_legspeed" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="200" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <Effect minstrength="0" maxstrength="200">
+        <Statvalue stattype="WalkingSpeed" minvalue="0" maxvalue="0.5" />
+      </Effect>
+    </Affliction>
+    <!--
+      Cyberorgans
+    -->
+    <Affliction name="Cyberliver" identifier="ntc_cyberliver" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <!-- in humanupdate.lua, also applies faster recovery rate for most poisons/debuffs/nausea, and resists liver damage-->
+      <!-- Overdose / Nausea resistance -->
+      <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="opiateoverdose,nausea" minresistance="0" maxresistance="0.5"></Effect>
+      <PeriodicEffect mininterval="300" maxinterval="1200">
+        <!-- Cyberpsychosis -->
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Conditional ntc_cyberliver="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="Cyberkidney" identifier="ntc_cyberkidney" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <!-- Bleeding & Bloodloss resistance -->
+      <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="bleeding,bloodloss" minresistance="0" maxresistance="0.6">
+        <StatusEffect target="Character" disabledeltatime="true" setvalue="true">
+          <Affliction identifier="abcplus" amount="100" />
+          <!-- Cyberblood, fun for selfish compatibility, and prevents Cyberorgan rejection -->
+          <Affliction identifier="ominus" amount="0" />
+          <Affliction identifier="oplus" amount="0" />
+          <Affliction identifier="aminus" amount="0" />
+          <Affliction identifier="aplus" amount="0" />
+          <Affliction identifier="bminus" amount="0" />
+          <Affliction identifier="bplus" amount="0" />
+          <Affliction identifier="abminus" amount="0" />
+          <Affliction identifier="abplus" amount="0" />
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect mininterval="300" maxinterval="1200">
+        <!-- Cyberpsychosis -->
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Conditional ntc_cyberkidney="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="Cyberlungs" identifier="ntc_cyberlung" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <!-- in humanupdate.lua lungs also grant reduced pneumothoraxchance and hypoxemia, and hypo/hyperventilates to balance PH -->
+      <!-- Oxygen low resistance -->
+      <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="oxygenlow" minresistance="0" maxresistance="0.6">
+        <!-- Faster movement/attack. Raises Vigor up to 75/150/225/300 if Tier 2/3 Lung + if Tier 2/3 Heart active -->
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 150.3" />
+          <Conditional ntc_cyberlung="gte 90" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 75.3" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 300.3" />
+          <Conditional ntc_cyberlung="gte 90" />
+          <Conditional ntc_cyberheart="gte 90" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 225.3" />
+          <Conditional ntc_cyberlung="gte 90" />
+          <Conditional ntc_cyberheart="gte 40" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 150.3" />
+          <Conditional ntc_cyberlung="gte 40" />
+          <Conditional ntc_cyberheart="gte 40" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 225.3" />
+          <Conditional ntc_cyberlung="gte 40" />
+          <Conditional ntc_cyberheart="gte 90" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatValue stattype="HoldBreathMultiplier" minvalue="1" maxvalue="0.5" />
+        <!-- Partial Pressure Protection: at most once every 30 seconds, if you're in pressure, give 5-10 seconds of Pressure Stabilization.
+          ntc_cyberlung_pressure_recovery being > 0 means its been triggered recently, and is a countdown until its next allowed to trigger.
+        -->
+        <StatusEffect target="Character" setvalue="true" interval="1" comparison="And">
+          <Conditional InPressure="true" />
+          <Conditional pressureProtection="lt 1000" />
+          <Conditional ntc_cyberlung_pressure_recovery="lte 0.1" />
+          <Affliction identifier="ntc_cyberlung_pressure_recovery" amount="31" />
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect mininterval="300" maxinterval="1200">
+        <!-- Cyberpsychosis -->
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Conditional ntc_cyberlung="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="Pressurized Cyberlung" identifier="ntc_cyberlung_pressure_recovery" description="" healableinmedicalclinic="false" type="gaze" isbuff="false" targets="human" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="100">
+      <Description textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery.low" minstrength="0" maxstrength="20" />
+      <Description textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery" minstrength="20" maxstrength="100" />
+      <!-- Restore partial loss from the Pressure Protection triggering  -->
+      <Effect minstrength="0" maxstrength="19.5" strengthchange="-1"></Effect>
+      <Effect minstrength="19.5" maxstrength="20" strengthchange="-1">
+        <StatusEffect type="always" target="Character" comparison="And">
+          <Conditional ntc_cyberlung="gte 90" />
+          <Affliction identifier="pressurestabilized" strength="3" />
+          <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="20" maxstrength="23.5" strengthchange="-1"></Effect>
+      <Effect minstrength="23.5" maxstrength="24" strengthchange="-1">
+        <StatusEffect type="always" target="Character">
+          <Affliction identifier="pressurestabilized" strength="3" />
+          <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="24" maxstrength="27.5" strengthchange="-1"></Effect>
+      <Effect minstrength="27.5" maxstrength="28" strengthchange="-1">
+        <StatusEffect type="always" target="Character">
+          <Affliction identifier="pressurestabilized" strength="3" />
+          <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="28" maxstrength="100" strengthchange="-1"></Effect>
+    </Affliction>
+    <Affliction name="Cyberheart" identifier="ntc_cyberheart" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <!-- in humanupdate.lua heart also grants better bloodpressurerate -->
+      <Effect minstrength="0" maxstrength="100" strengthchange="0">
+        <!-- Faster movement/attack -->
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 150.3" />
+          <Conditional ntc_cyberlung="gte 90" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect type="always" target="Character" interval="1" comparison="And">
+          <Conditional haste="lt 75.3" />
+          <Affliction identifier="haste" amount="0.125" />
+        </StatusEffect>
+        <StatusEffect target="Character" disabledeltatime="true">
+          <StatValue stattype="MaximumHealthMultiplier" minvalue="0" maxvalue="0.2" />
+          <!-- More Vitality -->
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect mininterval="300" maxinterval="1200">
+        <!-- Cyberpsychosis -->
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Conditional ntc_cyberheart="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+        </StatusEffect>
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="Cyberbrain" identifier="ntc_cyberbrain" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="1" iconcolors="76,102,145,255;76,102,145,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" sourcerect="896,0,128,128" />
+      <!-- in humanupdate: Neurotrauma (cerebralhypoxia) resistance, improved Neurotrauma/Coma recovery rate, and improved withdrawal/addiction recovery rates -->
+      <Effect minstrength="0" maxstrength="100" strengthchange="0">
+        <!-- Stat buffs -->
+        <StatValue stattype="ElectricalSkillBonus" minvalue="0" maxvalue="10" />
+        <StatValue stattype="HelmSkillBonus" minvalue="0" maxvalue="10" />
+        <StatValue stattype="MechanicalSkillBonus" minvalue="0" maxvalue="10" />
+        <StatValue stattype="MedicalSkillBonus" minvalue="0" maxvalue="10" />
+        <StatValue stattype="WeaponsSkillBonus" minvalue="0" maxvalue="10" />
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+          <Conditional ishuman="true" analgesia="lte 3" />
+          <Affliction identifier="analgesia" amount="1" />
+          <!-- Little bit of anaesthetic for easier surgery -->
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect mininterval="300" maxinterval="1200">
+        <!-- Cyberpsychosis -->
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+          <Conditional immunity="gte 90" />
+          <Conditional ntc_cyberbrain="gte 90" />
+          <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
+        </StatusEffect>
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="C+" identifier="abcplus" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    </Affliction>
+    <!-- Immunosuppressant Inhaler / mildly decreases immunity to prevent Cyberpsychosis -->
+    <Affliction name="" identifier="immunosuppressantinhaler" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="false" showiconthreshold="10" showinhealthscannerthreshold="300" maxstrength="100">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-0.125">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" immunity="gte 85" />
+          <ReduceAffliction identifier="immunity" amount="2.5" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,4" sheetelementsize="128,128" origin="0,0" sourcerect="0,512,128,128" />
+    </Affliction>
+    <!-- Hidden, immediately causes equivalent vanilla psychosis. Separate to allow configurable resistance -->
+    <Affliction name="" identifier="ntc_cyberpsychosis" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+      <Effect minstrength="0" maxstrength="100" strengthchange="-100">
+        <StatusEffect target="Character" comparison="and" disabledeltatime="true">
+          <Conditional ishuman="true" immunity="gte 85" />
+          <Affliction identifier="psychosis" minamount="0" maxamount="100" />
+        </StatusEffect>
+      </Effect>
+    </Affliction>
+    <Affliction name="" identifier="ntc_cyberpsychosis_resistance" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="500" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+      <Effect minstrength="0" maxstrength="100" resistancefor="ntc_cyberpsychosis" minresistance="0" maxresistance="1" strengthchange="0"></Effect>
+    </Affliction>
+    <!-- /// cyberlimb damage types /// -->
+    <!-- Loose screws
+    a cyber damage type, caused by trauma, movement
+    increases susceptibility to material loss -->
+    <Affliction name="" identifier="ntc_loosescrews" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <!-- 191,171,57,255;191,57,57,255 -->
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,0" sheetelementsize="128,128" origin="0,0" sourcerect="128,0,128,128" />
+    </Affliction>
+    <!-- Damaged electronics
+    a cyber damage type, caused by water and trauma
+    increases susceptibility to material loss -->
+    <Affliction name="" identifier="ntc_damagedelectronics" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,0" sheetelementsize="128,128" origin="0,0" sourcerect="256,0,128,128" />
+    </Affliction>
+    <!-- Bent metal
+    a cyber damage type, caused by trauma
+    increases susceptibility to material loss, decreases movement speed -->
+    <Affliction name="" identifier="ntc_bentmetal" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="3" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,0" sheetelementsize="128,128" origin="0,0" sourcerect="384,0,128,128" />
+    </Affliction>
+    <!-- Material loss
+    a cyber damage type, caused by trauma
+    if too high, the limb is lost -->
+    <Affliction name="" identifier="ntc_materialloss" description="" healableinmedicalclinic="false" targets="human" isbuff="false" limbspecific="true" maxstrength="100" showiconthreshold="5" showinhealthscannerthreshold="500" iconcolors="191,171,57,255;191,57,57,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,0" sheetelementsize="128,128" origin="-2.6355391E-07,0" sourcerect="512,0,128,128" />
+    </Affliction>
 
   <!--NT Eyes-->
     <!-- DAMAGE AFFLICTIONS -->
-  <!-- NO EYES -->
-  <Affliction name="" identifier="noeye" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="2" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="1" maxscreendistort="1" minscreenblur="1" maxscreenblur="1" minradialdistort="1" maxradialdistort="1" minchromaticaberration="1" maxchromaticaberration="1" minskillmultiplier="0.10" maxskillmultiplier="0.10" maxspeedmultiplier="0.5">
-      <StatusEffect target="Character">
-        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
-        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
-      </StatusEffect>
-    </Effect>
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/blackoverlay.png" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1280,128,128" origin="0,0" />
-  </Affliction>
-  <!-- EYES DEAD -->
-  <Affliction name="" identifier="eyesdead" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="2" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="255,0,0,255;255,0,0,255">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="15" maxscreendistort="15" minscreenblur="100" maxscreenblur="100" minradialdistort="100" maxradialdistort="100" minchromaticaberration="200" maxchromaticaberration="200" minskillmultiplier="0.15" maxskillmultiplier="0.15" maxspeedmultiplier="0.5">
-      <StatusEffect target="Character">
-        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
-        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
-      </StatusEffect>
-    </Effect>
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/blind.png" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1280,128,128" origin="0,0" />
-  </Affliction>
-  <!-- EYE ONE -->
-  <Affliction name="" identifier="eyeone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" showinhealthscannerthreshold="100" iconcolors="255,80,0,255;255,80,0,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1024,128,128" origin="0,0" />
-  </Affliction>
-  <!-- LEFT EYE GONE -->
-  <Affliction name="" identifier="lefteyegone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
-    <Effect minstrength="0" maxstrength="2" />
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/leftblind.png" />
-  </Affliction>
-  <!-- RIGHT EYE GONE -->
-  <Affliction name="" identifier="righteyegone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
-    <Effect minstrength="0" maxstrength="2" />
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/rightblind.png" />
-  </Affliction>
-  <!-- EYE LOW BLOOD PRESSURE -->
-  <Affliction name="" identifier="eyelowbloodpressure" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
-    <Effect minstrength="0" maxstrength="2" />
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/lowpressure.png" />
-  </Affliction>
-  <!-- EYE DAMAGE -->
-  <Affliction name="" identifier="eyedamage" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="20" showinhealthscannerthreshold="10" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="255,255,0,255;255,150,0,255;255,100,0,255;255,0,0,255">
-    <Effect minstrength="0" maxstrength="20" />
-    <Effect minstrength="20" maxstrength="60" minscreendistort="0" maxscreendistort="0.2" minscreenblur="0" maxscreenblur="0" minradialdistort="0" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="1" minskillmultiplier="1.0" maxskillmultiplier="0.9" />
-    <Effect minstrength="60" maxstrength="80" minscreendistort="0.2" maxscreendistort="0.7" minscreenblur="0" maxscreenblur="0.5" minradialdistort="0.01" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="0.2" minskillmultiplier="0.8" maxskillmultiplier="0.5" minspeedmultiplier="1" maxspeedmultiplier="0.8" />
-    <Effect minstrength="80" maxstrength="100" minscreendistort="0.7" maxscreendistort="7" minscreenblur="0.5" maxscreenblur="1" minradialdistort="0.1" maxradialdistort="1" minchromaticaberration="0.2" maxchromaticaberration="1" minskillmultiplier="0.5" maxskillmultiplier="0.15" minspeedmultiplier="0.8" maxspeedmultiplier="0.5" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1024,128,128" origin="0,0" />
-  </Affliction>
-  <!-- EYE SHOCK -->
-  <Affliction name="" identifier="eyeshock" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="65" showinhealthscannerthreshold="20" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="0,255,0,255;255,100,0,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1024,128,128" origin="-4.546242E-07,0" />
-  </Affliction>
-  <!-- EYE DROPS -->
-  <Affliction name="" identifier="eyedrop" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="1000" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false" iconcolors="100,120,50,255;100,240,50,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1024,128,128" origin="-2.6355391E-07,0" />
-  </Affliction>
-  <!-- DEUSIZINE DROPS -->
-  <Affliction name="" identifier="deusizinedrop" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="1000" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false" iconcolors="100,50,120,255;100,50,240,255">
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1024,128,128" origin="-2.6355391E-07,0" />
-  </Affliction>
-  <!-- VISION SICKNESS -->
-  <Affliction name="" identifier="eyesickness" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="20" showinhealthscannerthreshold="0" maxstrength="100" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="211,211,84,255;211,100,20,255">
-    <Effect minstrength="0" maxstrength="70" minscreendistort="0" maxscreendistort="0.5" minscreenblur="0" maxscreenblur="0.4" minradialdistort="0" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="0.5" minskillmultiplier="1.0" maxskillmultiplier="0.8" strengthchange="-0.6"></Effect>
-    <Effect minstrength="70" maxstrength="100" minscreendistort="0.5" maxscreendistort="1" minscreenblur="0.4" maxscreenblur="0.5" minradialdistort="0.1" maxradialdistort="0.2" minchromaticaberration="0.5" maxchromaticaberration="1" minskillmultiplier="0.8" maxskillmultiplier="0.5" strengthchange="-1" minspeedmultiplier="1" maxspeedmultiplier="0.8"></Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1024,128,128" origin="5.2710783E-07,0" />
-  </Affliction>
-  <!-- EYE CATARACT-->
-  <Affliction name="" identifier="eyecataract" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="80" showinhealthscannerthreshold="20" maxstrength="100" isbuff="false" healableinmedicalclinic="false" iconcolors="101,101,101,255;255,255,255,255">
-    <Effect minstrength="20" maxstrength="100" minscreendistort="0" maxscreendistort="0.2" minscreenblur="0" maxscreenblur="0.5" minradialdistort="0" maxradialdistort="0" minchromaticaberration="0" maxchromaticaberration="0" minskillmultiplier="1.0" maxskillmultiplier="0.85"></Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1024,128,128" origin="-1.3177696E-07,0" />
-  </Affliction>
-  <!-- SURGERY AFFLICTIONS -->
-  <!-- EYE MUSCLE -->
-  <Affliction name="" identifier="eyemuscle" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1152,128,128" origin="0,0" />
-  </Affliction>
-  <!-- EYE GELL -->
-  <Affliction name="" identifier="eyegell" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1152,128,128" color="0,0,255,255" origin="0.12301906,0.19178654" />
-  </Affliction>
-  <!-- NERVE CONNECTION -->
-  <Affliction name="" identifier="eyenerve" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1280,128,128" color="0,0,255,255" origin="0,0" />
-  </Affliction>
-  <!-- EYE LIDS HELD -->
-  <Affliction name="" identifier="eyelid" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-2" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1280,128,128" color="0,0,255,255" origin="2.7264932E-07,0" />
-  </Affliction>
-  <!-- EYE POPPED / TS without table -->
-  <Affliction name="" identifier="eyepopped" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-2" minscreendistort="0.5" maxscreendistort="10" minradialdistort="0.1" maxradialdistort="1" minchromaticaberration="1" maxchromaticaberration="200" minskillmultiplier="1" maxskillmultiplier="0.25">
-      <StatusEffect target="Character" comparison="and">
-        <Conditional table="eq 0" sym_unconsciousness="lte 0.1" />
-        <Affliction identifier="traumaticshock" amount="3" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1280,128,128" color="0,0,255,255" origin="0,0" />
-  </Affliction>
-  <!-- CORNEA INCISION / TS without opioids-->
-  <Affliction name="" identifier="corneaincision" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-1" minscreenblur="0.4" maxscreenblur="0.4" minskillmultiplier="0.8" maxskillmultiplier="0.8">
-      <StatusEffect target="Character" comparison="and">
-        <Conditional analgesia="lte 0.5" anesthesia="lte 0.5" afadrenaline="lte 0.5" sym_unconsciousness="lte 0.1" />
-        <Affliction identifier="traumaticshock" amount="2" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1280,128,128" color="0,0,255,255" origin="0,0" />
-  </Affliction>
-  <!-- EMULSIFICATION / TS without table -->
-  <Affliction name="" identifier="emulsification" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="2" minscreenblur="90" maxscreenblur="90" minskillmultiplier="0.25" maxskillmultiplier="0.25">
-      <StatusEffect target="Character" comparison="and">
-        <Conditional table="eq 0" sym_unconsciousness="lte 0.1" />
-        <Affliction identifier="traumaticshock" amount="1.5" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1280,128,128" color="0,0,255,255" origin="-2.7264932E-07,0" />
-  </Affliction>
-  <!-- LASER SURGERY -->
-  <Affliction name="" identifier="lasereyesurgery" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1280,128,128" color="0,0,255,255" origin="0,0" />
-  </Affliction>
-  <!-- EFFECT TYPE AFFLICTIONS -->
-  <!-- BIONIC EYE -->
-  <Affliction iconcolors="211,211,84,255;211,211,84,255" name="" identifier="eyebionic" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="-3" maxscreendistort="-3" minscreenblur="-3" maxscreenblur="-3" minradialdistort="-1.5" maxradialdistort="-1.5" minchromaticaberration="-4" maxchromaticaberration="-4" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1152,128,128" origin="2.5803047E-07,0" />
-  </Affliction>
-  <!-- MEDICAL HUD -->
-  <Affliction identifier="medicallens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2">
-      <StatValue stattype="MedicalSkillBonus" value="10" />
-    </Effect>
-  </Affliction>
-  <!-- ELECTRICAL HUD -->
-  <Affliction identifier="electricallens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2">
-      <StatValue stattype="ElectricalSkillBonus" value="15" />
-    </Effect>
-  </Affliction>
-  <!-- ZOOM HUD -->
-  <Affliction identifier="zoomlens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false" />
-  <!-- NIGHT VISION EYE-->
-  <Affliction iconcolors="42,194,47,255;42,194,47,255" name="" identifier="eyenight" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1152,128,128" origin="0,0" />
-  </Affliction>
-  <!-- INFRARED EYE -->
-  <Affliction iconcolors="16,116,179,255;16,116,179,255" name="" identifier="eyeinfrared" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minspeedmultiplier="1" maxspeedmultiplier="1.05" ThermalOverlayRange="1500" ThermalOverlayColor="255,0,0,150">
-      <StatValue stattype="WeaponsSkillBonus" value="15" />
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1024,128,128" origin="0,0" />
-  </Affliction>
-  <!-- PLASTIC EYE -->
-  <Affliction iconcolors="84,211,230,255;84,211,230,255" name="" identifier="eyeplastic" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="0.8" maxscreendistort="0.8" minscreenblur="0.4" maxscreenblur="0.4" minradialdistort="0.7" maxradialdistort="0.7" minchromaticaberration="1" maxchromaticaberration="1" minskillmultiplier="0.5" maxskillmultiplier="0.5"></Effect>
-    <AfflictionOverlay texture="%ModDir%/Images/Overlays/plasticoverlay.png" />
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1152,128,128" origin="-1.579546E-07,0" />
-  </Affliction>
-  <!-- MONSTER EYE -->
-  <Affliction iconcolors="160,160,70,255;160,160,70,255" name="" identifier="eyemonster" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="0.7" maxscreendistort="0.7" minscreenblur="0.2" maxscreenblur="0.2" minradialdistort="1" maxradialdistort="1" minchromaticaberration="0.75" maxchromaticaberration="0.75" minskillmultiplier="0.8" maxskillmultiplier="0.8"></Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1153,128,128" origin="-5.944389E-07,0" />
-  </Affliction>
-  <!-- HUSK EYE -->
-  <Affliction iconcolors="75,0,75,255;75,0,75,255" name="" identifier="eyehusk" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minscreendistort="0.5" maxscreendistort="0.5" minscreenblur="0.1" maxscreenblur="0.1" minradialdistort="0.5" maxradialdistort="0.5" minchromaticaberration="0.4" maxchromaticaberration="0.4" minskillmultiplier="0.9" maxskillmultiplier="0.9"></Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1152,128,128" origin="0,0" />
-  </Affliction>
-  <!-- TERROR EYE -->
-  <Affliction iconcolors="255,0,0,255;255,0,0,255" name="" identifier="eyeterror" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="2" minskillmultiplier="0.1" maxskillmultiplier="0.1" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.3" minradialdistort="0.0" maxradialdistort="0.5" resistancefor="pressure, damage" minresistance="0" maxresistance="0.5" minscreenblur="0.0" maxscreenblur="0.1">
-      <StatValue stattype="WeaponsSkillBonus" value="400" />
-      <StatusEffect target="Character" targetlimb="Head">
-        <Conditional IsLocalPlayer="True" />
-        <Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="5" camerashakerange="250" screencolor="255,0,0,60" screencolorrange="1000" screencolorduration="0.22" />
-        <Sound file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" loop="false" dontmuffle="true" volume="0.5" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1152,128,128" origin="0,0" />
-  </Affliction>
-  <!-- GLASSES CHECK -->
-  <Affliction identifier="hasglasses" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false" />
+    <!-- NO EYES -->
+    <Affliction name="" identifier="noeye" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="2" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="1" maxscreendistort="1" minscreenblur="1" maxscreenblur="1" minradialdistort="1" maxradialdistort="1" minchromaticaberration="1" maxchromaticaberration="1" minskillmultiplier="0.10" maxskillmultiplier="0.10" maxspeedmultiplier="0.5">
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
+        </StatusEffect>
+      </Effect>
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/blackoverlay.png" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1280,128,128" origin="0,0" />
+    </Affliction>
+    <!-- EYES DEAD -->
+    <Affliction name="" identifier="eyesdead" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="1" maxstrength="2" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="255,0,0,255;255,0,0,255">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="15" maxscreendistort="15" minscreenblur="100" maxscreenblur="100" minradialdistort="100" maxradialdistort="100" minchromaticaberration="200" maxchromaticaberration="200" minskillmultiplier="0.15" maxskillmultiplier="0.15" maxspeedmultiplier="0.5">
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
+        </StatusEffect>
+      </Effect>
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/blind.png" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1280,128,128" origin="0,0" />
+    </Affliction>
+    <!-- EYE ONE -->
+    <Affliction name="" identifier="eyeone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" showinhealthscannerthreshold="100" iconcolors="255,80,0,255;255,80,0,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1024,128,128" origin="0,0" />
+    </Affliction>
+    <!-- LEFT EYE GONE -->
+    <Affliction name="" identifier="lefteyegone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
+      <Effect minstrength="0" maxstrength="2" />
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/leftblind.png" />
+    </Affliction>
+    <!-- RIGHT EYE GONE -->
+    <Affliction name="" identifier="righteyegone" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
+      <Effect minstrength="0" maxstrength="2" />
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/rightblind.png" />
+    </Affliction>
+    <!-- EYE LOW BLOOD PRESSURE -->
+    <Affliction name="" identifier="eyelowbloodpressure" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="2">
+      <Effect minstrength="0" maxstrength="2" />
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/lowpressure.png" />
+    </Affliction>
+    <!-- EYE DAMAGE -->
+    <Affliction name="" identifier="eyedamage" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="20" showinhealthscannerthreshold="10" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="255,255,0,255;255,150,0,255;255,100,0,255;255,0,0,255">
+      <Effect minstrength="0" maxstrength="20" />
+      <Effect minstrength="20" maxstrength="60" minscreendistort="0" maxscreendistort="0.2" minscreenblur="0" maxscreenblur="0" minradialdistort="0" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="1" minskillmultiplier="1.0" maxskillmultiplier="0.9" />
+      <Effect minstrength="60" maxstrength="80" minscreendistort="0.2" maxscreendistort="0.7" minscreenblur="0" maxscreenblur="0.5" minradialdistort="0.01" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="0.2" minskillmultiplier="0.8" maxskillmultiplier="0.5" minspeedmultiplier="1" maxspeedmultiplier="0.8" />
+      <Effect minstrength="80" maxstrength="100" minscreendistort="0.7" maxscreendistort="7" minscreenblur="0.5" maxscreenblur="1" minradialdistort="0.1" maxradialdistort="1" minchromaticaberration="0.2" maxchromaticaberration="1" minskillmultiplier="0.5" maxskillmultiplier="0.15" minspeedmultiplier="0.8" maxspeedmultiplier="0.5" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1024,128,128" origin="0,0" />
+    </Affliction>
+    <!-- EYE SHOCK -->
+    <Affliction name="" identifier="eyeshock" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="65" showinhealthscannerthreshold="20" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="0,255,0,255;255,100,0,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1024,128,128" origin="-4.546242E-07,0" />
+    </Affliction>
+    <!-- EYE DROPS -->
+    <Affliction name="" identifier="eyedrop" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="1000" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false" iconcolors="100,120,50,255;100,240,50,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1024,128,128" origin="-2.6355391E-07,0" />
+    </Affliction>
+    <!-- DEUSIZINE DROPS -->
+    <Affliction name="" identifier="deusizinedrop" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="1000" maxstrength="100" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false" iconcolors="100,50,120,255;100,50,240,255">
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1024,128,128" origin="-2.6355391E-07,0" />
+    </Affliction>
+    <!-- VISION SICKNESS -->
+    <Affliction name="" identifier="eyesickness" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="20" showinhealthscannerthreshold="0" maxstrength="100" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="false" healableinmedicalclinic="false" iconcolors="211,211,84,255;211,100,20,255">
+      <Effect minstrength="0" maxstrength="70" minscreendistort="0" maxscreendistort="0.5" minscreenblur="0" maxscreenblur="0.4" minradialdistort="0" maxradialdistort="0.1" minchromaticaberration="0" maxchromaticaberration="0.5" minskillmultiplier="1.0" maxskillmultiplier="0.8" strengthchange="-0.6"></Effect>
+      <Effect minstrength="70" maxstrength="100" minscreendistort="0.5" maxscreendistort="1" minscreenblur="0.4" maxscreenblur="0.5" minradialdistort="0.1" maxradialdistort="0.2" minchromaticaberration="0.5" maxchromaticaberration="1" minskillmultiplier="0.8" maxskillmultiplier="0.5" strengthchange="-1" minspeedmultiplier="1" maxspeedmultiplier="0.8"></Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1024,128,128" origin="5.2710783E-07,0" />
+    </Affliction>
+    <!-- EYE CATARACT-->
+    <Affliction name="" identifier="eyecataract" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="80" showinhealthscannerthreshold="20" maxstrength="100" isbuff="false" healableinmedicalclinic="false" iconcolors="101,101,101,255;255,255,255,255">
+      <Effect minstrength="20" maxstrength="100" minscreendistort="0" maxscreendistort="0.2" minscreenblur="0" maxscreenblur="0.5" minradialdistort="0" maxradialdistort="0" minchromaticaberration="0" maxchromaticaberration="0" minskillmultiplier="1.0" maxskillmultiplier="0.85"></Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1024,128,128" origin="-1.3177696E-07,0" />
+    </Affliction>
+    <!-- SURGERY AFFLICTIONS -->
+    <!-- EYE MUSCLE -->
+    <Affliction name="" identifier="eyemuscle" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1152,128,128" origin="0,0" />
+    </Affliction>
+    <!-- EYE GELL -->
+    <Affliction name="" identifier="eyegell" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1152,128,128" color="0,0,255,255" origin="0.12301906,0.19178654" />
+    </Affliction>
+    <!-- NERVE CONNECTION -->
+    <Affliction name="" identifier="eyenerve" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="896,1280,128,128" color="0,0,255,255" origin="0,0" />
+    </Affliction>
+    <!-- EYE LIDS HELD -->
+    <Affliction name="" identifier="eyelid" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1280,128,128" color="0,0,255,255" origin="2.7264932E-07,0" />
+    </Affliction>
+    <!-- EYE POPPED / TS without table -->
+    <Affliction name="" identifier="eyepopped" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" minscreendistort="0.5" maxscreendistort="10" minradialdistort="0.1" maxradialdistort="1" minchromaticaberration="1" maxchromaticaberration="200" minskillmultiplier="1" maxskillmultiplier="0.25">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional table="eq 0" sym_unconsciousness="lte 0.1" />
+          <Affliction identifier="traumaticshock" amount="3" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1280,128,128" color="0,0,255,255" origin="0,0" />
+    </Affliction>
+    <!-- CORNEA INCISION / TS without opioids-->
+    <Affliction name="" identifier="corneaincision" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" minscreenblur="0.4" maxscreenblur="0.4" minskillmultiplier="0.8" maxskillmultiplier="0.8">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional analgesia="lte 0.5" anesthesia="lte 0.5" afadrenaline="lte 0.5" sym_unconsciousness="lte 0.1" />
+          <Affliction identifier="traumaticshock" amount="2" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1280,128,128" color="0,0,255,255" origin="0,0" />
+    </Affliction>
+    <!-- EMULSIFICATION / TS without table -->
+    <Affliction name="" identifier="emulsification" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="2" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="2" minscreenblur="90" maxscreenblur="90" minskillmultiplier="0.25" maxskillmultiplier="0.25">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional table="eq 0" sym_unconsciousness="lte 0.1" />
+          <Affliction identifier="traumaticshock" amount="1.5" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1280,128,128" color="0,0,255,255" origin="-2.7264932E-07,0" />
+    </Affliction>
+    <!-- LASER SURGERY -->
+    <Affliction name="" identifier="lasereyesurgery" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" maxstrength="100" isbuff="true" iconcolors="84,211,211,255;84,211,211,255">
+      <Effect minstrength="0" maxstrength="100" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="768,1280,128,128" color="0,0,255,255" origin="0,0" />
+    </Affliction>
+    <!-- EFFECT TYPE AFFLICTIONS -->
+    <!-- BIONIC EYE -->
+    <Affliction iconcolors="211,211,84,255;211,211,84,255" name="" identifier="eyebionic" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="-3" maxscreendistort="-3" minscreenblur="-3" maxscreenblur="-3" minradialdistort="-1.5" maxradialdistort="-1.5" minchromaticaberration="-4" maxchromaticaberration="-4" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,1152,128,128" origin="2.5803047E-07,0" />
+    </Affliction>
+    <!-- MEDICAL HUD -->
+    <Affliction identifier="medicallens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2">
+        <StatValue stattype="MedicalSkillBonus" value="10" />
+      </Effect>
+    </Affliction>
+    <!-- ELECTRICAL HUD -->
+    <Affliction identifier="electricallens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2">
+        <StatValue stattype="ElectricalSkillBonus" value="15" />
+      </Effect>
+    </Affliction>
+    <!-- ZOOM HUD -->
+    <Affliction identifier="zoomlens" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false" />
+    <!-- NIGHT VISION EYE-->
+    <Affliction iconcolors="42,194,47,255;42,194,47,255" name="" identifier="eyenight" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="512,1152,128,128" origin="0,0" />
+    </Affliction>
+    <!-- INFRARED EYE -->
+    <Affliction iconcolors="16,116,179,255;16,116,179,255" name="" identifier="eyeinfrared" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minspeedmultiplier="1" maxspeedmultiplier="1.05" ThermalOverlayRange="1500" ThermalOverlayColor="255,0,0,150">
+        <StatValue stattype="WeaponsSkillBonus" value="15" />
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1024,128,128" origin="0,0" />
+    </Affliction>
+    <!-- PLASTIC EYE -->
+    <Affliction iconcolors="84,211,230,255;84,211,230,255" name="" identifier="eyeplastic" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="0.8" maxscreendistort="0.8" minscreenblur="0.4" maxscreenblur="0.4" minradialdistort="0.7" maxradialdistort="0.7" minchromaticaberration="1" maxchromaticaberration="1" minskillmultiplier="0.5" maxskillmultiplier="0.5"></Effect>
+      <AfflictionOverlay texture="%ModDir%/Images/Overlays/plasticoverlay.png" />
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="128,1152,128,128" origin="-1.579546E-07,0" />
+    </Affliction>
+    <!-- MONSTER EYE -->
+    <Affliction iconcolors="160,160,70,255;160,160,70,255" name="" identifier="eyemonster" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="0.7" maxscreendistort="0.7" minscreenblur="0.2" maxscreenblur="0.2" minradialdistort="1" maxradialdistort="1" minchromaticaberration="0.75" maxchromaticaberration="0.75" minskillmultiplier="0.8" maxskillmultiplier="0.8"></Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="640,1153,128,128" origin="-5.944389E-07,0" />
+    </Affliction>
+    <!-- HUSK EYE -->
+    <Affliction iconcolors="75,0,75,255;75,0,75,255" name="" identifier="eyehusk" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minscreendistort="0.5" maxscreendistort="0.5" minscreenblur="0.1" maxscreenblur="0.1" minradialdistort="0.5" maxradialdistort="0.5" minchromaticaberration="0.4" maxchromaticaberration="0.4" minskillmultiplier="0.9" maxskillmultiplier="0.9"></Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="384,1152,128,128" origin="0,0" />
+    </Affliction>
+    <!-- TERROR EYE -->
+    <Affliction iconcolors="255,0,0,255;255,0,0,255" name="" identifier="eyeterror" description="" limbspecific="true" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="100" maxstrength="2" targets="human" type="gaze" causeofdeathdescription="" selfcauseofdeathdescription="" isbuff="true" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2" minskillmultiplier="0.1" maxskillmultiplier="0.1" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.3" minradialdistort="0.0" maxradialdistort="0.5" resistancefor="pressure, damage" minresistance="0" maxresistance="0.5" minscreenblur="0.0" maxscreenblur="0.1">
+        <StatValue stattype="WeaponsSkillBonus" value="400" />
+        <StatusEffect target="Character" targetlimb="Head">
+          <Conditional IsLocalPlayer="True" />
+          <Explosion range="1" force="0" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="5" camerashakerange="250" screencolor="255,0,0,60" screencolorrange="1000" screencolorduration="0.22" />
+          <Sound file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" loop="false" dontmuffle="true" volume="0.5" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1152,128,128" origin="0,0" />
+    </Affliction>
+    <!-- GLASSES CHECK -->
+    <Affliction identifier="hasglasses" showiconthreshold="1000" showinhealthscannerthreshold="1000" limbspecific="true" indicatorlimb="Head" maxstrength="2" healableinmedicalclinic="false" />
 
   <!--Bio Printer-->
-  <Affliction name="" identifier="bonemarrowextracted" description="" type="surgeryincision" limbspecific="true" showiconthreshold="50" showinhealthscannerthreshold="25" maxstrength="100" healableinmedicalclinic="false" isbuff="false" basehealcost="0">
-    <!-- Strength dissipates over 10 minutes -->
-    <Effect minstrength="0" maxstrength="99" maxvitalitydecrease="0" strengthchange="-0.1667">
-      <!-- Dissipates over 10 minutes -->
-    </Effect>
-    <Effect minstrength="99" maxstrength="100" maxvitalitydecrease="0" strengthchange="0.0"></Effect>
-    <!-- At full strength, start applying gradual bone damage -->
-    <PeriodicEffect mininterval="10" maxinterval="30">
-      <StatusEffect type="OnActive" target="Limb">
-        <Conditional bonemarrowextracted="gte 100" />
-        <Affliction identifier="bonedamage" amount="15" />
-      </StatusEffect>
-    </PeriodicEffect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1408,128,128" origin="0,0"/>
-  </Affliction>
+    <Affliction name="" identifier="bonemarrowextracted" description="" type="surgeryincision" limbspecific="true" showiconthreshold="50" showinhealthscannerthreshold="25" maxstrength="100" healableinmedicalclinic="false" isbuff="false" basehealcost="0">
+      <!-- Strength dissipates over 10 minutes -->
+      <Effect minstrength="0" maxstrength="99" maxvitalitydecrease="0" strengthchange="-0.1667">
+        <!-- Dissipates over 10 minutes -->
+      </Effect>
+      <Effect minstrength="99" maxstrength="100" maxvitalitydecrease="0" strengthchange="0.0"></Effect>
+      <!-- At full strength, start applying gradual bone damage -->
+      <PeriodicEffect mininterval="10" maxinterval="30">
+        <StatusEffect type="OnActive" target="Limb">
+          <Conditional bonemarrowextracted="gte 100" />
+          <Affliction identifier="bonedamage" amount="15" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,1408,128,128" origin="0,0"/>
+    </Affliction>
 </Afflictions>
