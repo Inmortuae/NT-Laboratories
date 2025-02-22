@@ -68,10 +68,19 @@ This mod is built upon and enhanced by the following **Neurotrauma** expansions:
 - [NT Blood Work](https://steamcommunity.com/workshop/filedetails/?id=2976434626)  
 - [NT Pharmacy](https://steamcommunity.com/sharedfiles/filedetails/?id=3247838390)  
 - [NT Cybernetics Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=3324062208)  
+  - [Github](https://github.com/Nebual/Neurotrauma/tree/main/NT%20Cybernetics)
 - [NT Bio Printer](https://steamcommunity.com/sharedfiles/filedetails/?id=3429100373)  
+  - [Github](https://github.com/Inmortuae/NT-Bio-Printing)
 - [NT Eyes](https://steamcommunity.com/sharedfiles/filedetails/?id=3294574390)  
-- [Undead's Medical](https://steamcommunity.com/sharedfiles/filedetails/?id=3275278739)  
+  - Not sure what going on with the dev here waiting on update
+  - [Github](https://github.com/dontmatterbro/NTEyes/branches)
+- [Undead's Medical](https://steamcommunity.com/sharedfiles/filedetails/?id=3275278739)
+  - [Github](https://github.com/Inmortuae/Undeads-Medical)  
 - [Extract it!](https://steamcommunity.com/sharedfiles/filedetails/?id=2936086408)  
+  - Not exact copy used as concept for new machine
+- [Curly's NT Surgery Plus Ultra](https://steamcommunity.com/sharedfiles/filedetails/?id=2857967391&tscn=1737793777)
+  - Only added Mannitol plus and Brain jar
+  - [Github](https://github.com/MrCurlyFries/NT-Surgery-Plus-Ultra-name-pending)
 
 ---
 
