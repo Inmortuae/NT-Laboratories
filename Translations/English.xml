@@ -1,365 +1,207 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Localization done by @Undead -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
-  <!--Genetics-->
-  <!-- /// Machines /// !-->
-  <entityname.geneextractor>Gene Extractor</entityname.geneextractor>
-  <entitydescription.geneextractor>A specialized fabricator designed for Extracting Genes.</entitydescription.geneextractor>
+  <!--Main-->
+    <!-- /// Messages ///-->
+    <itemmsgdetachcrowbar>[[use]] Detach (Crowbar)</itemmsgdetachcrowbar>
+    <!-- /// Machines /// -->
+    <entityname.geneextractor>Gene Extractor</entityname.geneextractor>
+    <entitydescription.geneextractor>A specialized fabricator designed for Extracting Genes.</entitydescription.geneextractor>
+    <entityname.biostorage>Bio Storage Cabinet</entityname.biostorage>
+    <entitydescription.biostorage>A specialized Cabinet for organ repair.</entitydescription.biostorage>
 
   <!--BIO PRINTER-->
-  <!-- /// Items /// !-->
-  <entityname.empty_syringe_bone>Empty Syringe</entityname.empty_syringe_bone>
-  <entitydescription.empty_syringe_bone>A empty syringe used for crafting.</entitydescription.empty_syringe_bone>
-  <entityname.bone_marrow>Bone Marrow Syringe</entityname.bone_marrow>
-  <entitydescription.bone_marrow>A syringe full of Bone Marrow.</entitydescription.bone_marrow>
-  <entityname.stem_cells>Stem Cell Syringe</entityname.stem_cells>
-  <entitydescription.stem_cells>A syringe full of Stem Cells.</entitydescription.stem_cells>
-  <entityname.biological_material>Biological Material Syringe</entityname.biological_material>
-  <entitydescription.biological_material>A syringe full of Biological Material.</entitydescription.biological_material>
-  <!-- /// Machines /// !-->
-  <entityname.bioprinter>Bio Printer</entityname.bioprinter>
-  <entitydescription.bioprinter>A specialized fabricator designed for printing biological organs.</entitydescription.bioprinter>
-  <entityname.stemcellprocessor>Stem Cell Processor</entityname.stemcellprocessor>
-  <entitydescription.stemcellprocessor>A specialized fabricator designed for synthesising Stem Cells.</entitydescription.stemcellprocessor>
-  <!-- /// Afflictions /// !-->
-  <afflictionname.bonemarrowextracted>Bone Marrow Extracted</afflictionname.bonemarrowextracted>
-  <afflictiondescription.bonemarrowextracted>The patient's bone marrow has been extracted.</afflictiondescription.bonemarrowextracted>
+    <!-- /// Items /// !-->
+    <entityname.empty_syringe_bone>Empty Syringe</entityname.empty_syringe_bone>
+    <entitydescription.empty_syringe_bone>A empty syringe used for crafting.</entitydescription.empty_syringe_bone>
+    <entityname.bone_marrow>Bone Marrow Syringe</entityname.bone_marrow>
+    <entitydescription.bone_marrow>A syringe full of Bone Marrow.</entitydescription.bone_marrow>
+    <entityname.stem_cells>Stem Cell Syringe</entityname.stem_cells>
+    <entitydescription.stem_cells>A syringe full of Stem Cells.</entitydescription.stem_cells>
+    <entityname.biological_material>Biological Material Syringe</entityname.biological_material>
+    <entitydescription.biological_material>A syringe full of Biological Material.</entitydescription.biological_material>
+    <!-- /// Machines /// !-->
+    <entityname.bioprinter>Bio Printer</entityname.bioprinter>
+    <entitydescription.bioprinter>A specialized fabricator designed for printing biological organs.</entitydescription.bioprinter>
+    <entityname.stemcellprocessor>Stem Cell Processor</entityname.stemcellprocessor>
+    <entitydescription.stemcellprocessor>A specialized fabricator designed for synthesising Stem Cells.</entitydescription.stemcellprocessor>
+    <!-- /// Afflictions /// !-->
+    <afflictionname.bonemarrowextracted>Bone Marrow Extracted</afflictionname.bonemarrowextracted>
+    <afflictiondescription.bonemarrowextracted>The patient's bone marrow has been extracted.</afflictiondescription.bonemarrowextracted>
 
   <!--PHARMACY-->
-  <!-- ChemMaster 2k -->
-  <entityname.chemmaster>ChemMaster 2000</entityname.chemmaster>
-  <entitydescription.chemmaster>A machine that makes pills out of chemicals loaded inside.</entitydescription.chemmaster>
-  <lua.chemerror.header>ChemMaster 2000 - ERROR!:</lua.chemerror.header>
-  <lua.chemerror.invaliditem>{id} is not a valid ingredient.</lua.chemerror.invaliditem>
-  <lua.chemerror.invalidcategory.base>{id} is not a valid pill base.</lua.chemerror.invalidcategory.base>
-  <lua.chemerror.invalidcategory.binder>{id} is not a valid pill binder.</lua.chemerror.invalidcategory.binder>
-  <lua.chemerror.invalidcategory.filler>{id} is not a valid pill filler.</lua.chemerror.invalidcategory.filler>
-  <lua.chemerror.invalidcategory.active>{id} is not a valid active ingredient for pills.</lua.chemerror.invalidcategory.active>
-  <lua.chemerror.invalidcategory.dye>{id} is not a valid pill dye.</lua.chemerror.invalidcategory.dye>
-  <lua.chemerror.outputfull>The output slot is full.</lua.chemerror.outputfull>
-  <lua.chemerror.missingbase>Missing pill base.</lua.chemerror.missingbase>
-  <lua.chemerror.missingbinder>Missing pill binder.</lua.chemerror.missingbinder>
-  <lua.chemerror.missingactive>Missing active ingredients.</lua.chemerror.missingactive>
-  <lua.chemerror.capacity>This configuration can only support up to {cap} active ingredients.</lua.chemerror.capacity>
-  <lua.chemerror.yield>This configuration would not yield any pills.</lua.chemerror.yield>
-  <label.cm_makeone>Make one</label.cm_makeone>
-  <label.cm_makeall>Make all</label.cm_makeall>
-  <label.cm_description>Pill description</label.cm_description>
-  <ItemMsgDetachCrowbar>Detach (Crowbar)</ItemMsgDetachCrowbar>
-  <!-- Pill analyzer -->
-  <entityname.chemalyzer>Pill analyzer</entityname.chemalyzer>
-  <entitydescription.chemalyzer>Displays the composition of pills that are placed inside.</entitydescription.chemalyzer>
-  <label.ca_analyze>Analyze</label.ca_analyze>
-  <lua.chemalyzer.header>Ingredients:</lua.chemalyzer.header>
-  <label.ca_rename>Set description</label.ca_rename>
-  <!-- pill combos -->
-  <pillcombo.antihusk>Antihusk</pillcombo.antihusk>
-  <!-- other items -->
-  <entityname.custompill>Custom pill</entityname.custompill>
-  <entityname.custompill_horsepill>Horse pill</entityname.custompill_horsepill>
-  <entityname.custompill_tablets>Tablets</entityname.custompill_tablets>
-  <entitydescription.custompill>Who knows what effects this pill could have?</entitydescription.custompill>
-  <entitydescription.custompill_horsepill>Quite big for you to haphazardly shove into your mouth.</entitydescription.custompill_horsepill>
-  <entitydescription.custompill_tablets>It can't be that bad, right?</entitydescription.custompill_tablets>
-  <entityname.pillbottleregular>Prescription Bottle</entityname.pillbottleregular>
-  <entitydescription.pillbottleregular>A plastic prescription bottle for storing pills.</entitydescription.pillbottleregular>
-  <entityname.pillbottleadvanced>Advanced Pill Bottle</entityname.pillbottleadvanced>
-  <entitydescription.pillbottleadvanced>A large plastic bottle used to store various pills. It's fitted with a child proof lid that is impossible to open without medical education. Perfect for keeping grabby hands out of harm's way.</entitydescription.pillbottleadvanced>
-  <!-- containers -->
-  <entityname.antidotetoolbox>Antidote container</entityname.antidotetoolbox>
-  <entityname.machinetoolbox>Machine container</entityname.machinetoolbox>
-  <entityname.bonetoolbox>Bone container</entityname.bonetoolbox>
-  <entityname.biohazardtoolbox>Biohazard container</entityname.biohazardtoolbox>
-  <entityname.bufftoolbox>Buff container</entityname.bufftoolbox>
-  <entityname.surgerycrate>Surgery crate</entityname.surgerycrate>
-  <entityname.antidotecrate>Antidote crate</entityname.antidotecrate>
-  <entityname.machinecrate>Machine crate</entityname.machinecrate>
-  <entityname.bonecrate>Bone crate</entityname.bonecrate>
-  <entityname.biohazardcrate>Biohazard crate</entityname.biohazardcrate>
-  <entityname.buffcrate>Buff crate</entityname.buffcrate>
+    <!-- ChemMaster 2k -->
+    <entityname.chemmaster>ChemMaster 2000</entityname.chemmaster>
+    <entitydescription.chemmaster>A machine that makes pills out of chemicals loaded inside.</entitydescription.chemmaster>
+    <lua.chemerror.header>ChemMaster 2000 - ERROR!:</lua.chemerror.header>
+    <lua.chemerror.invaliditem>{id} is not a valid ingredient.</lua.chemerror.invaliditem>
+    <lua.chemerror.invalidcategory.base>{id} is not a valid pill base.</lua.chemerror.invalidcategory.base>
+    <lua.chemerror.invalidcategory.binder>{id} is not a valid pill binder.</lua.chemerror.invalidcategory.binder>
+    <lua.chemerror.invalidcategory.filler>{id} is not a valid pill filler.</lua.chemerror.invalidcategory.filler>
+    <lua.chemerror.invalidcategory.active>{id} is not a valid active ingredient for pills.</lua.chemerror.invalidcategory.active>
+    <lua.chemerror.invalidcategory.dye>{id} is not a valid pill dye.</lua.chemerror.invalidcategory.dye>
+    <lua.chemerror.outputfull>The output slot is full.</lua.chemerror.outputfull>
+    <lua.chemerror.missingbase>Missing pill base.</lua.chemerror.missingbase>
+    <lua.chemerror.missingbinder>Missing pill binder.</lua.chemerror.missingbinder>
+    <lua.chemerror.missingactive>Missing active ingredients.</lua.chemerror.missingactive>
+    <lua.chemerror.capacity>This configuration can only support up to {cap} active ingredients.</lua.chemerror.capacity>
+    <lua.chemerror.yield>This configuration would not yield any pills.</lua.chemerror.yield>
+    <label.cm_makeone>Make one</label.cm_makeone>
+    <label.cm_makeall>Make all</label.cm_makeall>
+    <label.cm_description>Pill description</label.cm_description>
+    <ItemMsgDetachCrowbar>Detach (Crowbar)</ItemMsgDetachCrowbar>
+    <!-- Pill analyzer -->
+    <entityname.chemalyzer>Pill analyzer</entityname.chemalyzer>
+    <entitydescription.chemalyzer>Displays the composition of pills that are placed inside.</entitydescription.chemalyzer>
+    <label.ca_analyze>Analyze</label.ca_analyze>
+    <lua.chemalyzer.header>Ingredients:</lua.chemalyzer.header>
+    <label.ca_rename>Set description</label.ca_rename>
+    <!-- pill combos -->
+    <pillcombo.antihusk>Antihusk</pillcombo.antihusk>
+    <!-- other items -->
+    <entityname.custompill>Custom pill</entityname.custompill>
+    <entityname.custompill_horsepill>Horse pill</entityname.custompill_horsepill>
+    <entityname.custompill_tablets>Tablets</entityname.custompill_tablets>
+    <entitydescription.custompill>Who knows what effects this pill could have?</entitydescription.custompill>
+    <entitydescription.custompill_horsepill>Quite big for you to haphazardly shove into your mouth.</entitydescription.custompill_horsepill>
+    <entitydescription.custompill_tablets>It can't be that bad, right?</entitydescription.custompill_tablets>
+    <entityname.pillbottleregular>Prescription Bottle</entityname.pillbottleregular>
+    <entitydescription.pillbottleregular>A plastic prescription bottle for storing pills.</entitydescription.pillbottleregular>
+    <entityname.pillbottleadvanced>Advanced Pill Bottle</entityname.pillbottleadvanced>
+    <entitydescription.pillbottleadvanced>A large plastic bottle used to store various pills. It's fitted with a child proof lid that is impossible to open without medical education. Perfect for keeping grabby hands out of harm's way.</entitydescription.pillbottleadvanced>
+    <!-- containers -->
+    <entityname.antidotetoolbox>Antidote container</entityname.antidotetoolbox>
+    <entityname.machinetoolbox>Machine container</entityname.machinetoolbox>
+    <entityname.bonetoolbox>Bone container</entityname.bonetoolbox>
+    <entityname.biohazardtoolbox>Biohazard container</entityname.biohazardtoolbox>
+    <entityname.bufftoolbox>Buff container</entityname.bufftoolbox>
+    <entityname.surgerycrate>Surgery crate</entityname.surgerycrate>
+    <entityname.antidotecrate>Antidote crate</entityname.antidotecrate>
+    <entityname.machinecrate>Machine crate</entityname.machinecrate>
+    <entityname.bonecrate>Bone crate</entityname.bonecrate>
+    <entityname.biohazardcrate>Biohazard crate</entityname.biohazardcrate>
+    <entityname.buffcrate>Buff crate</entityname.buffcrate>
   
-  <!--NT EYES-->
-  <!-- ITEMS -->
-  <entityname.nightgoggles>Night Vision Goggles</entityname.nightgoggles>
-  <entitydescription.nightgoggles>Standard Night Vision Goggles. Requires Batteries.</entitydescription.nightgoggles>
-  
-  <entityname.organscalpel_eyes>Precision Eye Scalpel</entityname.organscalpel_eyes>
-  <entitydescription.organscalpel_eyes>A specialized scalpel used in eye surgeries.</entitydescription.organscalpel_eyes>
-  
-  <entityname.eyespoon>Advanced Eyeball Extraction Device</entityname.eyespoon>
-  <entitydescription.eyespoon>A specialized medical gadget for careful extraction of donor eyes. Works on both humans and monsters.</entitydescription.eyespoon>
-  
-  <entityname.eyeglasses>Corrective Glasses</entityname.eyeglasses>
-  <entitydescription.eyeglasses>An outdated device used in temporairly relieving vision problems.</entitydescription.eyeglasses>
-  
-  <entityname.aviatorglasses>Aviator Glasses</entityname.aviatorglasses>
-  <entitydescription.aviatorglasses>An ancient accessory that is said to be only used by commanders of airships. Gives a lot of confidence.</entitydescription.aviatorglasses>
-  
-  <entityname.eyejar>Eye Regeneration Jar</entityname.eyejar>
-  <entitydescription.eyejar>A jar that utilises stem cell regeneration to mend eyes slowly. Will not fully restore eyes.</entitydescription.eyejar>
-  
-  <!-- SURGERY ITEMS -->
-  <entityname.eyedrops>Eye Drops</entityname.eyedrops>
-  <entitydescription.eyedrops>Hastens the recovery of eyes.</entitydescription.eyedrops>
-
-  <entityname.deusizinedrops>Deusizine Drops</entityname.deusizinedrops>
-  <entitydescription.deusizinedrops>Prevents eye damage from internal and external causes.</entitydescription.deusizinedrops>
-  
-  <entityname.muscleconnectors>Muscle Connectors</entityname.muscleconnectors> 
-  <entitydescription.muscleconnectors>Connects the eye muscles, use after eye gel and before nerve connectors.</entitydescription.muscleconnectors>
- 
-  <entityname.eyegel>Eye Gel</entityname.eyegel>
-  <entitydescription.eyegel>Moisturizes the eye holes, use before muscle connectors.</entitydescription.eyegel>
-  
-  <entityname.medicallensitem>Bionic Medical Lens</entityname.medicallensitem>
-  <entitydescription.medicallensitem>An upgrade that can be applied to bionic eyes to give the patient medical scanner vision.
-  ‖color:120,200,120‖ Press F to on a limb to scan.‖color:end‖
-  ‖color:200,200,120‖ Press F to turn on/off.‖color:end‖</entitydescription.medicallensitem>
-  
-  <entityname.electricallensitem>Bionic Electrical Lens</entityname.electricallensitem>
-  <entitydescription.electricallensitem>An upgrade that can be applied to bionic eyes to give the patient electrical scanner vision.
-  ‖color:200,200,120‖ Press F to turn on/off.‖color:end‖</entitydescription.electricallensitem>
- 
-  <entityname.zoomlensitem>Bionic Magnification Lens</entityname.zoomlensitem>
-  <entitydescription.zoomlensitem>An upgrade that can be applied to bionic eyes to give the patient visual magnification ability.
-  ‖color:100,100,200‖ Press - or + to magnify.‖color:end‖</entitydescription.zoomlensitem>
-  
-  <entityname.eyelens>Eye Lens</entityname.eyelens>
-  <entitydescription.eyelens>Used in cataract surgeries, put in after emulsification.</entitydescription.eyelens>
-  
-  <entityname.nerveconnectors>Nerve Connectors</entityname.nerveconnectors>
-  <entitydescription.nerveconnectors>Connects the eye nerves, use after muscle connectors and before putting the eyes in.</entitydescription.nerveconnectors>
-  
-  <entityname.eye_laser_tool>Laser Surgery Tool</entityname.eye_laser_tool>
-  <entitydescription.eye_laser_tool>A compact surgery tool for treating imperfections of the cornea. Requires high amounts of skill to operate.</entitydescription.eye_laser_tool>
-  
-  <!-- EYE ITEMS -->
-  <entityname.transplant_eyes>Human Eyes Transplant</entityname.transplant_eyes>
-  <entitydescription.transplant_eyes>Right out of a human's skull. Used for transplants.</entitydescription.transplant_eyes>
-  
-  <entityname.transplant_eyes_monster>Monster Eyes Transplant</entityname.transplant_eyes_monster>
-  <entitydescription.transplant_eyes_monster>Right out of a monster's skull. Not great for seeing things, but stylish at parties.</entitydescription.transplant_eyes_monster>
-  
-  <entityname.transplant_eyes_terror>Eldritch Eyes</entityname.transplant_eyes_terror>
-  <entitydescription.transplant_eyes_terror>An eye-like object that is unbeknownst to humanity. Proceed with caution.</entitydescription.transplant_eyes_terror>
-  
-  <entityname.transplant_eyes_husk>Husk Eyes Transplant</entityname.transplant_eyes_husk>
-  <entitydescription.transplant_eyes_husk>Right out of a husk's skull. Cannot be damaged by water, and has a chance to give the patient husk infection.</entitydescription.transplant_eyes_husk>
-  
-  <entityname.transplant_eyes_bionic>Bionic Eyes Transplant</entityname.transplant_eyes_bionic>
-  <entitydescription.transplant_eyes_bionic>A metal, much more resilient eye, made for transplantation. Can't be damaged by bodily afflictions and needs to repaired manually. Slightly increases vision quality. Can be upgraded using special lenses.</entitydescription.transplant_eyes_bionic>
-  
-  <entityname.transplant_eyes_night>Night Vision Eyes Transplant</entityname.transplant_eyes_night>
-  <entitydescription.transplant_eyes_night>A pair of eyes, that comes with night vision implants. Can't be turned off on demand.</entitydescription.transplant_eyes_night>
-  
-  <entityname.transplant_eyes_infrared>Infrared Eyes Transplant</entityname.transplant_eyes_infrared>
-  <entitydescription.transplant_eyes_infrared>A pair of eyes with infrared implants. Slightly improves combat skill and vision in dark.</entitydescription.transplant_eyes_infrared>
-  
-  <entityname.transplant_eyes_plastic>Plastic Eyes Transplant</entityname.transplant_eyes_plastic>
-  <entitydescription.transplant_eyes_plastic>A pair of "eyes", not much better than being blind. While its hard to see clear with them, at least they look fashionable.</entitydescription.transplant_eyes_plastic>
-  
-  
-  <!-- AFFLICTIONS -->
-  <afflictionname.noeye>Eyes Removed</afflictionname.noeye>
-  <afflictiondescription.noeye>The patient's eyes have been surgically removed, with empty, red holes taking their place. Horrific.</afflictiondescription.noeye>
-  
-  <afflictionname.eyedamage>Eye Damage</afflictionname.eyedamage>
-  <afflictiondescription.eyedamage>The patient's eyes look flat, and they have trouble seeing.</afflictiondescription.eyedamage>
-  
-  <afflictionname.eyeshock>Autoimmune Retinopathy</afflictionname.eyeshock>
-  <afflictiondescription.eyeshock>The patient's immune system did not accept the eye, and is attacking it instead. Eye removal or immunosuppressants are required to stop it.</afflictiondescription.eyeshock>
-  
-  <afflictionname.eyedrop>Eye Drops</afflictionname.eyedrop>
-  <afflictiondescription.eyedrop>The patient's eye healing rate has increased.</afflictiondescription.eyedrop>
-
-  <afflictionname.deusizinedrop>Deusizine Drops</afflictionname.deusizinedrop>
-  <afflictiondescription.deusizinedrop>The patient's eyes are saturated with Deusizine, preventing most damage to the eye including pressure.</afflictiondescription.deusizinedrop>
-  
-  <afflictionname.eyeone>Dead Eye</afflictionname.eyeone>
-  <afflictiondescription.eyeone>The patient has lost all vision in one of the eyes.</afflictiondescription.eyeone>
-  
-  <afflictionname.eyesdead>Dead Eyes</afflictionname.eyesdead>
-  <afflictiondescription.eyesdead>The patient has lost all vision and their eyes are unresponsive.</afflictiondescription.eyesdead>
-  
-  <afflictionname.eyesickness>Vision Sickness</afflictionname.eyesickness>
-  <afflictiondescription.eyesickness>The patient has trouble seeing, likely because of a recent eye transplant. Should wear off in time.</afflictiondescription.eyesickness>
-  
-  <afflictionname.eyecataract>Cataracts</afflictionname.eyecataract>
-  <afflictiondescription.eyecataract>The patient's eyes look cloudy, and their vision is blurred. Surgery advised.</afflictiondescription.eyecataract>
-  
-  <afflictionname.eyemuscle>Muscle Connectors</afflictionname.eyemuscle>
-  <afflictiondescription.eyemuscle>Muscle connectors are attached to the eye holes.</afflictiondescription.eyemuscle>
-  
-  <afflictionname.eyegell>Eye Gel</afflictionname.eyegell>
-  <afflictiondescription.eyegell>Eye gel is applied to the eye holes.</afflictiondescription.eyegell>
-  
-  <afflictionname.eyelid>Held Eyelids</afflictionname.eyelid>
-  <afflictiondescription.eyelid>The eyelids are held up.</afflictiondescription.eyelid>
-  
-  <afflictionname.eyepopped>Popped Eyeballs</afflictionname.eyepopped>
-  <afflictiondescription.eyepopped>The eyeballs have popped outside the skull and are hanging.</afflictiondescription.eyepopped>
-  
-  <afflictionname.corneaincision>Cornea Incision</afflictionname.corneaincision>
-  <afflictiondescription.corneaincision>An incision into the cornea has been made.</afflictiondescription.corneaincision>
-  
-  <afflictionname.emulsification>Emulsification</afflictionname.emulsification>
-  <afflictiondescription.emulsification>The eye lens has been removed.</afflictiondescription.emulsification>
-  
-  <afflictionname.lasereyesurgery>Laser Surgery</afflictionname.lasereyesurgery>
-  <afflictiondescription.lasereyesurgery>Patient's eyes are rapidly healing due to recent laser surgery.</afflictiondescription.lasereyesurgery>
-  
-  <afflictionname.eyenerve>Nerve Connectors</afflictionname.eyenerve>
-  <afflictiondescription.eyenerve>Eye-brain nerve connection is established.</afflictiondescription.eyenerve>
-  
-  <!-- EYE AFFLICTIONS -->
-  <afflictionname.eyebionic>Bionic Eyes</afflictionname.eyebionic>
-  <afflictiondescription.eyebionic>The patient has bionic eyes.</afflictiondescription.eyebionic>
-  
-  <afflictionname.eyenight>Night Vision Eyes</afflictionname.eyenight>
-  <afflictiondescription.eyenight>The patient has night vision eyes.</afflictiondescription.eyenight>
-  
-  <afflictionname.eyeinfrared>Infrared Eyes</afflictionname.eyeinfrared>
-  <afflictiondescription.eyeinfrared>The patient has infrared eyes.</afflictiondescription.eyeinfrared>
-  
-  <afflictionname.eyeplastic>Plastic Eyes</afflictionname.eyeplastic>
-  <afflictiondescription.eyeplastic>The patient has plastic eyes.</afflictiondescription.eyeplastic>
-  
-  <afflictionname.eyemonster>Monster Eyes</afflictionname.eyemonster>
-  <afflictiondescription.eyemonster>The patient has monster eyes.</afflictiondescription.eyemonster>
-  
-  <afflictionname.eyehusk>Husk Eyes</afflictionname.eyehusk>
-  <afflictiondescription.eyehusk>The patient has husk eyes.</afflictiondescription.eyehusk>
-  
-  <afflictionname.eyeterror>EYES OF THE BEAST</afflictionname.eyeterror>
-  <afflictiondescription.eyeterror>You feel a comforting sense of bloodlust and strength. You are more resilient. You are alive. You must kill. KAR EN TUK</afflictiondescription.eyeterror>
-  
-  <!-- LOADING TIPS -->
-  <loadingscreentip>Latchers and Charybdis' see the world different.</loadingscreentip>
-  <loadingscreentip>Corrective Glasses may improve sight.</loadingscreentip>
-  <loadingscreentip>Husk Eyes have can give the patient husk infection.</loadingscreentip>
-  <loadingscreentip>Laser Surgery Tool consumes high amounts of power.</loadingscreentip>
-  <loadingscreentip>Eye Regeneration Jar can regenerate a dead eye.</loadingscreentip>
-  <loadingscreentip>Cataract causes blurry vision, use glasses.</loadingscreentip>
 
   <!--Blood Work-->
-  <entityname.bloodcultureominus>Blood cell culture O-</entityname.bloodcultureominus>
-  <entitydescription.bloodcultureominus>Combine with any blood plasma to fabricate an O- blood pack</entitydescription.bloodcultureominus>
-  <entityname.bloodcultureoplus>Blood cell culture O+</entityname.bloodcultureoplus>
-  <entitydescription.bloodcultureoplus>Combine with any blood plasma to fabricate an O+ blood pack</entitydescription.bloodcultureoplus>
-  <entityname.bloodcultureabminus>Blood cell culture AB-</entityname.bloodcultureabminus>
-  <entitydescription.bloodcultureabminus>Combine with AB blood plasma to fabricate an AB- blood pack</entitydescription.bloodcultureabminus>
-  <entityname.bloodcultureabplus>Blood cell culture AB+</entityname.bloodcultureabplus>
-  <entitydescription.bloodcultureabplus>Combine with AB blood plasma to fabricate an AB+ blood pack</entitydescription.bloodcultureabplus>
-  <entityname.bloodcultureaminus>Blood cell culture A-</entityname.bloodcultureaminus>
-  <entitydescription.bloodcultureaminus>Combine with AB or A blood plasma to fabricate an A- blood pack</entitydescription.bloodcultureaminus>
-  <entityname.bloodcultureaplus>Blood cell culture A+</entityname.bloodcultureaplus>
-  <entitydescription.bloodcultureaplus>Combine with AB or A blood plasma to fabricate an A+ blood pack</entitydescription.bloodcultureaplus>
-  <entityname.bloodculturebminus>Blood cell culture B-</entityname.bloodculturebminus>
-  <entitydescription.bloodculturebminus>Combine with AB or B plasma to fabricate an B- blood pack</entitydescription.bloodculturebminus>
-  <entityname.bloodculturebplus>Blood cell culture B+</entityname.bloodculturebplus>
-  <entitydescription.bloodculturebplus>Combine with AB or B plasma to fabricate an B+ blood pack</entitydescription.bloodculturebplus>
-  <entityname.bloodcultureabcplus>Blood cell culture C+</entityname.bloodcultureabcplus>
-  <entitydescription.bloodcultureabcplus>Combine with C blood plasma to fabricate an C+ blood pack</entitydescription.bloodcultureabcplus>
-  <entityname.bloodplasmao>Blood plasma O</entityname.bloodplasmao>
-  <entitydescription.bloodplasmao>Compatible with O- and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmao>
-  <entityname.bloodplasmaab>Blood plasma AB</entityname.bloodplasmaab>
-  <entitydescription.bloodplasmaab>Compatible with all blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaab>
-  <entityname.bloodplasmaa>Blood plasma A</entityname.bloodplasmaa>
-  <entitydescription.bloodplasmaa>Compatible with A-, A+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaa>
-  <entityname.bloodplasmab>Blood plasma B</entityname.bloodplasmab>
-  <entitydescription.bloodplasmab>Compatible with B-, B+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmab>
-  <entityname.bloodplasmaabc>Blood plasma C</entityname.bloodplasmaabc>
-  <entitydescription.bloodplasmaabc>Compatible with C+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaabc>
-  <afflictionname.afbloodplasma>Blood plasma infusion</afflictionname.afbloodplasma>
-  
+    <entityname.bloodcultureominus>Blood cell culture O-</entityname.bloodcultureominus>
+    <entitydescription.bloodcultureominus>Combine with any blood plasma to fabricate an O- blood pack</entitydescription.bloodcultureominus>
+    <entityname.bloodcultureoplus>Blood cell culture O+</entityname.bloodcultureoplus>
+    <entitydescription.bloodcultureoplus>Combine with any blood plasma to fabricate an O+ blood pack</entitydescription.bloodcultureoplus>
+    <entityname.bloodcultureabminus>Blood cell culture AB-</entityname.bloodcultureabminus>
+    <entitydescription.bloodcultureabminus>Combine with AB blood plasma to fabricate an AB- blood pack</entitydescription.bloodcultureabminus>
+    <entityname.bloodcultureabplus>Blood cell culture AB+</entityname.bloodcultureabplus>
+    <entitydescription.bloodcultureabplus>Combine with AB blood plasma to fabricate an AB+ blood pack</entitydescription.bloodcultureabplus>
+    <entityname.bloodcultureaminus>Blood cell culture A-</entityname.bloodcultureaminus>
+    <entitydescription.bloodcultureaminus>Combine with AB or A blood plasma to fabricate an A- blood pack</entitydescription.bloodcultureaminus>
+    <entityname.bloodcultureaplus>Blood cell culture A+</entityname.bloodcultureaplus>
+    <entitydescription.bloodcultureaplus>Combine with AB or A blood plasma to fabricate an A+ blood pack</entitydescription.bloodcultureaplus>
+    <entityname.bloodculturebminus>Blood cell culture B-</entityname.bloodculturebminus>
+    <entitydescription.bloodculturebminus>Combine with AB or B plasma to fabricate an B- blood pack</entitydescription.bloodculturebminus>
+    <entityname.bloodculturebplus>Blood cell culture B+</entityname.bloodculturebplus>
+    <entitydescription.bloodculturebplus>Combine with AB or B plasma to fabricate an B+ blood pack</entitydescription.bloodculturebplus>
+    <entityname.bloodcultureabcplus>Blood cell culture C+</entityname.bloodcultureabcplus>
+    <entitydescription.bloodcultureabcplus>Combine with C blood plasma to fabricate an C+ blood pack</entitydescription.bloodcultureabcplus>
+    <entityname.bloodplasmao>Blood plasma O</entityname.bloodplasmao>
+    <entitydescription.bloodplasmao>Compatible with O- and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmao>
+    <entityname.bloodplasmaab>Blood plasma AB</entityname.bloodplasmaab>
+    <entitydescription.bloodplasmaab>Compatible with all blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaab>
+    <entityname.bloodplasmaa>Blood plasma A</entityname.bloodplasmaa>
+    <entitydescription.bloodplasmaa>Compatible with A-, A+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaa>
+    <entityname.bloodplasmab>Blood plasma B</entityname.bloodplasmab>
+    <entitydescription.bloodplasmab>Compatible with B-, B+, O-, and O+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmab>
+    <entityname.bloodplasmaabc>Blood plasma C</entityname.bloodplasmaabc>
+    <entitydescription.bloodplasmaabc>Compatible with C+ blood and blood cell cultures\nPlasma infusions can be used to treat first and second degree burns, stabilize blood pH, and raise blood pressure similar to ringer's solution. \nIt can also temporarily prevent sepsis from increasing, as well as preventing neurotrauma stemming from liver failure.</entitydescription.bloodplasmaabc>
+    <afflictionname.afbloodplasma>Blood plasma infusion</afflictionname.afbloodplasma>
 
   <!--Undead's Medical-->
-  <!-- Afflictions ! -->
-  <afflictionname.revived>Revived</afflictionname.revived>
-  <afflictiondescription.revived>You have been brought back from death's door.</afflictiondescription.revived>
-  <afflictionname.nanobots>Nanobots</afflictionname.nanobots>
-  <afflictiondescription.nanobots>Nanobots are reviving you.</afflictiondescription.nanobots>
-  <!-- /// Items /// !-->
-  <entityname.revive_syringe>Revive Serum</entityname.revive_syringe>
-  <entitydescription.revive_syringe>A powerful mix to prevent eternal rest. Effective only on the dead.</entitydescription.revive_syringe>
-  <entityname.nanobots>Nanobots</entityname.nanobots>
-  <entitydescription.nanobots>A syringe full of tiny medical robots. They can heal everyone including previously revived people.</entitydescription.nanobots>
-  <entityname.refinedcalyx_syringe>Refined Calyx Extract</entityname.refinedcalyx_syringe>
-  <entitydescription.refinedcalyx_syringe>A more potent calyx extract.</entitydescription.refinedcalyx_syringe>
-  <entityname.symbiosis_syringe>Symbiosis Syringe</entityname.symbiosis_syringe>
-  <entitydescription.symbiosis_syringe>A syringe containing a refined symbiote, granting strength and awareness while binding host and parasite as one.</entitydescription.symbiosis_syringe>
-  <!-- /// Materials /// !-->
-  <entityname.xenocrystal>Xenocrystal</entityname.xenocrystal>
-  <entitydescription.xenocrystal>A alien crystal formed from various metals.</entitydescription.xenocrystal>
+    <!-- Afflictions ! -->
+    <afflictionname.revived>Revived</afflictionname.revived>
+    <afflictiondescription.revived>You have been brought back from death's door.</afflictiondescription.revived>
+    <afflictionname.nanobots>Nanobots</afflictionname.nanobots>
+    <afflictiondescription.nanobots>Nanobots are reviving you.</afflictiondescription.nanobots>
+    <!-- /// Items /// !-->
+    <entityname.revive_syringe>Revive Serum</entityname.revive_syringe>
+    <entitydescription.revive_syringe>A powerful mix to prevent eternal rest. Effective only on the dead.</entitydescription.revive_syringe>
+    <entityname.nanobots>Nanobots</entityname.nanobots>
+    <entitydescription.nanobots>A syringe full of tiny medical robots. They can heal everyone including previously revived people.</entitydescription.nanobots>
+    <entityname.refinedcalyx_syringe>Refined Calyx Extract</entityname.refinedcalyx_syringe>
+    <entitydescription.refinedcalyx_syringe>A more potent calyx extract.</entitydescription.refinedcalyx_syringe>
+    <entityname.symbiosis_syringe>Symbiosis Syringe</entityname.symbiosis_syringe>
+    <entitydescription.symbiosis_syringe>A syringe containing a refined symbiote, granting strength and awareness while binding host and parasite as one.</entitydescription.symbiosis_syringe>
+    <!-- /// Materials /// !-->
+    <entityname.xenocrystal>Xenocrystal</entityname.xenocrystal>
+    <entitydescription.xenocrystal>A alien crystal formed from various metals.</entitydescription.xenocrystal>
 
   <!--Cyber-->
-  <!-- ITEMS -->
-  <entityname.cyberarm>Cyberarm</entityname.cyberarm>
-  <entitydescription.cyberarm>An arm made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.cyberarm>
-  <entityname.cyberleg>Cyberleg</entityname.cyberleg>
-  <entitydescription.cyberleg>A leg made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.cyberleg>
-  <entityname.waterproofcyberarm>Waterproof Cyberarm</entityname.waterproofcyberarm>
-  <entitydescription.waterproofcyberarm>A waterproofed cyberarm made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberarm>
-  <entityname.waterproofcyberleg>Waterproof Cyberleg</entityname.waterproofcyberleg>
-  <entitydescription.waterproofcyberleg>A waterproofed cyberleg made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberleg>
-  <entityname.augmentedliver>Cyber-Augmented Liver</entityname.augmentedliver>
-  <entitydescription.augmentedliver>A partially synthetic liver. An improved blood filtration system capable of removing toxins and improving the immune system, ready for reinsertion. </entitydescription.augmentedliver>
-  <entityname.augmentedkidney>Cyber-Augmented Kidney</entityname.augmentedkidney>
-  <entitydescription.augmentedkidney>A partially synthetic kidney. Improves blood production and clotting, altering blood type to C+ for compatibility with other cyber implants. Use after removal of the original kidney to install.</entitydescription.augmentedkidney>
-  <entityname.augmentedheart>Cyber-Augmented Heart</entityname.augmentedheart>
-  <entitydescription.augmentedheart>A partially synthetic heart. Improves muscle speed and blood pressure normalization. Use after removal of the original heart to install.</entitydescription.augmentedheart>
-  <entityname.augmentedlung>Cyber-Augmented Lungs</entityname.augmentedlung>
-  <entitydescription.augmentedlung>A partially synthetic set of lungs. Improves muscle speed, oxygen capacity, modulates breathing to balance blood pH, and provides brief pressure resistance. Use after removal of the original lungs to install.</entitydescription.augmentedlung>
-  <entityname.augmentedbrain>Cyber-Augmented Brain Implant</entityname.augmentedbrain>
-  <entitydescription.augmentedbrain>A neural augment chip for the brain. Improves skills, neurotrauma + addiction recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.augmentedbrain>
-  <entityname.cyberliver>Cyberliver</entityname.cyberliver>
-  <entitydescription.cyberliver>A completely synthetic liver. A top of the line blood filtration system capable of removing toxins and improving the immune system, ready for transplant. </entitydescription.cyberliver>
-  <entityname.cyberkidney>Cyberkidney</entityname.cyberkidney>
-  <entitydescription.cyberkidney>A completely synthetic kidney. A top of the line nano-blood production system which improves blood production and clotting, altering blood type to C+ for compatibility with other cyber implants. Use after removal of original kidney to install. </entitydescription.cyberkidney>
-  <entityname.cyberheart>Cyberheart</entityname.cyberheart>
-  <entitydescription.cyberheart>A completely synthetic heart. A top of the line circulatory system, improving muscle speed and blood pressure normalization. Use after removal of the original heart to install.</entitydescription.cyberheart>
-  <entityname.cyberlung>Cyberlungs</entityname.cyberlung>
-  <entitydescription.cyberlung>A completely synthetic set of lungs. A top of the line respiratory system, improving muscle speed, oxygen capacity, modulates breathing to balance blood pH, and provides partial pressure resistance. Use after removal of the original lungs to install.</entitydescription.cyberlung>
-  <entityname.cyberbrain>Cyberbrain Positronic Implant</entityname.cyberbrain>
-  <entitydescription.cyberbrain>A positronic cyberbrain implant chipset. Top of the line, supercharges skills, neurotrauma + addiction recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.cyberbrain>
-  <entityname.bloodpackabcplus>Blood Pack C+</entityname.bloodpackabcplus>
-  <entitydescription.bloodpackabcplus>Administerable to: C+</entitydescription.bloodpackabcplus>
-  <entityname.abcpluscard>Donor card C+</entityname.abcpluscard>
-  <entitydescription.abcpluscard>Can take blood from: all of them
-Can give blood to: C+</entitydescription.abcpluscard>
-  <entityname.immunosuppressantinhaler>Immunoblocker Inhaler</entityname.immunosuppressantinhaler>
-  <entitydescription.immunosuppressantinhaler>Depresses the immune system to reduce Cyberpsychosis caused by excessive cybernetic implants.</entitydescription.immunosuppressantinhaler>
-  <!-- AFFLICTIONS -->
-  <afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
-  <afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
-  <afflictionname.ntc_cyberarm>Cyberarm</afflictionname.ntc_cyberarm>
-  <afflictiondescription.ntc_cyberarm>The arm is made of metal and electronics</afflictiondescription.ntc_cyberarm>
-  <afflictionname.ntc_cyberleg>Cyberleg</afflictionname.ntc_cyberleg>
-  <afflictiondescription.ntc_cyberleg>The leg is made of metal and electronics</afflictiondescription.ntc_cyberleg>
-  <afflictionname.ntc_waterproof>Weatherproof</afflictionname.ntc_waterproof>
-  <afflictiondescription.ntc_waterproof>The limb is not exposed to the deleterious effects of water.</afflictiondescription.ntc_waterproof>
-  <afflictionname.ntc_cyberlung_pressure_recovery>Pressurized Cyberlung</afflictionname.ntc_cyberlung_pressure_recovery>
-  <afflictiondescription.ntc_cyberlung_pressure_recovery>The Cyberlung is resisting severe pressure, briefly preventing implosion.</afflictiondescription.ntc_cyberlung_pressure_recovery>
-  <afflictiondescription.ntc_cyberlung_pressure_recovery.low>The Cyberlung has resisted severe pressure, and is undertaking self-repair routines.</afflictiondescription.ntc_cyberlung_pressure_recovery.low>
-  <!-- Hidden Cyberpsychosis technical afflictions -->
-  <afflictionname.ntc_cyberpsychosis>Cyberpsychosis</afflictionname.ntc_cyberpsychosis>
-  <afflictiondescription.ntc_cyberpsychosis>The patient is suffering from Cyberpsychosis, a mental disorder caused by excessive cybernetic implants.</afflictiondescription.ntc_cyberpsychosis>
-  <afflictionname.ntc_cyberpsychosis_resistance>Cyberpsychosis Resistance</afflictionname.ntc_cyberpsychosis_resistance>
-  <afflictiondescription.ntc_cyberpsychosis_resistance>The patient has resistance to Cyberpsychosis.</afflictiondescription.ntc_cyberpsychosis_resistance>
-  <afflictionname.ntc_loosescrews>Loose screws</afflictionname.ntc_loosescrews>
-  <afflictiondescription.ntc_loosescrews>Some screws look dangerously close to falling out. Rattling can be heard when moving the limb.</afflictiondescription.ntc_loosescrews>
-  <afflictionname.ntc_damagedelectronics>Damaged electronics</afflictionname.ntc_damagedelectronics>
-  <afflictiondescription.ntc_damagedelectronics>The limb occasionally emits sparks of electricity. Some subsystems are reporting outages.</afflictiondescription.ntc_damagedelectronics>
-  <afflictionname.ntc_bentmetal>Bent metal</afflictionname.ntc_bentmetal>
-  <afflictiondescription.ntc_bentmetal>The limb is bending in an unintended direction.</afflictiondescription.ntc_bentmetal>
-  <afflictionname.ntc_materialloss>Material loss</afflictionname.ntc_materialloss>
-  <afflictiondescription.ntc_materialloss>Parts of the limb are gone.</afflictiondescription.ntc_materialloss>
-  <afflictionname.immunosuppressantinhaler>Inhaled Immunosuppressants</afflictionname.immunosuppressantinhaler>
-  <afflictiondescription.immunosuppressantinhaler></afflictiondescription.immunosuppressantinhaler>
+    <!-- ITEMS -->
+    <entityname.cyberarm>Cyberarm</entityname.cyberarm>
+    <entitydescription.cyberarm>An arm made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.cyberarm>
+    <entityname.cyberleg>Cyberleg</entityname.cyberleg>
+    <entitydescription.cyberleg>A leg made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.cyberleg>
+    <entityname.waterproofcyberarm>Waterproof Cyberarm</entityname.waterproofcyberarm>
+    <entitydescription.waterproofcyberarm>A waterproofed cyberarm made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberarm>
+    <entityname.waterproofcyberleg>Waterproof Cyberleg</entityname.waterproofcyberleg>
+    <entitydescription.waterproofcyberleg>A waterproofed cyberleg made of metal and electronics. Faster and doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberleg>
+    <entityname.augmentedliver>Cyber-Augmented Liver</entityname.augmentedliver>
+    <entitydescription.augmentedliver>A partially synthetic liver. An improved blood filtration system capable of removing toxins and improving the immune system, ready for reinsertion. </entitydescription.augmentedliver>
+    <entityname.augmentedkidney>Cyber-Augmented Kidney</entityname.augmentedkidney>
+    <entitydescription.augmentedkidney>A partially synthetic kidney. Improves blood production and clotting, altering blood type to C+ for compatibility with other cyber implants. Use after removal of the original kidney to install.</entitydescription.augmentedkidney>
+    <entityname.augmentedheart>Cyber-Augmented Heart</entityname.augmentedheart>
+    <entitydescription.augmentedheart>A partially synthetic heart. Improves muscle speed and blood pressure normalization. Use after removal of the original heart to install.</entitydescription.augmentedheart>
+    <entityname.augmentedlung>Cyber-Augmented Lungs</entityname.augmentedlung>
+    <entitydescription.augmentedlung>A partially synthetic set of lungs. Improves muscle speed, oxygen capacity, modulates breathing to balance blood pH, and provides brief pressure resistance. Use after removal of the original lungs to install.</entitydescription.augmentedlung>
+    <entityname.augmentedbrain>Cyber-Augmented Brain Implant</entityname.augmentedbrain>
+    <entitydescription.augmentedbrain>A neural augment chip for the brain. Improves skills, neurotrauma + addiction recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.augmentedbrain>
+    <entityname.cyberliver>Cyberliver</entityname.cyberliver>
+    <entitydescription.cyberliver>A completely synthetic liver. A top of the line blood filtration system capable of removing toxins and improving the immune system, ready for transplant. </entitydescription.cyberliver>
+    <entityname.cyberkidney>Cyberkidney</entityname.cyberkidney>
+    <entitydescription.cyberkidney>A completely synthetic kidney. A top of the line nano-blood production system which improves blood production and clotting, altering blood type to C+ for compatibility with other cyber implants. Use after removal of original kidney to install. </entitydescription.cyberkidney>
+    <entityname.cyberheart>Cyberheart</entityname.cyberheart>
+    <entitydescription.cyberheart>A completely synthetic heart. A top of the line circulatory system, improving muscle speed and blood pressure normalization. Use after removal of the original heart to install.</entitydescription.cyberheart>
+    <entityname.cyberlung>Cyberlungs</entityname.cyberlung>
+    <entitydescription.cyberlung>A completely synthetic set of lungs. A top of the line respiratory system, improving muscle speed, oxygen capacity, modulates breathing to balance blood pH, and provides partial pressure resistance. Use after removal of the original lungs to install.</entitydescription.cyberlung>
+    <entityname.cyberbrain>Cyberbrain Positronic Implant</entityname.cyberbrain>
+    <entitydescription.cyberbrain>A positronic cyberbrain implant chipset. Top of the line, supercharges skills, neurotrauma + addiction recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.cyberbrain>
+    <entityname.bloodpackabcplus>Blood Pack C+</entityname.bloodpackabcplus>
+    <entitydescription.bloodpackabcplus>Administerable to: C+</entitydescription.bloodpackabcplus>
+    <entityname.abcpluscard>Donor card C+</entityname.abcpluscard>
+      <entitydescription.abcpluscard>Can take blood from: all of them
+    Can give blood to: C+</entitydescription.abcpluscard>
+    <entityname.immunosuppressantinhaler>Immunoblocker Inhaler</entityname.immunosuppressantinhaler>
+    <entitydescription.immunosuppressantinhaler>Depresses the immune system to reduce Cyberpsychosis caused by excessive cybernetic implants.</entitydescription.immunosuppressantinhaler>
+    <!-- AFFLICTIONS -->
+    <afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+    <afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+    <afflictionname.ntc_cyberarm>Cyberarm</afflictionname.ntc_cyberarm>
+    <afflictiondescription.ntc_cyberarm>The arm is made of metal and electronics</afflictiondescription.ntc_cyberarm>
+    <afflictionname.ntc_cyberleg>Cyberleg</afflictionname.ntc_cyberleg>
+    <afflictiondescription.ntc_cyberleg>The leg is made of metal and electronics</afflictiondescription.ntc_cyberleg>
+    <afflictionname.ntc_waterproof>Weatherproof</afflictionname.ntc_waterproof>
+    <afflictiondescription.ntc_waterproof>The limb is not exposed to the deleterious effects of water.</afflictiondescription.ntc_waterproof>
+    <afflictionname.ntc_cyberlung_pressure_recovery>Pressurized Cyberlung</afflictionname.ntc_cyberlung_pressure_recovery>
+    <afflictiondescription.ntc_cyberlung_pressure_recovery>The Cyberlung is resisting severe pressure, briefly preventing implosion.</afflictiondescription.ntc_cyberlung_pressure_recovery>
+    <afflictiondescription.ntc_cyberlung_pressure_recovery.low>The Cyberlung has resisted severe pressure, and is undertaking self-repair routines.</afflictiondescription.ntc_cyberlung_pressure_recovery.low>
+    <!-- Hidden Cyberpsychosis technical afflictions -->
+    <afflictionname.ntc_cyberpsychosis>Cyberpsychosis</afflictionname.ntc_cyberpsychosis>
+    <afflictiondescription.ntc_cyberpsychosis>The patient is suffering from Cyberpsychosis, a mental disorder caused by excessive cybernetic implants.</afflictiondescription.ntc_cyberpsychosis>
+    <afflictionname.ntc_cyberpsychosis_resistance>Cyberpsychosis Resistance</afflictionname.ntc_cyberpsychosis_resistance>
+    <afflictiondescription.ntc_cyberpsychosis_resistance>The patient has resistance to Cyberpsychosis.</afflictiondescription.ntc_cyberpsychosis_resistance>
+    <afflictionname.ntc_loosescrews>Loose screws</afflictionname.ntc_loosescrews>
+    <afflictiondescription.ntc_loosescrews>Some screws look dangerously close to falling out. Rattling can be heard when moving the limb.</afflictiondescription.ntc_loosescrews>
+    <afflictionname.ntc_damagedelectronics>Damaged electronics</afflictionname.ntc_damagedelectronics>
+    <afflictiondescription.ntc_damagedelectronics>The limb occasionally emits sparks of electricity. Some subsystems are reporting outages.</afflictiondescription.ntc_damagedelectronics>
+    <afflictionname.ntc_bentmetal>Bent metal</afflictionname.ntc_bentmetal>
+    <afflictiondescription.ntc_bentmetal>The limb is bending in an unintended direction.</afflictiondescription.ntc_bentmetal>
+    <afflictionname.ntc_materialloss>Material loss</afflictionname.ntc_materialloss>
+    <afflictiondescription.ntc_materialloss>Parts of the limb are gone.</afflictiondescription.ntc_materialloss>
+    <afflictionname.immunosuppressantinhaler>Inhaled Immunosuppressants</afflictionname.immunosuppressantinhaler>
+    <afflictiondescription.immunosuppressantinhaler></afflictiondescription.immunosuppressantinhaler>
 
-  <entityname.mannitolplus>Mannitol plus</entityname.mannitolplus>
-  <entitydescription.mannitolplus>An improved version of mannitol. It is used to quickly treat neurotrauma.</entitydescription.mannitolplus>
-  <entityname.brainjar>Brain jar</entityname.brainjar>
-  <entitydescription.brainjar>A container to hold brain transplants indefinitely.</entitydescription.brainjar>
+  <!--Surgery Plus-->
+    <entityname.mannitolplus>Mannitol plus</entityname.mannitolplus>
+    <entitydescription.mannitolplus>An improved version of mannitol. It is used to quickly treat neurotrauma.</entitydescription.mannitolplus>
+    <entityname.brainjar>Brain jar</entityname.brainjar>
+    <entitydescription.brainjar>A container to hold brain transplants indefinitely.</entitydescription.brainjar>
 
 </infotexts>

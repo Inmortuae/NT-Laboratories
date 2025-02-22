@@ -21,11 +21,16 @@
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
           <Conditional hastag="neq refrigerated" targetcontainer="true" />
+          <Conditional hastag="neq biostorage" targetcontainer="true" />
           <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
           <Conditional condition="gte 95" />
           <Conditional hastag="refrigerated" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" condition="0.08" comparison="and">
+          <Conditional condition="gte 1" />
+          <Conditional HasStatusTag="organrenewal" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
@@ -57,11 +62,16 @@
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
           <Conditional hastag="neq refrigerated" targetcontainer="true" />
+          <Conditional hastag="neq biostorage" targetcontainer="true" />
           <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
           <Conditional condition="gte 95" />
           <Conditional hastag="refrigerated" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" condition="0.08" comparison="and">
+          <Conditional condition="gte 1" />
+          <Conditional HasStatusTag="organrenewal" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
@@ -93,11 +103,16 @@
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
           <Conditional hastag="neq refrigerated" targetcontainer="true" />
+          <Conditional hastag="neq biostorage" targetcontainer="true" />
           <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
           <Conditional condition="gte 95" />
           <Conditional hastag="refrigerated" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" condition="0.08" comparison="and">
+          <Conditional condition="gte 1" />
+          <Conditional HasStatusTag="organrenewal" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
@@ -129,11 +144,16 @@
         <!-- making the limb go kaputt if left outside of refrigeration -->
         <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
           <Conditional hastag="neq refrigerated" targetcontainer="true" />
+          <Conditional hastag="neq biostorage" targetcontainer="true" />
           <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
           <Conditional condition="gte 95" />
           <Conditional hastag="refrigerated" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" condition="0.08" comparison="and">
+          <Conditional condition="gte 1" />
+          <Conditional HasStatusTag="organrenewal" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!

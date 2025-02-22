@@ -9,106 +9,73 @@
 
   <!--Main-->
     <!--Images-->  
-  <Other file="%ModDir%/Images/InGameItemIconAtlas.png" />
-  <Other file="%ModDir%/Images/InventoryItemIconAtlas.png" />
-  <Other file="%ModDir%/Images/AfflictionIcons.png" />
-  <Other file="%ModDir%/Images/Machines.png" />
-  <Other file="%ModDir%/Images/BloodPacksAtlas.png" />
-  <Other file="%ModDir%/Images/Overlays/blackoverlay.png" />
-  <Other file="%ModDir%/Images/Overlays/plasticoverlay.png" />
-  <Other file="%ModDir%/Images/Overlays/leftblind.png" />
-  <Other file="%ModDir%/Images/Overlays/rightblind.png" />
-  <Other file="%ModDir%/Images/Overlays/blind.png" />
-  <Other file="%ModDir%/Images/Overlays/lowpressure.png" />
+    <Other file="%ModDir%/Images/InGameItemIconAtlas.png" />
+    <Other file="%ModDir%/Images/InventoryItemIconAtlas.png" />
+    <Other file="%ModDir%/Images/AfflictionIcons.png" />
+    <Other file="%ModDir%/Images/Machines.png" />
+    <Other file="%ModDir%/Images/BloodPacksAtlas.png" />
     <!--Afflictions-->
-  <Afflictions file="%ModDir%/Xml/Afflictions/Afflictions.xml" />
+    <Afflictions file="%ModDir%/Xml/Afflictions/Afflictions.xml" />
     <!--Items-->
-  <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
-  <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
-  <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
-  <Item file="%ModDir%/Xml/Items/items.xml" />
+    <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
+    <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
+    <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
+    <Item file="%ModDir%/Xml/Items/items.xml" />
     <!--Machines-->
-  <Item file="%ModDir%/Xml/Machines/Machines.xml" />
+    <Item file="%ModDir%/Xml/Machines/Machines.xml" />
     <!--Sounds-->
     <!--Talents-->
   
   <!--Bio Printer-->
-  <Other file="%ModDir%/Lua/Scripts/Server/BioPrinter/EmptySyringe.lua" />
-  <Other file="%ModDir%/Sounds/BioPrinter/severed.ogg" />
+    <Other file="%ModDir%/Lua/Scripts/Server/BioPrinter/EmptySyringe.lua" />
+    <Other file="%ModDir%/Sounds/BioPrinter/severed.ogg" />
 
   <!--Pharmacy-->
-  <Sounds file="%ModDir%/Xml/Sounds/Pharmacy/sounds.xml" />
-  <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
-
-  <!--NT Eyes-->
-  <Other file="%ModDir%/Sounds/NTEye/eyesofterror.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/eye_slowlaser.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/eye_healthscanner.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/eye_error.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/eye_beep.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_female_1.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_1.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_2.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/Voice/scream_male_3.ogg" />
-  <Other file="%ModDir%/Sounds/NTEye/Voice/screams_female_2.ogg" />
-  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/clientControls.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/eyeHealthScanner.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Client/NTEye/eyeupdateClient.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/immersivedivingComp.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/robotraumaCompClient.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Compatibility/NTEye/robotraumaCompServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeNetworkServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeondamageServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyesurgeryServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/eyeupdateServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/itemspawnServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/LosModeServer.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/NTEye/spoonServer.lua" />
-  <Other file="%ModDir%/CSharp/RunConfig.xml" />
-  <Other file="%ModDir%/CSharp/Client/CompleteDarknessMod.cs" />
+    <Sounds file="%ModDir%/Xml/Sounds/Pharmacy/sounds.xml" />
+    <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
 
   <!--Undead's Medical-->
-  <Talents file="%ModDir%/Xml/Talents/UndeadsMed/Doctor/TalentsDoctor.xml" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Affliction.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Regen.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/revivesyringe.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/refinedcalyxsyringe.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/nanobots.lua" />
+    <Talents file="%ModDir%/Xml/Talents/UndeadsMed/Doctor/TalentsDoctor.xml" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Affliction.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Regen.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/revivesyringe.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/refinedcalyxsyringe.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/nanobots.lua" />
 
   <!--Cyber-->
-  <Other file="%ModDir%/Lua/Scripts/Cyber/humanupdate.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/items.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/items.client.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/items.shared.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/ondamaged.lua" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/testing.lua" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberbite1.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberbite2.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberbite3.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt1.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt10.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt11.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt2.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt3.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt4.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt5.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt6.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt7.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt8.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberblunt9.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberdeath1.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberdeath2.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/cyberdeath3.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/screwdriver1.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/screwdriver2.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/welding1.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/welding2.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/welding3.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/welding4.ogg" />
-  <Other file="%ModDir%/Sounds/Cyber/welding5.ogg" />
-  <Other file="%ModDir%/Lua/Scripts/Cyber/helperfunctions.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/humanupdate.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/items.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/items.client.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/items.shared.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/ondamaged.lua" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/testing.lua" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberbite1.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberbite2.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberbite3.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt1.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt10.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt11.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt2.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt3.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt4.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt5.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt6.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt7.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt8.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberblunt9.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberdeath1.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberdeath2.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/cyberdeath3.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/screwdriver1.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/screwdriver2.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/welding1.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/welding2.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/welding3.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/welding4.ogg" />
+    <Other file="%ModDir%/Sounds/Cyber/welding5.ogg" />
+    <Other file="%ModDir%/Lua/Scripts/Cyber/helperfunctions.lua" />
 </contentpackage>
