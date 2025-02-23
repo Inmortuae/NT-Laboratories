@@ -81,6 +81,8 @@ This mod is built upon and enhanced by the following **Neurotrauma** expansions:
 - [Curly's NT Surgery Plus Ultra](https://steamcommunity.com/sharedfiles/filedetails/?id=2857967391&tscn=1737793777)
   - Only added Mannitol plus and Brain jar
   - [Github](https://github.com/MrCurlyFries/NT-Surgery-Plus-Ultra-name-pending)
+- [NT Symbiote + Infection](https://steamcommunity.com/sharedfiles/filedetails/?id=3258504017)
+  - Players with Symbiosis can reattach limbs without surgery.
 
 ---
 
