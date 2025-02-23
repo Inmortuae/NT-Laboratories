@@ -292,7 +292,7 @@ Timer.Wait(function()
     
         local amputationAffliction = traumaticAmputationAfflictions[limbtype]
     
-        if not HF.CanPerformSurgeryOn(targetCharacter) then
+        if not HF.CanPerformSurgeryOn(targetCharacter) and NTConfig.Get("TraumaSaw", true) then
             if amputationAffliction then
                 HF.SetAfflictionLimb(targetCharacter, amputationAffliction, limbtype, 1, usingCharacter)
             end

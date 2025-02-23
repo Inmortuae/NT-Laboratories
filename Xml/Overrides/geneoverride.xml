@@ -54,7 +54,7 @@
       <Body width="15" radius="15" density="20" />
       <Pickable slots="Any" />
     </Item>
-    <Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
+    <Item name="" identifier="alienblood" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" secondary="medcontainer" />
       <PreferredContainer secondary="storageorgan" minamount="1" maxamount="2" spawnprobability="1" />

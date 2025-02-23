@@ -5,6 +5,12 @@ NTL.ConfigData = {
     NTCyb_cyberpsychosisChance = {name="Cyberpsychosis Chance",default=1,range={0,1},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
     NTCyb_cyberarmSpeed = {name="Cyberarm Speed Increase",default=1,range={0,2},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
     NTCyb_cyberlegSpeed = {name="Cyberleg Speed Increase",default=1,range={0,2},type="float", difficultyCharacteristics={multiplier=0.5,max=2}},
+    TraumaSaw = {
+        name = "Traumatic Amputation",
+        default = true,
+        type = "bool",
+        description = "Enables the ability to perform traumatic amputations using a saw. When enabled, the saw can be used to forcibly amputate limbs, causing significant damage and bleeding.",
+    },
     RS_Affliction = {
         name = "Revive Affliction",
         default = true,
