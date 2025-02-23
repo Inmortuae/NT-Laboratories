@@ -1,360 +1,425 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
     <!-- ChemMaster 2000 -->
-      <Item name="" identifier="chemmaster" tags="chemmaster" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker" scale="0.3" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2" isshootable="true">
-        <Price baseprice="1500" soldbydefault="false">
-          <Price storeidentifier="merchantengineering" sold="true" minavailable="1" />
-        </Price>
-        <Deconstruct time="30">
-          <Item identifier="plastic" />
-          <Item identifier="steel" />
-          <Item identifier="titaniumaluminiumalloy" />
-        </Deconstruct>
-        <Fabricate suitablefabricators="fabricator" requiredtime="50">
-          <RequiredSkill identifier="medical" level="50" />
-          <RequiredItem identifier="fpgacircuit" />
-          <RequiredItem identifier="plastic" />
-          <RequiredItem identifier="steel" />
-          <RequiredItem identifier="aluminium" />
-          <RequiredItem identifier="titaniumaluminiumalloy" />
-        </Fabricate>
-        <Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.8" sourcerect="0,0,336,288" origin="0.5,0.5" />
-        <InventoryIcon texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="0,0,336,288" origin="0.5,0.5" />
-        <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="336,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-        <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="672,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="0" />
-        <Body radius="45" width="34" density="15" />
-        <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5" IsOn="true" castshadows="false" allowingameediting="false">
-          <sprite texture="Content/Items/Command/navigatorLights.png" depth="0.025" sourcerect="688,339,336,288" alpha="1.0" />
-        </LightComponent>
-        <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-          <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-          <RequiredSkill identifier="electrical" level="55" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-            <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-            <Affliction identifier="stun" strength="5" />
-            <Affliction identifier="burn" strength="5" />
+    <Item name="" identifier="chemmaster" tags="chemmaster" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker" scale="0.3" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2" isshootable="true">
+      <Price baseprice="1500" soldbydefault="false">
+        <Price storeidentifier="merchantengineering" sold="true" minavailable="1" />
+      </Price>
+      <Deconstruct time="30">
+        <Item identifier="plastic" />
+        <Item identifier="steel" />
+        <Item identifier="titaniumaluminiumalloy" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="50">
+        <RequiredSkill identifier="medical" level="50" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="titaniumaluminiumalloy" />
+      </Fabricate>
+      <Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.8" sourcerect="0,0,336,288" origin="0.5,0.5" />
+      <InventoryIcon texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="0,0,336,288" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="336,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="672,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <Body radius="45" width="34" density="15" />
+      <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/Command/navigatorLights.png" depth="0.025" sourcerect="688,339,336,288" alpha="1.0" />
+      </LightComponent>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer capacity="14" slotsperrow="7" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.3,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="smallitem,mediumitem" />
+        <SlotIcon slotindex="0" texture="%ModDir%/Images/pillui.png" sourcerect="66,0,31,47" origin="0.5,0.45" />
+        <SlotIcon slotindex="1" texture="%ModDir%/Images/pillui.png" sourcerect="99,4,25,44" origin="0.5,0.45" />
+        <SlotIcon slotindex="2" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
+        <SlotIcon slotindex="3" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
+        <SlotIcon slotindex="4" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="5" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="6" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
+        <SlotIcon slotindex="13" texture="%ModDir%/Images/pillui.png" sourcerect="214,9,42,39" origin="0.5,0.45" />
+      </ItemContainer>
+      <CustomInterface canbeselected="true" allowuioverlap="true">
+        <GuiFrame relativesize="0.2,0.2" anchor="CenterRight" pivot="CenterLeft" relativeoffset="0.36,0.001" style="ItemUI" linkuitocomponent="ItemContainer" />
+        <Button text="label.cm_makeone">
+          <StatusEffect target="This" type="OnUse">
+            <LuaHook name="NTL.ChemMaster.makeone" />
           </StatusEffect>
-          <RequiredItem items="screwdriver" type="Equipped" />
-          <input name="power_in" displayname="connection.powerin" />
-        </ConnectionPanel>
-        <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-          <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-          <RequiredSkill identifier="mechanical" level="55" />
-          <RequiredItem items="wrench" type="equipped" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-          <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-          <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-            <Affliction identifier="lacerations" strength="5" />
-            <Affliction identifier="stun" strength="5" />
+        </Button>
+        <Button text="label.cm_makeall">
+          <StatusEffect target="This" type="OnUse">
+            <LuaHook name="NTL.ChemMaster.makeall" />
           </StatusEffect>
-        </Repairable>
-        <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
-          <RequiredItem items="crowbar" type="Equipped" />
-          <StatusEffect target="This" type="OnContained">
-            <Conditional attached="false" targetitemcomponentname="Holdable" />
-            <DropContainedItems />
-          </StatusEffect>
-        </Holdable>
-        <ItemContainer capacity="14" slotsperrow="7" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-          <GuiFrame relativesize="0.3,0.2" anchor="Center" style="ItemUI" />
-          <Containable items="smallitem,mediumitem" />
-          <SlotIcon slotindex="0" texture="%ModDir%/Images/pillui.png" sourcerect="66,0,31,47" origin="0.5,0.45" />
-          <SlotIcon slotindex="1" texture="%ModDir%/Images/pillui.png" sourcerect="99,4,25,44" origin="0.5,0.45" />
-          <SlotIcon slotindex="2" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
-          <SlotIcon slotindex="3" texture="%ModDir%/Images/pillui.png" sourcerect="126,7,49,39" origin="0.5,0.45" />
-          <SlotIcon slotindex="4" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
-          <SlotIcon slotindex="5" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
-          <SlotIcon slotindex="6" texture="%ModDir%/Images/pillui.png" sourcerect="179,0,30,48" origin="0.5,0.45" />
-          <SlotIcon slotindex="13" texture="%ModDir%/Images/pillui.png" sourcerect="214,9,42,39" origin="0.5,0.45" />
-        </ItemContainer>
-        <CustomInterface canbeselected="true" allowuioverlap="true">
-          <GuiFrame relativesize="0.2,0.2" anchor="CenterRight" pivot="CenterLeft" relativeoffset="0.36,0.001" style="ItemUI" linkuitocomponent="ItemContainer" />
-          <Button text="label.cm_makeone">
-            <StatusEffect target="This" type="OnUse">
-              <LuaHook name="NTL.ChemMaster.makeone" />
-            </StatusEffect>
-          </Button>
-          <Button text="label.cm_makeall">
-            <StatusEffect target="This" type="OnUse">
-              <LuaHook name="NTL.ChemMaster.makeall" />
-            </StatusEffect>
-          </Button>
-          <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64" />
-        </CustomInterface>
-      </Item>
+        </Button>
+        <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64" />
+      </CustomInterface>
+    </Item>
     <!-- Genetic Research Station -->
-      <Item name="" identifier="geneextractor" tags="geneticresearchstation,geneextractor,donttakeitems,dontsellitems" width="494" height="297" texturescale="1.0,1.0" scale="0.5" category="Machine" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-          <Upgrade gameversion="0.10.4.0">
-              <Repairable Msg="ItemMsgRepairWrench" />
-          </Upgrade>
-          <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
-              <RequiredSkill identifier="electrical" level="65" />
-              <RequiredSkill identifier="mechanical" level="50" />
-              <RequiredItem identifier="silicon" amount="2" />
-              <RequiredItem identifier="copper" amount="4" />
-              <RequiredItem identifier="fulgurium" amount="2" />
-              <RequiredItem identifier="fpgacircuit" amount="6" />
-          </Fabricate>
-          <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-          <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="417,6,494,297" depth="0.79" premultiplyalpha="false" origin="0.5,0.5" />
-          <LightComponent range="0.0" powerconsumption="5" lightcolor="255,255,255,111" IsOn="true" castshadows="false" allowingameediting="false">
-              <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="417,6,494,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-          </LightComponent>
-          <Body width="94" height="221" density="20" />
-          <Deconstructor canbeselected="true" showoutput="false" powerconsumption="500.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="researchstation.empty.infotext" infoareawidth="0.7">
-              <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
-              <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true" />
-              <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
-              <StatusEffect type="InWater" target="This" condition="-0.5" />
-          </Deconstructor>
-          <ItemContainer capacity="2" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" uilabel="" allowuioverlap="true">
-              <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,alienblood" />
-          </ItemContainer>
-          <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
-              <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial" />
-          </ItemContainer>
-          <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-            <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-            <RequiredSkill identifier="electrical" level="55" />
-            <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-              <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-              <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-              <Affliction identifier="stun" strength="5" />
-              <Affliction identifier="burn" strength="5" />
-            </StatusEffect>
-            <RequiredItem items="screwdriver" type="Equipped" />
-            <input name="power_in" displayname="connection.powerin" />
-          </ConnectionPanel>
-          <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-            <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-            <RequiredSkill identifier="mechanical" level="55" />
-            <RequiredItem items="wrench" type="equipped" />
-            <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-            <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-            <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-            <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-              <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-              <Affliction identifier="lacerations" strength="5" />
-              <Affliction identifier="stun" strength="5" />
-            </StatusEffect>
-          </Repairable>
-        <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
-          <RequiredItem items="crowbar" type="Equipped" />
-          <StatusEffect target="This" type="OnContained">
-            <Conditional attached="false" targetitemcomponentname="Holdable" />
-            <DropContainedItems />
-          </StatusEffect>
-        </Holdable>
-      </Item>
+    <Item name="" identifier="geneextractor" tags="geneticresearchstation,geneextractor,donttakeitems,dontsellitems" width="494" height="297" texturescale="1.0,1.0" scale="0.5" category="Machine" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+      </Fabricate>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="417,6,494,297" depth="0.79" premultiplyalpha="false" origin="0.5,0.5" />
+      <LightComponent range="0.0" powerconsumption="5" lightcolor="255,255,255,111" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="417,6,494,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <Body width="94" height="221" density="20" />
+      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="500.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="researchstation.empty.infotext" infoareawidth="0.7">
+        <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Deconstructor>
+      <ItemContainer capacity="2" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,alienblood" />
+      </ItemContainer>
+      <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial" />
+      </ItemContainer>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+    </Item>
     <!-- Stem Cell Processor -->
-      <Item name="" identifier="stemcellprocessor" tags="stemcellprocessor,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.5" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-        <Upgrade gameversion="0.10.4.0">
-          <Repairable Msg="ItemMsgRepairWrench" />
-        </Upgrade>
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
-          <RequiredSkill identifier="electrical" level="65" />
-          <RequiredSkill identifier="mechanical" level="50" />
-          <RequiredItem identifier="silicon" amount="2" />
-          <RequiredItem identifier="copper" amount="4" />
-          <RequiredItem identifier="fulgurium" amount="2" />
-          <RequiredItem identifier="fpgacircuit" amount="6" />
-        </Fabricate>
-        <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-        <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,130,117,108" origin="0.5,0.5" />
-        <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="169,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-        <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="336,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="0" />
-        <Body width="94" height="221" density="20" />
-        <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-          <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="751,273,117,109" alpha="1.0" origin="0.5,0.5" />
-        </LightComponent>
-        <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
-          <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-          <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
-          <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
-          <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
-          <StatusEffect type="InWater" target="This" condition="-0.5" />
-        </Fabricator>
-        <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-          <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-          <RequiredSkill identifier="electrical" level="55" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-            <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-            <Affliction identifier="stun" strength="5" />
-            <Affliction identifier="burn" strength="5" />
-          </StatusEffect>
-          <RequiredItem items="screwdriver" type="Equipped" />
-          <input name="power_in" displayname="connection.powerin" />
-        </ConnectionPanel>
-        <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-          <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-          <RequiredSkill identifier="mechanical" level="55" />
-          <RequiredItem items="wrench" type="equipped" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-          <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-          <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-            <Affliction identifier="lacerations" strength="5" />
-            <Affliction identifier="stun" strength="5" />
-          </StatusEffect>
-        </Repairable>
-        <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
-          <RequiredItem items="crowbar" type="Equipped" />
-          <StatusEffect target="This" type="OnContained">
-            <Conditional attached="false" targetitemcomponentname="Holdable" />
-            <DropContainedItems />
-          </StatusEffect>
-        </Holdable>
-        <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
-          <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
-        </ItemContainer>
-        <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
-          <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
-        </ItemContainer>
-      </Item>
+    <Item name="" identifier="stemcellprocessor" tags="stemcellprocessor,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.5" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+      </Fabricate>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,130,117,108" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="169,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="336,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <Body width="94" height="221" density="20" />
+      <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
+        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="751,273,117,109" alpha="1.0" origin="0.5,0.5" />
+      </LightComponent>
+      <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Fabricator>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+    </Item>
     <!-- Bioprinter -->
-      <Item name="" identifier="bioprinter" tags="bioprinter,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-        <Upgrade gameversion="0.10.4.0">
-          <Repairable Msg="ItemMsgRepairWrench" />
-        </Upgrade>
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
-          <RequiredSkill identifier="electrical" level="65" />
-          <RequiredSkill identifier="mechanical" level="50" />
-          <RequiredItem identifier="silicon" amount="2" />
-          <RequiredItem identifier="copper" amount="4" />
-          <RequiredItem identifier="fulgurium" amount="2" />
-          <RequiredItem identifier="fpgacircuit" amount="6" />
-        </Fabricate>
-        <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-        <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,0,295,105" origin="0.5,0.5" />
-        <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="337,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-        <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="673,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="0" />
-        <Body width="94" height="221" density="20" />
-        <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-          <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="651,131,316,119" alpha="1.0" origin="0.5,0.5" />
-        </LightComponent>
-        <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
-          <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-          <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
-          <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
-          <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
-          <StatusEffect type="InWater" target="This" condition="-0.5" />
-        </Fabricator>
-        <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
-          <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
-        </ItemContainer>
-        <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
-          <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
-          <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
-        </ItemContainer>
-        <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-          <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-          <RequiredSkill identifier="electrical" level="55" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-            <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-            <Affliction identifier="stun" strength="5" />
-            <Affliction identifier="burn" strength="5" />
-          </StatusEffect>
-          <RequiredItem items="screwdriver" type="Equipped" />
-          <input name="power_in" displayname="connection.powerin" />
-        </ConnectionPanel>
-        <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-          <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-          <RequiredSkill identifier="mechanical" level="55" />
-          <RequiredItem items="wrench" type="equipped" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-          <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-          <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-            <Affliction identifier="lacerations" strength="5" />
-            <Affliction identifier="stun" strength="5" />
-          </StatusEffect>
-        </Repairable>
-        <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
-          <RequiredItem items="crowbar" type="Equipped" />
-          <StatusEffect target="This" type="OnContained">
-            <Conditional attached="false" targetitemcomponentname="Holdable" />
-            <DropContainedItems />
-          </StatusEffect>
-        </Holdable>
-      </Item>
+    <Item name="" identifier="bioprinter" tags="bioprinter,refrigerated,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+      </Fabricate>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,0,295,105" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="337,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="673,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <Body width="94" height="221" density="20" />
+      <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
+        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="651,131,316,119" alpha="1.0" origin="0.5,0.5" />
+      </LightComponent>
+      <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Fabricator>
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+    </Item>
     <!-- Bio Storage -->
-      <Item name="" identifier="biostorage" tags="container,biostorage,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
-          <RequiredSkill identifier="electrical" level="65" />
-          <RequiredSkill identifier="mechanical" level="50" />
-          <RequiredItem identifier="silicon" amount="2" />
-          <RequiredItem identifier="copper" amount="4" />
-          <RequiredItem identifier="fulgurium" amount="2" />
-          <RequiredItem identifier="fpgacircuit" amount="6" />
-          <RequiredItem identifier="stem_cells" amount="5" />
-        </Fabricate>
-        <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,130,117,108" origin="0.5,0.5" />
-        <Body width="94" height="221" density="20" />
-
-        <!-- Power Handling (Recharges + Stores Energy) -->
-        <PowerContainer capacity="500.0" maxrechargespeed="150.0" rechargespeed="100.0" maxoutput="200.0" canbeselected="true" indicatorposition="5,10" indicatorsize="46,22" ishorizontal="true" msg="ItemMsgInteractSelect">
-            <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
-            <StatusEffect type="OnActive" target="This" charge="-1" />
-            <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="organrenewal" duration="0.1">
-                <Conditional Charge="gt 0.01" />
-                <Sound file="%ModDir%/Content/Sounds/Biostorage.ogg" volume="2" range="500" loop="true" />
-            </StatusEffect>
-        </PowerContainer>
-
-        <!-- Light Component -->
-        <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-            <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="751,273,117,109" alpha="1.0" origin="0.5,0.5" />
-        </LightComponent>
-        <!-- Storage Functionality -->
-        <ItemContainer capacity="20" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-            <GuiFrame relativesize="0.28,0.48" anchor="Center" style="ItemUI" />
-            <Containable tags="bio_core" />
-        </ItemContainer>
-        <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-          <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-          <RequiredSkill identifier="electrical" level="55" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-            <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-            <Affliction identifier="stun" strength="5" />
-            <Affliction identifier="burn" strength="5" />
-          </StatusEffect>
-          <RequiredItem items="screwdriver" type="Equipped" />
-          <input name="power_in" displayname="connection.powerin" />
-        </ConnectionPanel>
-        <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-          <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-          <RequiredSkill identifier="mechanical" level="55" />
-          <RequiredItem items="wrench" type="equipped" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-          <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-          <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-          <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-            <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-            <Affliction identifier="lacerations" strength="5" />
-            <Affliction identifier="stun" strength="5" />
-          </StatusEffect>
-        </Repairable>
-        <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
-          <RequiredItem items="crowbar" type="Equipped" />
-          <StatusEffect target="This" type="OnContained">
-            <Conditional attached="false" targetitemcomponentname="Holdable" />
-            <DropContainedItems />
-          </StatusEffect>
-        </Holdable>
-      </Item>
+    <Item name="" identifier="biostorage" tags="container,biostorage,donttakeitems,dontsellitems" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" scale="0.4" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+        <RequiredItem identifier="stem_cells" amount="5" />
+      </Fabricate>
+      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,267,132,321" origin="0.5,0.5" />
+      <Body width="94" height="221" density="20" />
+      <!-- Power Handling (Recharges + Stores Energy) -->
+      <PowerContainer capacity="500.0" maxrechargespeed="150.0" rechargespeed="100.0" maxoutput="200.0" canbeselected="true" indicatorposition="43,3" indicatorsize="46,22" ishorizontal="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
+        <StatusEffect type="OnActive" target="This" charge="-1" />
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="organrenewal" duration="0.1">
+          <Conditional Charge="gt 0.01" />
+          <Sound file="%ModDir%/Content/Sounds/Biostorage.ogg" volume="2" range="500" loop="true" />
+        </StatusEffect>
+      </PowerContainer>
+      <!-- Storage Functionality -->
+      <ItemContainer capacity="20" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.28,0.48" anchor="Center" style="ItemUI" />
+        <Containable tags="bio_core" />
+      </ItemContainer>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <!-- Centrifuge -->
+    <Item name="" identifier="centrifugestation" tags="centrifugestation,donttakeitems,dontsellitems" texturescale="1.0,1.0" scale="0.5" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+      </Fabricate>
+      <Body width="494" height="297" density="20" />
+      <Sprite texture="%ModDir%/Images/Machines.png" sourcerect="197,294,180,199" depth="0.8" premultiplyalpha="false" origin="0.5,0.5" />
+      <DecorativeSprite texture="%ModDir%/Images/Machines.png" depth="0.83" offset="0,0" sourcerect="379,407,128,79" origin="0.5,1" />
+      <DecorativeSprite texture="%ModDir%/Images/Machines.png" depth="0.81" offset="0,0" sourcerect="503,308,138,83" origin="0.5,1" />
+      <DecorativeSprite texture="%ModDir%/Images/Machines.png" depth="0.82" offset="0,0" sourcerect="379,294,110,109" origin="0.5,0.5" rotationspeed="-715">
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <AnimationConditional IsActive="True" targetitemcomponent="Fabricator" />
+        <IsActiveConditional Condition="gt 0.0" />
+      </DecorativeSprite>
+      <LightComponent range="0.0" powerconsumption="5" lightcolor="220,255,220,0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="%ModDir%/Images/Machines.png" sourcerect="192,511,185,215" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Fabricator>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="60" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+    </Item>
   </Items>
 </Override>

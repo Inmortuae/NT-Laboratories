@@ -48,6 +48,11 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
     
         dofile(NTL.Path.."/Lua/Scripts/Cyber/testing.lua")
 
+        --Symbiote + Infection
+        dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/humanupdate.lua")
+        dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/items.lua")
+        dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/testing.lua")
+
         --Pharmacy
         NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
         NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)

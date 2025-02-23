@@ -78,4 +78,8 @@
     <Other file="%ModDir%/Sounds/Cyber/welding4.ogg" />
     <Other file="%ModDir%/Sounds/Cyber/welding5.ogg" />
     <Other file="%ModDir%/Lua/Scripts/Cyber/helperfunctions.lua" />
+  <!--NT Symbiote + Infection-->
+  <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/humanupdate.lua" />
+  <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/items.lua" />
+  <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/testing.lua" />
 </contentpackage>

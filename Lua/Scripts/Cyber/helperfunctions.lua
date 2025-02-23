@@ -2,6 +2,11 @@
 -- This file contains a bunch of useful functions that see heavy use in the other scripts.
 NTL.HF = {} -- Helperfunctions
 
+NTL.HF.HasHusk = function(character)
+    return HF.GetAfflictionStrength(character,"huskinfection") > 0.1
+    --or HF.GetAfflictionStrength(character,"husksymbiosis") > 0.1
+end
+
 function NTL.HF.LimbIsCyber(character,limbtype) 
     return HF.HasAfflictionLimb(character,"ntc_cyberlimb",HF.NormalizeLimbType(limbtype),0.1)
 end
