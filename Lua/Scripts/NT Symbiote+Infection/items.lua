@@ -97,32 +97,51 @@ Timer.Wait(function()
         end
     end
 
-    -- add sawing torso bones to the bonesaw
+    -- Add sawing torso bones to the bonesaw
     local tempSawFunction = NT.ItemMethods.surgerysaw
     NT.ItemMethods.surgerysaw = function(item, usingCharacter, targetCharacter, limb) 
-        tempSawFunction(item,usingCharacter,targetCharacter,limb)
+        tempSawFunction(item, usingCharacter, targetCharacter, limb)
         
         local limbtype = HF.NormalizeLimbType(limb.type)
-    
-        -- only the torso is interesting for the husk stuff
+
+        -- Trauma amputation afflictions for each limb
+        local traumaticAmputationAfflictions = {
+            [LimbType.RightArm] = "gate_ta_ra",
+            [LimbType.LeftArm] = "gate_ta_la",
+            [LimbType.RightLeg] = "gate_ta_rl",
+            [LimbType.LeftLeg] = "gate_ta_ll"
+        }
+        
+        local amputationAffliction = traumaticAmputationAfflictions[limbtype]
+        
+        if not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 99) and NTConfig.Get("TraumaSaw", true) then
+            if HF.GetSurgerySkillRequirementMet(usingCharacter, 25) then
+                if amputationAffliction then
+                    HF.SetAfflictionLimb(targetCharacter, amputationAffliction, limbtype, 1, usingCharacter)
+                    local reduction = (math.random(25, 50))
+                    item.Condition = item.Condition - reduction
+                end
+            end
+        end
+
+        -- Only the torso is interesting for the husk stuff
         if limbtype ~= LimbType.Torso then return end
-    
-        -- don't work on stasis
-        if(HF.HasAffliction(targetCharacter,"stasis",0.1)) then return end
 
-        local huskHealth = HF.GetAfflictionStrength(targetCharacter,"surgery_huskhealth")
+        -- Don't work on stasis
+        if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
 
-        -- don't work if we've already cut the torso open
-        if HF.HasAffliction(targetCharacter,"bonecuttorso",1) then return end
-    
-        if(HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAfflictionLimb(targetCharacter,"retractedskin",limbtype,99)
-        ) then
-            if(HF.GetSurgerySkillRequirementMet(usingCharacter,50)) then
-                HF.AddAffliction(targetCharacter,"bonecuttorso",1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
+        local huskHealth = HF.GetAfflictionStrength(targetCharacter, "surgery_huskhealth")
+
+        -- Don't work if we've already cut the torso open
+        if HF.HasAffliction(targetCharacter, "bonecuttorso", 1) then return end
+
+        if HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99) then
+            if HF.GetSurgerySkillRequirementMet(usingCharacter, 50) then
+                HF.AddAffliction(targetCharacter, "bonecuttorso", 1 + HF.GetSurgerySkill(usingCharacter) / 2, usingCharacter)
             else
-                HF.AddAfflictionLimb(targetCharacter,"bleeding",limbtype,15,usingCharacter)
-                HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,6,usingCharacter)
-                HF.AddAfflictionLimb(targetCharacter,"lacerations",limbtype,4,usingCharacter)
+                HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
+                HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 6, usingCharacter)
+                HF.AddAfflictionLimb(targetCharacter, "lacerations", limbtype, 4, usingCharacter)
             end
         end
     end
@@ -239,16 +258,29 @@ Timer.Wait(function()
                 [LimbType.RightLeg] = "rl_fracture",
                 [LimbType.LeftLeg] = "ll_fracture"
             }
+
+            local arterialcutAffotion = {
+                [LimbType.RightArm] = "ra_arterialcut",
+                [LimbType.LeftArm] = "la_arterialcut",
+                [LimbType.RightLeg] = "rl_arterialcut",
+                [LimbType.LeftLeg] = "ll_arterialcut"
+            }
         
             -- Get the fracture affliction for the limb being reattached
             local fractureID = fractureAffliction[limbtype]
         
             -- Perform the surgical reattachment
             NT.SurgicallyAmputateLimb(target, limbtype, 0, 0)
+
+            -- Remove the arterial cut affliction
+            local arterialcutID = arterialcutAffotion[limbtype]
+            if arterialcutID then
+                HF.SetAfflictionLimb(target, arterialcutID, limbtype, 0, user)
+            end
         
             -- Apply the correct fracture with 50 severity
             if fractureID then
-                HF.SetAfflictionLimb(target, fractureID, limbtype, 50, user)
+                HF.SetAfflictionLimb(target, fractureID, limbtype, 100, user)
             end
         
             HF.RemoveItem(item)
@@ -272,49 +304,6 @@ Timer.Wait(function()
     NT.ItemMethods.rarmp = NT.ItemMethods.rarm
     NT.ItemMethods.larmp = NT.ItemMethods.larm
     NT.ItemMethods.rlegp = NT.ItemMethods.rleg
-    NT.ItemMethods.llegp = NT.ItemMethods.lleg
-
-    NT.ItemMethods.surgerysaw = function(item, usingCharacter, targetCharacter, limb)
-        local limbtype = HF.NormalizeLimbType(limb.type)
-    
-        -- Don't allow surgery if the patient is in stasis
-        if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-            return
-        end
-    
-        -- Trauma amputation afflictions for each limb
-        local traumaticAmputationAfflictions = {
-            [LimbType.RightArm] = "gate_ta_ra",
-            [LimbType.LeftArm] = "gate_ta_la",
-            [LimbType.RightLeg] = "gate_ta_rl",
-            [LimbType.LeftLeg] = "gate_ta_ll"
-        }
-    
-        local amputationAffliction = traumaticAmputationAfflictions[limbtype]
-    
-        if not HF.CanPerformSurgeryOn(targetCharacter) and NTConfig.Get("TraumaSaw", true) then
-            if amputationAffliction then
-                HF.SetAfflictionLimb(targetCharacter, amputationAffliction, limbtype, 1, usingCharacter)
-            end
-            return
-        elseif HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99) and not HF.HasAfflictionLimb(targetCharacter, "bonecut", limbtype, 1) then
-            if HF.GetSurgerySkillRequirementMet(usingCharacter, 50) then
-                if limbtype ~= LimbType.Torso then
-                    HF.AddAfflictionLimb(
-                        targetCharacter,
-                        "bonecut",
-                        limbtype,
-                        1 + HF.GetSurgerySkill(usingCharacter) / 2,
-                        usingCharacter
-                    )
-                end
-            else
-                -- Apply penalties for failed surgery (bleeding, internal damage, lacerations)
-                HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
-                HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 6, usingCharacter)
-                HF.AddAfflictionLimb(targetCharacter, "lacerations", limbtype, 4, usingCharacter)
-            end
-        end
-    end    
+    NT.ItemMethods.llegp = NT.ItemMethods.lleg  
 
 end,2000)

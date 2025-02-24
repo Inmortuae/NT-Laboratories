@@ -17,7 +17,6 @@
     <!--Afflictions-->
     <Afflictions file="%ModDir%/Xml/Afflictions/Afflictions.xml" />
     <!--Items-->
-    <Item file="%ModDir%/Xml/Overrides/geneoverride.xml" />
     <Item file="%ModDir%/Xml/Overrides/limbsoverride.xml" />
     <Item file="%ModDir%/Xml/Overrides/organroverride.xml" />
     <Item file="%ModDir%/Xml/Items/items.xml" />
