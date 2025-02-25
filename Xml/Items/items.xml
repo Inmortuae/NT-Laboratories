@@ -1033,14 +1033,10 @@
       <SkillRequirementHint identifier="mechanical" level="40" />
     </Item>
     <Item name="" identifier="cyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-      <Price baseprice="500" soldbydefault="false">
-        <Price storeidentifier="merchantmedical" sold="true" />
-        <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price baseprice="1500" soldbydefault="false">
         <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
       </Price>
-      <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
-      <PreferredContainer primary="locker" />
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="1" spawnprobability="0.01" />
       <Fabricate suitablefabricators="fabricator" requiredtime="60">
         <RequiredSkill identifier="mechanical" level="70" />
         <RequiredSkill identifier="medical" level="20" />
@@ -1068,14 +1064,10 @@
       <SkillRequirementHint identifier="mechanical" level="70" />
     </Item>
     <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-      <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
-        <Price storeidentifier="merchantmedical" sold="true" />
-        <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
         <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
       </Price>
-      <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
-      <PreferredContainer primary="locker" />
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.005" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="mechanical" level="70" />
         <RequiredSkill identifier="medical" level="35" />
@@ -1105,14 +1097,10 @@
       <SkillRequirementHint identifier="mechanical" level="70" />
     </Item>
     <Item name="" identifier="cyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-      <Price baseprice="500" soldbydefault="false">
-        <Price storeidentifier="merchantmedical" sold="true" />
-        <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price baseprice="1500" soldbydefault="false">
         <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
       </Price>
-      <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
-      <PreferredContainer primary="locker" />
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.01" />
       <Fabricate suitablefabricators="fabricator" requiredtime="60">
         <RequiredSkill identifier="mechanical" level="70" />
         <RequiredSkill identifier="medical" level="20" />
@@ -1140,14 +1128,10 @@
       <SkillRequirementHint identifier="mechanical" level="70" />
     </Item>
     <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-      <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
-        <Price storeidentifier="merchantmedical" sold="true" />
-        <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
         <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
       </Price>
-      <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
-      <PreferredContainer primary="locker" />
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.005" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="mechanical" level="70" />
         <RequiredSkill identifier="medical" level="35" />
@@ -1178,7 +1162,6 @@
     </Item>
     <Item name="" identifier="augmentedliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
       <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5" />
@@ -1225,10 +1208,9 @@
     </Item>
     <Item name="" identifier="cyberliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
       <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.0125" />
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="18" density="10" />
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -1251,7 +1233,6 @@
     </Item>
     <Item name="" identifier="augmentedkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
       <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5" />
@@ -1298,10 +1279,9 @@
     </Item>
     <Item name="" identifier="cyberkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
       <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.0125" />
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5" />
       <Body width="14" height="20" density="10" />
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -1324,7 +1304,6 @@
     </Item>
     <Item name="" identifier="augmentedlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
       <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5" />
@@ -1371,10 +1350,9 @@
     </Item>
     <Item name="" identifier="cyberlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
       <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.0125" />
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="30" density="10" />
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -1397,7 +1375,6 @@
     </Item>
     <Item name="" identifier="augmentedheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
       <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
@@ -1444,10 +1421,9 @@
     </Item>
     <Item name="" identifier="cyberheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
       <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.0125" />
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
       <Body width="14" height="22" density="10" />
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -1470,7 +1446,6 @@
     </Item>
     <Item name="" identifier="augmentedbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
       <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5" />
@@ -1492,10 +1467,9 @@
     </Item>
     <Item name="" identifier="cyberbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
       <Price baseprice="4000" soldbydefault="false" minleveldifficulty="30">
-        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
         <Price storeidentifier="merchantresearch" sold="true" />
       </Price>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.0125" />
       <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5" />
       <Body width="14" height="22" density="10" />
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -2563,6 +2537,38 @@
           <Remove />
         </StatusEffect>
       </MeleeWeapon>
+    </Item>
+
+    <!--NT Items-->
+    <Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+      <PreferredContainer primary="toxcontainer" spawnprobability="1" />
+      <PreferredContainer primary="locker" />
+      <Fabricate suitablefabricators="fabricator">
+        <RequiredSkill identifier="medical" level="30" />
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.5" usecondition="true" />
+      </Fabricate>
+      <Deconstruct time="5" />
+      <Price baseprice="100" soldbydefault="true">
+        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
+      </Price>
+      <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="0,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="0,0,128,128" depth="0.55" origin="0.5,0.5" />
+      <Body width="120" height="50" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,-7" holdangle="90" reload="1.0">
+        <StatusEffect type="OnUse" target="Limb" comparison="And">
+          <Conditional analgesia="gte 1" />
+          <Conditional retractedskin="gte 99" />
+          <sound file="%ModDir:3190189044%/Sound/bonebreak4.ogg" selectionmode="random" range="500" />
+          <sound file="%ModDir:3190189044%/Sound/bonebreak3.ogg" range="500" />
+          <sound file="%ModDir:3190189044%/Sound/bonebreak2.ogg" range="500" />
+          <sound file="%ModDir:3190189044%/Sound/bonebreak1.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="medical" level="50" />
     </Item>
   </Items>
 </Override>
