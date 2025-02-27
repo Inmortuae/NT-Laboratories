@@ -309,7 +309,7 @@
         <StatusEffect type="OnActive" target="This" charge="-1" />
         <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="organrenewal" duration="0.1">
           <Conditional Charge="gt 0.01" />
-          <Sound file="%ModDir%/Content/Sounds/Biostorage.ogg" volume="2" range="500" loop="true" />
+          <Sound file="%ModDir%/Sounds/Biostorage.ogg" volume="2" range="500" loop="true" />
         </StatusEffect>
       </PowerContainer>
       <!-- Storage Functionality -->
@@ -405,6 +405,55 @@
           <Affliction identifier="stun" strength="5" />
         </StatusEffect>
       </Repairable>
+      <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true">
+        <StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+      </ItemContainer>
+    </Item>
+    <!-- Cybernetic Workbench -->
+    <Item name="" identifier="cyberbench" tags="cyberbench,refrigerated,donttakeitems,dontsellitems" texturescale="1.0,1.0" scale="0.5" category="Machine" linkable="true" allowedlinks="deconstructor,locker,toxcontainer" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="120" requiresrecipe="true">
+        <RequiredSkill identifier="electrical" level="65" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredItem identifier="silicon" amount="2" />
+        <RequiredItem identifier="copper" amount="4" />
+        <RequiredItem identifier="incendium" />
+        <RequiredItem identifier="fulgurium" amount="2" />
+        <RequiredItem identifier="fpgacircuit" amount="6" />
+      </Fabricate>
+      <Body width="494" height="297" density="20" />
+      <Sprite texture="%ModDir%/Images/Machines.png" sourcerect="396,512,257,219" depth="0.8" premultiplyalpha="false" origin="0.5,0.5" />
+      <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Fabricator>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
       <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true">
         <RequiredItem items="crowbar" type="Equipped" />
         <StatusEffect target="This" type="OnContained">

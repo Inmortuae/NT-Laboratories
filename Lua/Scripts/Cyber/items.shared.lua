@@ -312,8 +312,74 @@ local function patchDamageWeldingTool(itemId)
     targetEffect.SetAttributeValue('comparison','And')
 end
 
+local function addCyberWorkbenchToRoboticsTalent()
+    if not TalentPrefab.TalentPrefabs.ContainsKey("robotics") then
+        return
+    end
+    local roboticsTalent = TalentPrefab.TalentPrefabs["robotics"]
+    local xmlDefinition = [[
+        <overwrite>
+            <AddedRecipe itemidentifier="cyberbench" />
+        </overwrite>
+    ]]
+    local xml = XDocument.Parse(xmlDefinition)
+    for element in xml.Root.Elements() do
+        roboticsTalent.ConfigElement.Element.Add(element)
+    end
+
+    for descNode in roboticsTalent.ConfigElement.GetChildElements("Description") do
+        if descNode.GetAttributeString("tag") == "talentdescription.unlockrecipe" then
+            for replaceTag in descNode.Elements() do
+                replaceTag.SetAttributeValue("value", replaceTag.GetAttributeString("value") .. ",entityname.cyberbench")
+                break
+            end
+        end
+    end
+    while TalentPrefab.TalentPrefabs.ContainsKey("robotics") do
+        -- remove all existing versions of this talent (including overrides), as we're going to add a new combined one on top
+        TalentPrefab.TalentPrefabs.Remove(TalentPrefab.TalentPrefabs["robotics"])
+    end
+    TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(roboticsTalent.ConfigElement, roboticsTalent.ContentFile), false)
+end
+
+local function addRevivesToMiracleWorker()
+    if not TalentPrefab.TalentPrefabs.ContainsKey("miracleworker") then
+        return
+    end
+    local miracleworkerTalent = TalentPrefab.TalentPrefabs["miracleworker"]
+    local xmlDefinition = [[
+        <overwrite>
+            <AddedRecipe itemidentifier="revive_syringe" />
+            <AddedRecipe itemidentifier="nanobots" />
+        </overwrite>
+    ]]
+    local xml = XDocument.Parse(xmlDefinition)
+    for element in xml.Root.Elements() do
+        miracleworkerTalent.ConfigElement.Element.Add(element)
+    end
+    local xmlDefinitionRecipes = [[
+        <overwrite>
+        <Description tag="talentdescription.unlockrecipe">
+            <Replace tag="[itemname]" value="entityname.revive_syringe,entityname.nanobots" color="gui.orange" />
+        </Description>
+        </overwrite>
+        ]]
+    local xml = XDocument.Parse(xmlDefinitionRecipes)
+    for element in xml.Root.Elements() do
+        miracleworkerTalent.ConfigElement.Element.Add(element)
+    end
+
+    while TalentPrefab.TalentPrefabs.ContainsKey("miracleworker") do
+        -- remove all existing versions of this talent (including overrides), as we're going to add a new combined one on top
+        TalentPrefab.TalentPrefabs.Remove(TalentPrefab.TalentPrefabs["miracleworker"])
+    end
+    TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(miracleworkerTalent.ConfigElement, miracleworkerTalent.ContentFile), false)
+end
+
 Timer.Wait(function()
     addCyberOrgansToSuperSoldiersTalent()
+    addCyberWorkbenchToRoboticsTalent()
+    addRevivesToMiracleWorker()
     evaluateExtraUseInHealthInterface()
     evaluateExtraSkillRequirementHints()
     evaluateExtraTreatmentSuitability()

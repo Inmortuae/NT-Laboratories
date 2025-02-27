@@ -11,6 +11,13 @@
     <entitydescription.biostorage>A specialized Cabinet for organ repair.</entitydescription.biostorage>
     <entityname.centrifugestation>Centrifuge Station</entityname.centrifugestation>
     <entitydescription.centrifugestation>A fabricator for Blood Work.</entitydescription.centrifugestation>
+    <entityname.cyberbench>Cybernetic Workbench</entityname.cyberbench>
+    <entitydescription.cyberbench>A Workbench for crafting Cybernetic enhancments.</entitydescription.cyberbench>
+    <!-- /// Items /// !-->
+    <entityname.ccyberarm>Cyberarm Shell</entityname.ccyberarm>
+    <entitydescription.ccyberarm>An arm made of metal and electronics. Used to craft a Cyber Arm.</entitydescription.ccyberarm>
+    <entityname.ccyberleg>Cyberleg Shell</entityname.ccyberleg>
+    <entitydescription.ccyberleg>A leg made of metal and electronics. Used to craft a Cyber Leg.</entitydescription.ccyberleg>
 
   <!--BIO PRINTER-->
     <!-- /// Items /// !-->

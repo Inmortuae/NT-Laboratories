@@ -36,7 +36,6 @@
     <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
 
   <!--Undead's Medical-->
-    <Talents file="%ModDir%/Xml/Talents/UndeadsMed/Doctor/TalentsDoctor.xml" />
     <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
     <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Inv.lua" />
     <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Affliction.lua" />

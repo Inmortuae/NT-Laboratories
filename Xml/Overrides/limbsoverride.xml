@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
+    <!-- Limbs -->
+    <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core,arm">
       <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="650,20,46,90" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="543,117,46,90" depth="0.6" origin="0.5,0.5" />
       <Body width="46" height="90" density="20" />
@@ -34,15 +35,15 @@
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-              <Affliction identifier="nausea" amount="0.2"/>
-            </StatusEffect>-->
+              <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+                <Affliction identifier="nausea" amount="0.2"/>
+              </StatusEffect>-->
         <StatusEffect type="OnBroken" target="This">
           <LuaHook name="NT.RotOrgan" />
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
+    <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core,arm">
       <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="650,20,46,90" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="543,117,46,90" depth="0.6" origin="0.5,0.5" />
       <Body width="46" height="90" density="20" />
@@ -75,15 +76,15 @@
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-              <Affliction identifier="nausea" amount="0.2"/>
-            </StatusEffect>-->
+              <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+                <Affliction identifier="nausea" amount="0.2"/>
+              </StatusEffect>-->
         <StatusEffect type="OnBroken" target="This">
           <LuaHook name="NT.RotOrgan" />
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
+    <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core,leg">
       <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="710,20,60,90" origin="0.5,0.5" />
       <Body width="60" height="90" density="20" />
       <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="603,117,60,90" depth="0.6" origin="0.5,0.5" />
@@ -116,15 +117,15 @@
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-              <Affliction identifier="nausea" amount="0.2"/>
-            </StatusEffect>-->
+              <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+                <Affliction identifier="nausea" amount="0.2"/>
+              </StatusEffect>-->
         <StatusEffect type="OnBroken" target="This">
           <LuaHook name="NT.RotOrgan" />
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core">
+    <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3,bio_core,leg">
       <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="710,20,60,90" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="603,117,60,90" depth="0.6" origin="0.5,0.5" />
       <Body width="60" height="90" density="20" />
@@ -157,15 +158,16 @@
         </StatusEffect>
         <StatusEffect type="OnFire" target="This" Condition="-25.0" />
         <!-- yuck! severed limbs on the floor!
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-              <Affliction identifier="nausea" amount="0.2"/>
-            </StatusEffect>-->
+              <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+                <Affliction identifier="nausea" amount="0.2"/>
+              </StatusEffect>-->
         <StatusEffect type="OnBroken" target="This">
           <LuaHook name="NT.RotOrgan" />
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="llegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <!-- Prostectic (Bionic) limbs -->
+    <Item name="" identifier="llegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,prostheticleg">
       <Price baseprice="500" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
       </Price>
@@ -178,7 +180,7 @@
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="rlegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Item name="" identifier="rlegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,prostheticleg">
       <Price baseprice="500" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
       </Price>
@@ -191,7 +193,7 @@
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="larmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Item name="" identifier="larmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,prostheticarm">
       <Price baseprice="500" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
       </Price>
@@ -204,7 +206,7 @@
         </StatusEffect>
       </Throwable>
     </Item>
-    <Item name="" identifier="rarmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+    <Item name="" identifier="rarmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,prostheticarm">
       <Price baseprice="500" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1" />
       </Price>
@@ -216,6 +218,197 @@
           <Remove />
         </StatusEffect>
       </Throwable>
+    </Item>
+    <!-- Cyber Limbs (Dummy Crafting Item)-->
+    <Item name="" identifier="ccyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="False" scale="0.4">
+      <Price baseprice="1000" soldbydefault="false" minleveldifficulty="10">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="1" spawnprobability="0.01" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="60">
+        <RequiredSkill identifier="mechanical" level="70" />
+        <RequiredSkill identifier="medical" level="20" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+        <RequiredItem identifier="steel" amount="4" />
+        <RequiredItem identifier="fpgacircuit" amount="4" />
+        <RequiredItem identifier="fulgurium" />
+        <RequiredItem tag="prostheticarm" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="693,165,228,47" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="383,256,128,128" origin="0.5,0.5" />
+      <Body width="114" height="23" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="70" />
+    </Item>
+    <Item name="" identifier="ccyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="False" scale="0.4">
+      <Price baseprice="1500" soldbydefault="false" minleveldifficulty="10">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.01" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="60">
+        <RequiredSkill identifier="mechanical" level="70" />
+        <RequiredSkill identifier="medical" level="20" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+        <RequiredItem identifier="steel" amount="4" />
+        <RequiredItem identifier="fpgacircuit" amount="4" />
+        <RequiredItem identifier="fulgurium" />
+        <RequiredItem tag="prostheticleg" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="723,311,63,238" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="511,256,128,128" origin="0.5,0.5" />
+      <Body width="30" height="115" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="70" />
+    </Item>
+    <!--Normal Cyber Limbs-->
+    <Item name="" identifier="cyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+      <Price baseprice="1500" soldbydefault="false" minleveldifficulty="10">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="1" spawnprobability="0.01" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="60">
+        <RequiredSkill identifier="medical" level="70" />
+        <RequiredItem identifier="ccyberarm" amount="1" />
+        <RequiredItem tag="arm" amount="1" />
+        <RequiredItem identifier="liquidoxygenite" amount="1" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="695,229,228,47" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="383,0,128,128" origin="0.5,0.5" />
+      <Body width="114" height="23" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="medical" level="70" />
+    </Item>
+    <Item name="" identifier="cyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+      <Price baseprice="1500" soldbydefault="false" minleveldifficulty="10">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.01" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="60">
+        <RequiredSkill identifier="medical" level="70" />
+        <RequiredItem identifier="ccyberarm" amount="1" />
+        <RequiredItem tag="arm" amount="1" />
+        <RequiredItem identifier="liquidoxygenite" amount="1" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="828,311,63,238" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="511,0,128,128" origin="0.5,0.5" />
+      <Body width="30" height="115" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="medical" level="70" />
+    </Item>
+    <!--Waterproof Cyber Limbs-->
+    <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+      <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.005" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="70" />
+        <RequiredSkill identifier="medical" level="35" />
+        <RequiredItem identifier="cyberarm" />
+        <RequiredItem identifier="fulgurium" amount="1" />
+        <RequiredItem identifier="plastic" amount="3" />
+        <RequiredItem identifier="rubber" amount="4" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" amount="2" />
+        <Item identifier="plastic" amount="2" />
+        <Item identifier="rubber" amount="2" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="693,102,228,47" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="383,128,128,128" origin="0.5,0.5" />
+      <Body width="114" height="23" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="70" />
+    </Item>
+    <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+      <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
+        <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+      </Price>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.005" />
+      <Fabricate suitablefabricators="cyberbench" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="70" />
+        <RequiredSkill identifier="medical" level="35" />
+        <RequiredItem identifier="cyberleg" />
+        <RequiredItem identifier="fulgurium" amount="1" />
+        <RequiredItem identifier="plastic" amount="3" />
+        <RequiredItem identifier="rubber" amount="4" />
+      </Fabricate>
+      <Deconstruct time="30">
+        <Item identifier="titaniumaluminiumalloy" />
+        <Item identifier="steel" amount="3" />
+        <Item identifier="fpgacircuit" amount="3" />
+        <Item identifier="fulgurium" amount="2" />
+        <Item identifier="plastic" amount="2" />
+        <Item identifier="rubber" amount="2" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="917,311,63,238" origin="0.5,0.5" depth="0.6" />
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="511,128,128,128" origin="0.5,0.5" />
+      <Body width="30" height="115" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="70" />
     </Item>
   </Items>
 </Override>
