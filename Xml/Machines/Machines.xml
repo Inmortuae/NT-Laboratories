@@ -11,7 +11,7 @@
         <Item identifier="steel" />
         <Item identifier="titaniumaluminiumalloy" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="50">
+      <Fabricate suitablefabricators="fabricator" requiredtime="50" requiresrecipe="true">
         <RequiredSkill identifier="medical" level="50" />
         <RequiredItem identifier="fpgacircuit" />
         <RequiredItem identifier="plastic" />
@@ -91,7 +91,7 @@
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
-      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="65" />
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="silicon" amount="2" />
@@ -155,7 +155,7 @@
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
-      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="65" />
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="silicon" amount="2" />
@@ -225,7 +225,7 @@
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
-      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="65" />
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="silicon" amount="2" />
@@ -352,7 +352,7 @@
     </Item>
     <!-- Centrifuge -->
     <Item name="" identifier="centrifugestation" tags="centrifugestation,donttakeitems,dontsellitems" texturescale="1.0,1.0" scale="0.5" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker,toxcontainer" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="65" />
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="silicon" amount="2" />

@@ -376,10 +376,120 @@ local function addRevivesToMiracleWorker()
     TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(miracleworkerTalent.ConfigElement, miracleworkerTalent.ContentFile), false)
 end
 
+local function addCentrifugeToBloodyBusinessTalent()
+    if not TalentPrefab.TalentPrefabs.ContainsKey("bloodybusiness") then
+        return
+    end
+    local bloodybusinessTalent = TalentPrefab.TalentPrefabs["bloodybusiness"]
+    local xmlDefinition = [[
+        <overwrite>
+            <AddedRecipe itemidentifier="centrifugestation" />
+        </overwrite>
+    ]]
+    local xml = XDocument.Parse(xmlDefinition)
+    for element in xml.Root.Elements() do
+        bloodybusinessTalent.ConfigElement.Element.Add(element)
+    end
+    local existscsrecipe = false
+    for descNode in bloodybusinessTalent.ConfigElement.GetChildElements("Description") do
+        if descNode.GetAttributeString("tag") == "talentdescription.unlockrecipe" then
+            for replaceTag in descNode.Elements() do
+                replaceTag.SetAttributeValue("value", replaceTag.GetAttributeString("value") .. ",entityname.centrifugestation")
+                existscsrecipe = true
+                break
+            end
+        end
+
+    end
+    if existscsrecipe == false then
+        local xmlDefinitionRecipes = [[
+            <overwrite>
+            <Description tag="talentdescription.unlockrecipe">
+                <Replace tag="[itemname]" value="entityname.centrifugestation" color="gui.orange" />
+            </Description>
+            </overwrite>
+        ]]
+        local xml = XDocument.Parse(xmlDefinitionRecipes)
+        for element in xml.Root.Elements() do
+            bloodybusinessTalent.ConfigElement.Element.Add(element)
+        end
+    end 
+    while TalentPrefab.TalentPrefabs.ContainsKey("bloodybusiness") do
+        -- remove all existing versions of this talent (including overrides), as we're going to add a new combined one on top
+        TalentPrefab.TalentPrefabs.Remove(TalentPrefab.TalentPrefabs["bloodybusiness"])
+    end
+    TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(bloodybusinessTalent.ConfigElement, bloodybusinessTalent.ContentFile), false)
+end
+
+local function addBioToGeneticGeniousTalent()
+    if not TalentPrefab.TalentPrefabs.ContainsKey("geneticgenious") then
+        return
+    end
+    local geneticgeniousTalent = TalentPrefab.TalentPrefabs["geneticgenious"]
+    local xmlDefinition = [[
+        <overwrite>
+            <AddedRecipe itemidentifier="geneextractor" />
+            <AddedRecipe itemidentifier="stemcellprocessor" />
+            <AddedRecipe itemidentifier="bioprinter" />
+        </overwrite>
+    ]]
+    local xml = XDocument.Parse(xmlDefinition)
+    for element in xml.Root.Elements() do
+        geneticgeniousTalent.ConfigElement.Element.Add(element)
+    end
+
+    for descNode in geneticgeniousTalent.ConfigElement.GetChildElements("Description") do
+        if descNode.GetAttributeString("tag") == "talentdescription.unlockrecipe" then
+            for replaceTag in descNode.Elements() do
+                replaceTag.SetAttributeValue("value", replaceTag.GetAttributeString("value") .. ",entityname.geneextractor,entityname.stemcellprocessor,entityname.bioprinter")
+                break
+            end
+        end
+    end
+    while TalentPrefab.TalentPrefabs.ContainsKey("geneticgenious") do
+        -- remove all existing versions of this talent (including overrides), as we're going to add a new combined one on top
+        TalentPrefab.TalentPrefabs.Remove(TalentPrefab.TalentPrefabs["geneticgenious"])
+    end
+    TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(geneticgeniousTalent.ConfigElement, geneticgeniousTalent.ContentFile), false)
+end
+
+local function addChemmasterToMacroDosingTalent()
+    if not TalentPrefab.TalentPrefabs.ContainsKey("macrodosing") then
+        return
+    end
+    local macrodosingTalent = TalentPrefab.TalentPrefabs["macrodosing"]
+    local xmlDefinition = [[
+        <overwrite>
+            <AddedRecipe itemidentifier="chemmaster" />
+        </overwrite>
+    ]]
+    local xml = XDocument.Parse(xmlDefinition)
+    for element in xml.Root.Elements() do
+        macrodosingTalent.ConfigElement.Element.Add(element)
+    end
+
+    for descNode in macrodosingTalent.ConfigElement.GetChildElements("Description") do
+        if descNode.GetAttributeString("tag") == "talentdescription.unlockrecipe" then
+            for replaceTag in descNode.Elements() do
+                replaceTag.SetAttributeValue("value", replaceTag.GetAttributeString("value") .. ",entityname.chemmaster")
+                break
+            end
+        end
+    end
+    while TalentPrefab.TalentPrefabs.ContainsKey("macrodosing") do
+        -- remove all existing versions of this talent (including overrides), as we're going to add a new combined one on top
+        TalentPrefab.TalentPrefabs.Remove(TalentPrefab.TalentPrefabs["macrodosing"])
+    end
+    TalentPrefab.TalentPrefabs.Add(TalentPrefab.__new(macrodosingTalent.ConfigElement, macrodosingTalent.ContentFile), false)
+end
+
 Timer.Wait(function()
     addCyberOrgansToSuperSoldiersTalent()
     addCyberWorkbenchToRoboticsTalent()
     addRevivesToMiracleWorker()
+    addCentrifugeToBloodyBusinessTalent()
+    addBioToGeneticGeniousTalent()
+    addChemmasterToMacroDosingTalent()
     evaluateExtraUseInHealthInterface()
     evaluateExtraSkillRequirementHints()
     evaluateExtraTreatmentSuitability()
