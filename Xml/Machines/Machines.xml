@@ -164,12 +164,17 @@
         <RequiredItem identifier="fpgacircuit" amount="6" />
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,130,117,108" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="169,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="336,130,117,108" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="598,10,115,190" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="736,10,115,190" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="874,10,115,190" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <DecorativeSprite texture="%ModDir%/Images/Machines.png" depth="0.82" offset="0,20" sourcerect="336,178,77,77" origin="0.5,0.5" rotationspeed="-455">
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <AnimationConditional IsActive="True" targetitemcomponent="Fabricator" />
+        <IsActiveConditional Condition="gt 0.0" />
+      </DecorativeSprite>
       <Body width="94" height="221" density="20" />
-      <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="751,273,117,109" alpha="1.0" origin="0.5,0.5" />
+      <LightComponent range="10.0" lightcolor="200,255,110,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
+        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="206,173,77,77" alpha="1.0" origin="0.48,0.65" />
       </LightComponent>
       <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
@@ -234,12 +239,12 @@
         <RequiredItem identifier="fpgacircuit" amount="6" />
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,0,295,105" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="337,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="673,0,295,105" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+      <Sprite texture="%ModDir%/Images/Machines.png" depth="0.8" sourcerect="1,5,179,154" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="188,5,179,154" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Images/Machines.png" sourcerect="375,5,179,154" origin="0.5,0.5" depth="0.8" maxcondition="0" />
       <Body width="94" height="221" density="20" />
       <LightComponent range="10.0" lightcolor="200,255,200,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
-        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="651,131,316,119" alpha="1.0" origin="0.5,0.5" />
+        <sprite texture="%ModDir%/Images/Machines.png" depth="0.025" sourcerect="10,172,150,77" alpha="1.0" origin="0.5,0.93" />
       </LightComponent>
       <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
@@ -370,7 +375,7 @@
         <IsActiveConditional Condition="gt 0.0" />
       </DecorativeSprite>
       <LightComponent range="0.0" powerconsumption="5" lightcolor="220,255,220,0" IsOn="true" castshadows="false" allowingameediting="false">
-        <sprite texture="%ModDir%/Images/Machines.png" sourcerect="192,511,185,215" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <sprite texture="%ModDir%/Images/Machines.png" sourcerect="192,511,189,116" depth="0.1" origin="0.49962476,0.9246815" alpha="1.0" />
       </LightComponent>
       <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
@@ -433,7 +438,7 @@
         <RequiredItem identifier="fpgacircuit" amount="6" />
       </Fabricate>
       <Body width="494" height="297" density="20" />
-      <Sprite texture="%ModDir%/Images/Machines.png" sourcerect="396,512,257,219" depth="0.8" premultiplyalpha="false" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/Machines.png" sourcerect="737,260,257,219" depth="0.8" premultiplyalpha="false" origin="0.5,0.5" />
       <Fabricator canbeselected="true" powerconsumption="500.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" volumeproperty="RelativeVoltage" loop="true" />
