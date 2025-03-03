@@ -67,6 +67,8 @@
     <label.ca_rename>Set description</label.ca_rename>
     <!-- pill combos -->
     <pillcombo.antihusk>Antihusk</pillcombo.antihusk>
+    <pillcombo.nausea>Nausea</pillcombo.nausea>
+    <pillcombo.antinausea>Antinausea</pillcombo.antinausea>
     <!-- other items -->
     <entityname.custompill>Custom pill</entityname.custompill>
     <entityname.custompill_horsepill>Horse pill</entityname.custompill_horsepill>

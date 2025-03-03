@@ -3,7 +3,7 @@
   <Items>
     <!--Pharmacy-->
     <!-- Courtesy of Grass's Pill bottles mod -->
-    <Item name="" identifier="custompill" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,pill" description="" useinhealthinterface="true" scale="0.1" impactsoundtag="impact_pill" maxstacksize="16">
+    <Item name="" identifier="custompill" description="" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,pill" useinhealthinterface="true" scale="0.1" impactsoundtag="impact_pill" maxstacksize="16">
       <PreferredContainer primary="medcab" spawnprobability="0" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="8" spawnprobability="0.9" />
       <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.1" />
@@ -631,7 +631,7 @@
       <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" />
       <SkillRequirementHint identifier="medical" level="60" />
     </Item>
-    <Item name="" identifier="xenocrystal" category="Material" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" description="" identifier="xenocrystal" category="Material" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="2" spawnprobability="0.00001" />
       <Fabricate suitablefabricators="fabricator" requiredtime="90" requiresrecipe="false">
@@ -734,26 +734,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <!--<Item name="" identifier="bloodpackominus" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,allblood" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
-        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0" />
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
-        <PreferredContainer secondary="medcontainer" />
-        <Price baseprice="300">
-          <Price storeidentifier="merchantmedical" sold="false" multiplier="0.9" minavailable="5" />
-        </Price>
-        <Fabricate suitablefabricators="centrifugestation" requiredtime="25">
-          <RequiredSkill identifier="medical" level="30" />
-          <RequiredItem identifier="bloodcultureominus" />
-          <RequiredItem tag="plasmao" />
-        </Fabricate>
-        <Deconstruct time="10">
-          <Item identifier="bloodplasmao" />
-          <Item identifier="bloodcultureominus" />
-        </Deconstruct>
-        <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
-        <Body width="80" height="42" density="11" />
-      </Item>-->
     <Item name="" identifier="bloodpackoplus" nameidentifier="bloodpackoplus" variantof="antibloodloss2">
       <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
       <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0" />
@@ -906,13 +886,7 @@
       </Deconstruct>
       <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="1,167,64,85" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <!--<Item name="Any type O blood" identifier="Anytypeoblood" Tags="smallite,medical">
-        <SuitableTreatment identifier="bloodloss" suitability="100" />
-        <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
-        <Body width="80" height="42" density="11" />
-        <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
-        </Holdable>
-      </Item>-->
+    <!--Blood cultures-->
     <Item name="" identifier="bloodcultureominus" Tags="smallitem,medical,bloodculture,bloodcultures" category="Medical" cargocontaineridentifier="mediccrate" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.25" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
       <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0" />
@@ -921,16 +895,12 @@
       <Price baseprice="200">
         <Price storeidentifier="merchantmedical" sold="false" multiplier="0.9" minavailable="5" />
       </Price>
-      <!--<Fabricate suitablefabricators="medicalfabricator" requiredtime="25">
-          <RequiredSkill identifier="medical" level="30" />
-          <RequiredItem identifier="bloodpackominus" />
-        </Fabricate>-->
       <Fabricate suitablefabricators="centrifugestation" requiredtime="25" amount="3">
         <RequiredSkill identifier="medical" level="30" />
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureominus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -950,7 +920,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureoplus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -970,7 +940,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureabplus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -990,7 +960,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureabcplus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -1010,7 +980,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureabminus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -1030,7 +1000,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureaplus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -1050,7 +1020,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodcultureaminus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -1070,7 +1040,7 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodculturebplus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
@@ -1090,13 +1060,14 @@
         <RequiredItem identifier="alienblood" />
         <RequiredItem identifier="saline" />
         <RequiredItem identifier="bloodculturebminus" />
-        <RequiredItem identifier="dementonite" mincondition="0.25" usecondition="true" />
+        <RequiredItem identifier="dementonite" mincondition="0.25"/>
       </Fabricate>
       <Body width="80" height="45" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
       <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,9,15,50" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="325,9,15,50" depth="0.6" origin="0.5,0.5" />
     </Item>
+    <!--Blood plasma-->
     <Item name="" identifier="bloodplasmao" Tags="smallitem,medical,plasmao" category="Medical" cargocontaineridentifier="mediccrate" useinhealthinterface="true" description="" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.3" impactsoundtag="impact_soft">
       <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true" />
       <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0" />

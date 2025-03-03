@@ -482,6 +482,34 @@ NTL.PillData.combos = {
             }
         }
     },
+    nausea={
+        requireditems={{id="lithium"},{id="raptorbaneextract"},{id="carbon"}},
+        forbiddenitems={},
+        coloroverride={214,148,6},
+        descriptionoverride="nausea",
+        effectoverride={skillrequirement=30,
+            effects={
+                {type="addeffect",identifier="nausea",amount=100},
+            },
+            faileffects={
+                {type="addeffect",identifier="nausea",amount=30},
+            }
+        }
+    },
+    antinausea={
+        requireditems={{id="carbon"},{id="carbon"},{id="stabilozine"}},
+        forbiddenitems={},
+        coloroverride={6,129,214},
+        descriptionoverride="antinausea",
+        effectoverride={skillrequirement=30,
+            effects={
+                {type="addeffect",identifier="nausea",amount=-50},
+            },
+            faileffects={
+                {type="addeffect",identifier="nausea",amount=-30},
+            }
+        }
+    },
     sodiumboom1={
         requireditems={{id="antibloodloss1"},{id="sodium"}},
         effectoverride={skillrequirement=0,
