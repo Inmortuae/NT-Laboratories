@@ -12,34 +12,27 @@ From **life-saving transplants and neural implants** to **revival syringes, nano
 
 ## **🔬 Key Features**  
 
-### **🧬 Cloning & Genetic Engineering**
-- **Full-body cloning** to restore lost personnel.  
-- **DNA manipulation and genetic hybridization** for biological modifications.  
-- **Genetic splicing experiments** to create enhanced life forms.  
-- **Symbiosis research**, allowing for **biological fusion between organisms**.  
-- **Experimental mutations** that redefine human and alien physiology.  
+### ** Husk Infection**
+- **Symbiosis Syringe**, ability to transfer symbiosis.
+- **Uses NT Symbiote + Infection logic** 
+
 
 ### **🩸 Blood Work & Synthetic Fluids**
 - **Advanced blood synthesis and transfusion systems**.  
-- **Synthetic and genetically modified blood types** for specialized needs.  
-- **Customized plasma and experimental serums** for enhanced resilience.  
+- **Extract plasma** for medical uses.
 
 ### **🫁 Organ Printing & Transplants**
 - **3D bioprinting of vital organs** using stem cells and biological material.  
-- **Organ degradation and preservation mechanics** to ensure transplant viability.  
-- **Cybernetic organ replacements** with enhanced durability and functionality.  
 - **Full integration with Neurotrauma’s surgical and transplant mechanics**.  
 
 ### **🤖 Cybernetics & Cyber-Organs**
-- **Cybernetic limbs, organs, and neural implants** for enhanced performance.  
-- **Synthetic cyber-organs** that surpass human limitations.  
-- **Neural interfaces** for direct brain augmentation and cognition enhancement.  
+- **Cybernetic limbs and organs** for enhanced performance.   
 - **Adaptive cyber-enhancements** that integrate with Neurotrauma’s medical system.  
 
 ### **💉 Advanced Medicine & Biotech**
 - **Revive Syringes** – A specialized **emergency revival** serum that jumpstarts vital functions.  
 - **Nanobot Treatments** – Self-replicating medical nanites that **repair tissue damage and restore function**.  
-- **Symbiosis Research** – Organic implants that allow **biological symbiotic enhancements**.  
+- **Symbiosis Syringe** – A syringe that allow **biological symbiotic enhancements**.  
 
 ### **🏥 Cutting-Edge Medical Science**
 - **State-of-the-art laboratory tools** for in-depth medical research.  
