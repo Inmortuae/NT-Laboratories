@@ -351,6 +351,8 @@ local function addRevivesToMiracleWorker()
         <overwrite>
             <AddedRecipe itemidentifier="revive_syringe" />
             <AddedRecipe itemidentifier="nanobots" />
+            <AddedRecipe itemidentifier="brainjar" />
+            <AddedRecipe itemidentifier="mannitolplus" />
         </overwrite>
     ]]
     local xml = XDocument.Parse(xmlDefinition)
@@ -360,7 +362,7 @@ local function addRevivesToMiracleWorker()
     local xmlDefinitionRecipes = [[
         <overwrite>
         <Description tag="talentdescription.unlockrecipe">
-            <Replace tag="[itemname]" value="entityname.revive_syringe,entityname.nanobots" color="gui.orange" />
+            <Replace tag="[itemname]" value="entityname.revive_syringe,entityname.nanobots,entityname.brainjar,entityname.mannitolplus" color="gui.orange" />
         </Description>
         </overwrite>
         ]]
