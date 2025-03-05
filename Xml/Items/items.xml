@@ -1961,8 +1961,8 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
       <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
-          <Sound file="%ModDir%/Sound/Cyber/screwdriver1.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/screwdriver2.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/screwdriver1.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/screwdriver2.ogg" type="OnUse" range="500" />
         </StatusEffect>
         <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
           <Remove />
@@ -1974,17 +1974,17 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
       <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt1.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt2.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt3.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt4.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt5.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt6.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt7.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt8.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt9.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt10.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberblunt11.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt1.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt2.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt3.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt4.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt5.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt6.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt7.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt8.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt9.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt10.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberblunt11.ogg" type="OnUse" range="500" />
         </StatusEffect>
         <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
           <Remove />
@@ -1996,9 +1996,9 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
       <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
-          <Sound file="%ModDir%/Sound/Cyber/cyberbite1.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberbite2.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberbite3.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberbite1.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberbite2.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberbite3.ogg" type="OnUse" range="500" />
         </StatusEffect>
         <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
           <Remove />
@@ -2010,9 +2010,9 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
       <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
-          <Sound file="%ModDir%/Sound/Cyber/cyberdeath1.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberdeath2.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/cyberdeath3.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberdeath1.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberdeath2.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/cyberdeath3.ogg" type="OnUse" range="500" />
         </StatusEffect>
         <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
           <Remove />
@@ -2024,11 +2024,11 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
       <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
-          <Sound file="%ModDir%/Sound/Cyber/welding1.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/welding2.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/welding3.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/welding4.ogg" type="OnUse" range="500" />
-          <Sound file="%ModDir%/Sound/Cyber/welding5.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/welding1.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/welding2.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/welding3.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/welding4.ogg" type="OnUse" range="500" />
+          <Sound file="%ModDir%/Sounds/welding5.ogg" type="OnUse" range="500" />
         </StatusEffect>
         <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
           <Remove />
