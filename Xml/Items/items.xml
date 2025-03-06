@@ -1551,7 +1551,7 @@
         <RequiredItem identifier="bloodcultureabcplus" minamount="1" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,640,64,64" origin="0.5,0.5" />
-      <Sprite texture="Medicines.png" sourcerect="112,139,37,70" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="112,139,37,70" depth="0.6" origin="0.5,0.5" />
       <SuitableTreatment type="poison" suitability="10" />
       <SuitableTreatment identifier="stabilozineeffect" suitability="-100" />
       <!-- Don't administer this while the effect is already active-->

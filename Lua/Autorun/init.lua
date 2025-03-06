@@ -1,7 +1,7 @@
 
 NTL = {} -- Neurotrauma Laboratories
 NTL.Name="NT Laboratories"
-NTL.Version = "A1.0.5"
+NTL.Version = "A1.0.6"
 NTL.VersionNum = 01000602
 NTL.MinNTVersion = "A1.9.0"
 NTL.MinNTVersionNum = 01090000
