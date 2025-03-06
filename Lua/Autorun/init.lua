@@ -15,11 +15,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
     dofile(NTL.Path .. "/Lua/Scripts/Server/BioPrinter/EmptySyringe.lua")
 
     -- Pharmacy
-    dofile(NTL.Path.."/Lua/Scripts/Pharmacy/humanupdate.lua")
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/items.lua")
     dofile(NTL.Path.."/Lua/Scripts/Pharmacy/pills.lua")
-    dofile(NTL.Path.."/Lua/Scripts/Pharmacy/testing.lua")
-
     -- Blood Work
     dofile(NTL.Path.."/Lua/Scripts/BloodWork/plasma.lua")
 
@@ -51,13 +48,9 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
         --Symbiote + Infection
         dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/humanupdate.lua")
         dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/items.lua")
-        dofile(NTL.Path.."/Lua/Scripts/NT Symbiote+Infection/testing.lua")
 
         --Human Update Hooks
-        NTC.AddPreHumanUpdateHook(NTL.PreUpdateHuman)
         NTC.AddPreHumanUpdateHook(NTL.UpdateHuman)
-        NTC.AddHumanUpdateHook(NTL.PostUpdateHuman)
-
     end,1)
 
 else

@@ -31,9 +31,7 @@
 
   <!--Pharmacy-->
     <Sounds file="%ModDir%/Xml/Sounds/Pharmacy/sounds.xml" />
-    <Other file="%ModDir%/Lua/Scripts/Pharmacy/humanupdate.lua" />
     <Other file="%ModDir%/Lua/Scripts/Pharmacy/items.lua" />
-    <Other file="%ModDir%/Lua/Scripts/Pharmacy/testing.lua" />
 
   <!--Undead's Medical-->
     <Other file="%ModDir%/Lua/Scripts/Server/UndeadsMed/Server_SaveScripts/Talents.lua" />
@@ -79,5 +77,4 @@
   <!--NT Symbiote + Infection-->
   <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/items.lua" />
-  <Other file="%ModDir%/Lua/Scripts/NT Symbiote+Infection/testing.lua" />
 </contentpackage>
