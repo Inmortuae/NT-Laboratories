@@ -1,4 +1,4 @@
-![NT Laboratories](https://github.com/user-attachments/assets/03fd1361-9f72-4bab-aa1a-4bfe915af5ff)
+![NT Laboratories](https://github.com/user-attachments/assets/d1573e8c-80cb-4c1c-ba16-a33cfdb9e1c8)
 
 # **NT Laboratories - The Future of Medical Science, Cybernetics, and Biotech**  
 
