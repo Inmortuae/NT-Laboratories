@@ -309,6 +309,80 @@ local limbtypes = {
 	LimbType.RightLeg,
 }
 
+LuaUserData.MakeFieldAccessible(Descriptors["Barotrauma.AbandonedOutpostMission"], "requireRescue")
+local rescuetargets = {}
+local UpdateRescueTargets = function()
+	rescuetargets = {}
+	for mission in Game.GameSession.Missions do
+		if LuaUserData.IsTargetType(mission.Prefab.MissionClass, "Barotrauma.AbandonedOutpostMission") then
+			for character in mission.requireRescue do
+				rescuetargets[character.ID] = character
+				--table.insert(rescuetargets, character)
+			end
+		end
+	end
+	-- print('rescue targets =')
+	-- for char in rescuetargets do print(char.Name) end
+end
+NTL.CyberifyHumansOnDifficulty = function()
+	local levelDifficulty = Game.GameSession.LevelData.Difficulty
+	if levelDifficulty < 15 then
+		return
+	end
+	local cyberified = false
+	for character in Character.CharacterList do
+		if character.IsHuman and character.TeamID ~= 1 and not rescuetargets[character.ID] == character then
+			cyberified = false
+			if HF.Chance(0.02) then
+				if HF.Chance(0.25) then
+					NTL.CyberifyLimb(character, LimbType.LeftArm, true)
+				elseif HF.Chance(0.25) then
+					NTL.CyberifyLimb(character, LimbType.RightArm, true)
+				elseif HF.Chance(0.25) then
+					NTL.CyberifyLimb(character, LimbType.LeftLeg, true)
+				else
+					NTL.CyberifyLimb(character, LimbType.RightLeg, true)
+				end
+				cyberified = true
+			end
+			if levelDifficulty > 35 and HF.Chance(0.1) and not cyberified and not character.IsEscorted then
+				if HF.Chance(0.5) then
+					NTL.CyberifyLimb(character, LimbType.LeftArm, true)
+				else
+					NTL.CyberifyLimb(character, LimbType.RightArm, true)
+				end
+				if HF.Chance(0.5) then
+					NTL.CyberifyLimb(character, LimbType.LeftLeg, true)
+				else
+					NTL.CyberifyLimb(character, LimbType.RightLeg, true)
+				end
+				HF.SetAfflictionLimb(character, "ntc_cyberheart", LimbType.Torso, 50)
+				HF.SetAfflictionLimb(character, "ntc_cyberlung", LimbType.Torso, 50)
+				HF.SetAfflictionLimb(character, "ntc_cyberkidney", LimbType.Torso, 50)
+				HF.SetAfflictionLimb(character, "ntc_cyberliver", LimbType.Torso, 50)
+				HF.SetAfflictionLimb(character, "ntc_cyberbrain", LimbType.Torso, 50)
+				cyberified = true
+			end
+			if levelDifficulty > 50 and HF.Chance(0.9) and not cyberified and not character.IsEscorted then
+				NTL.CyberifyLimb(character, LimbType.LeftArm, true)
+				NTL.CyberifyLimb(character, LimbType.RightArm, true)
+				NTL.CyberifyLimb(character, LimbType.LeftLeg, true)
+				NTL.CyberifyLimb(character, LimbType.RightLeg, true)
+				HF.SetAfflictionLimb(character, "ntc_cyberheart", LimbType.Torso, 100)
+				HF.SetAfflictionLimb(character, "ntc_cyberlung", LimbType.Torso, 100)
+				HF.SetAfflictionLimb(character, "ntc_cyberkidney", LimbType.Torso, 100)
+				HF.SetAfflictionLimb(character, "ntc_cyberliver", LimbType.Torso, 100)
+				HF.SetAfflictionLimb(character, "ntc_cyberbrain", LimbType.Torso, 100)
+			end
+		end
+	end
+end
+Hook.Add("roundStart", "NTL.RoundStart.modCharacters", function()
+	Timer.Wait(function()
+		UpdateRescueTargets()
+		NTL.CyberifyHumansOnDifficulty()
+	end, 10000)
+end)
 Timer.Wait(function()
 	-- override bone damage to factor in cyberlimbs
 	NT.Afflictions.bonedamage = {
